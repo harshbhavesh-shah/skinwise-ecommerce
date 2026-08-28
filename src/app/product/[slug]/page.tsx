@@ -18,7 +18,7 @@ export async function generateMetadata({
   const product = getProductBySlug(slug);
   if (!product) return {};
   return {
-    title: `${product.name} — Aurel`,
+    title: `${product.brand} ${product.name} — SkinWise`,
     description: product.desc,
   };
 }
@@ -33,14 +33,18 @@ export default async function ProductPage({
   if (!product) notFound();
 
   const related = getRelated(product);
+  const primaryConcern = product.concerns[0];
 
   return (
     <div className="mx-auto max-w-7xl px-8 py-12 md:py-14">
       <div className="mb-8 text-[13px] text-ink-soft">
         <Link href="/" className="hover:text-ink">Home</Link>
         {" / "}
-        <Link href={`/?category=${product.category}`} className="hover:text-ink">
-          {product.category}
+        <Link
+          href={{ pathname: "/", query: { concern: primaryConcern } }}
+          className="hover:text-ink"
+        >
+          {primaryConcern}
         </Link>
         {" / "}
         <span>{product.name}</span>
@@ -50,7 +54,7 @@ export default async function ProductPage({
         <div className="relative aspect-[5/6] overflow-hidden rounded-[20px] bg-bg-2 md:sticky md:top-24">
           <Image
             src={product.image}
-            alt={product.name}
+            alt={`${product.brand} ${product.name}`}
             fill
             className="object-cover"
             priority
@@ -60,12 +64,23 @@ export default async function ProductPage({
 
         <div>
           <div className="mb-3.5 text-xs font-semibold uppercase tracking-[1.5px] text-accent">
-            {product.category}
+            {product.brand} &middot; {product.type}
           </div>
           <h1 className="mb-3.5 text-[30px] font-medium leading-tight md:text-[34px]">
             {product.name}
           </h1>
-          <p className="mb-7 text-xl">{formatPrice(product.price)}</p>
+          <p className="mb-5 text-xl">{formatPrice(product.price)}</p>
+          <div className="mb-7 flex flex-wrap gap-2">
+            {product.concerns.map((c) => (
+              <Link
+                key={c}
+                href={{ pathname: "/", query: { concern: c } }}
+                className="rounded-full bg-accent-soft px-3 py-1.5 text-[12.5px] font-medium text-accent hover:opacity-80"
+              >
+                {c}
+              </Link>
+            ))}
+          </div>
           <p className="mb-8 max-w-md text-[15.5px] leading-relaxed text-ink-soft">
             {product.desc}
           </p>
@@ -73,9 +88,10 @@ export default async function ProductPage({
           <AddToCartForm product={product} />
 
           <dl className="mt-9 border-t border-line pt-6">
-            <dt className="mb-1 text-[13px] font-semibold">Materials</dt>
+            <dt className="mb-1 text-[13px] font-semibold">Authenticity</dt>
             <dd className="mb-4 text-[13.5px] text-ink-soft">
-              Made with responsibly sourced materials, finished by hand.
+              Sourced directly from authorized distributors — every product is
+              genuine, sealed, and within its use-by date.
             </dd>
             <dt className="mb-1 text-[13px] font-semibold">Shipping</dt>
             <dd className="text-[13.5px] text-ink-soft">

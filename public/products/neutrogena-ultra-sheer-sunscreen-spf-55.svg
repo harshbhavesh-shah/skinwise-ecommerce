@@ -1,0 +1,13 @@
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g19" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e6dcc0"/>
+      <stop offset="100%" stop-color="#aea791"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g19)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">NEUTROGENA</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">SUNSCREEN</text>
+</svg>

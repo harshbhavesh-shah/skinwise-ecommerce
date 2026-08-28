@@ -44,8 +44,8 @@ export default function CartPage() {
                 <div className="flex flex-1 flex-col justify-between">
                   <div className="flex justify-between gap-4">
                     <div>
-                      <div className="mb-1 text-[11px] uppercase tracking-wide text-ink-soft">
-                        {product.category}
+                      <div className="mb-1 text-[11px] uppercase tracking-wide text-accent">
+                        {product.brand}
                       </div>
                       <Link href={`/product/${product.slug}`} className="text-[16px] font-medium hover:underline">
                         {product.name}

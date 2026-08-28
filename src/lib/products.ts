@@ -3,8 +3,29 @@ import type { Product } from "./types";
 
 export const products = productsData as Product[];
 
-export function getCategories(): string[] {
-  return Array.from(new Set(products.map((p) => p.category)));
+// Fixed, sensible order for concern pills rather than JSON insertion order.
+const CONCERN_ORDER = [
+  "Acne",
+  "Eczema",
+  "Dryness & Hydration",
+  "Anti-Aging",
+  "Hyperpigmentation",
+  "Sensitive Skin",
+  "Sun Protection",
+  "Hair & Scalp",
+];
+
+export function getConcerns(): string[] {
+  const present = new Set(products.flatMap((p) => p.concerns));
+  return CONCERN_ORDER.filter((c) => present.has(c));
+}
+
+export function getTypes(): string[] {
+  return Array.from(new Set(products.map((p) => p.type))).sort();
+}
+
+export function getBrands(): string[] {
+  return Array.from(new Set(products.map((p) => p.brand))).sort();
 }
 
 export function getProductBySlug(slug: string): Product | undefined {
@@ -12,22 +33,42 @@ export function getProductBySlug(slug: string): Product | undefined {
 }
 
 export function getRelated(product: Product, count = 4): Product[] {
-  return products
-    .filter((p) => p.category === product.category && p.slug !== product.slug)
-    .slice(0, count);
+  const sameConcern = products.filter(
+    (p) =>
+      p.slug !== product.slug &&
+      p.concerns.some((c) => product.concerns.includes(c))
+  );
+  if (sameConcern.length >= count) return sameConcern.slice(0, count);
+
+  const sameType = products.filter(
+    (p) =>
+      p.slug !== product.slug &&
+      p.type === product.type &&
+      !sameConcern.includes(p)
+  );
+  return [...sameConcern, ...sameType].slice(0, count);
 }
 
-export function filterProducts(category?: string, query?: string): Product[] {
+export function filterProducts(
+  concern?: string,
+  type?: string,
+  query?: string
+): Product[] {
   let result = products;
-  if (category && category !== "All") {
-    result = result.filter((p) => p.category === category);
+  if (concern && concern !== "All") {
+    result = result.filter((p) => p.concerns.includes(concern));
+  }
+  if (type && type !== "All") {
+    result = result.filter((p) => p.type === type);
   }
   if (query && query.trim()) {
     const q = query.trim().toLowerCase();
     result = result.filter(
       (p) =>
         p.name.toLowerCase().includes(q) ||
-        p.category.toLowerCase().includes(q) ||
+        p.brand.toLowerCase().includes(q) ||
+        p.type.toLowerCase().includes(q) ||
+        p.concerns.some((c) => c.toLowerCase().includes(q)) ||
         p.desc.toLowerCase().includes(q)
     );
   }

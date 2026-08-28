@@ -34,12 +34,13 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-line bg-bg/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center gap-7 px-8 py-5">
         <Link href="/" className="shrink-0 text-[22px] font-serif font-medium tracking-wide">
-          AUREL
+          SkinWise
         </Link>
         <nav className="hidden shrink-0 gap-6 text-sm text-ink-soft md:flex">
           <Link href="/" className="hover:text-ink">Shop All</Link>
-          <Link href="/?category=Apparel" className="hover:text-ink">Apparel</Link>
-          <Link href="/?category=Home" className="hover:text-ink">Home</Link>
+          <Link href={{ pathname: "/", query: { concern: "Acne" } }} className="hover:text-ink">Acne</Link>
+          <Link href={{ pathname: "/", query: { concern: "Dryness & Hydration" } }} className="hover:text-ink">Dryness</Link>
+          <Link href={{ pathname: "/", query: { concern: "Sensitive Skin" } }} className="hover:text-ink">Sensitive Skin</Link>
         </nav>
         <div className="relative max-w-[420px] flex-1">
           <svg

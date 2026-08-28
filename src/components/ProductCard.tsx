@@ -30,11 +30,21 @@ export default function ProductCard({ product }: { product: Product }) {
           Quick Add
         </button>
       </div>
-      <div className="mb-1 text-[11px] uppercase tracking-wide text-ink-soft">
-        {product.category}
+      <div className="mb-1 text-[11px] uppercase tracking-wide text-accent">
+        {product.brand}
       </div>
       <h3 className="mb-1.5 text-[16px] font-medium">{product.name}</h3>
-      <p className="text-[14.5px] text-ink-soft">{formatPrice(product.price)}</p>
+      <p className="mb-1.5 text-[14.5px] text-ink-soft">{formatPrice(product.price)}</p>
+      <div className="flex flex-wrap gap-1.5">
+        {product.concerns.slice(0, 2).map((c) => (
+          <span
+            key={c}
+            className="rounded-full bg-bg-2 px-2.5 py-1 text-[10.5px] text-ink-soft"
+          >
+            {c}
+          </span>
+        ))}
+      </div>
     </Link>
   );
 }

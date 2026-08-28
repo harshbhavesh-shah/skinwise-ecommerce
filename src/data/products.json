@@ -1,182 +1,343 @@
 [
   {
-    "name": "Wool Overcoat",
-    "category": "Apparel",
-    "price": 428,
-    "color": "#8a7862",
-    "desc": "A structured wool overcoat cut from a heavyweight Italian melton, built for cold-weather layering without the bulk.",
+    "name": "Sensibio H2O Micellar Water",
+    "brand": "Bioderma",
+    "type": "Cleanser",
+    "concerns": [
+      "Sensitive Skin"
+    ],
+    "price": 15,
+    "color": "#a7c4bd",
     "id": 1,
-    "slug": "wool-overcoat",
-    "image": "/products/wool-overcoat.svg"
+    "slug": "bioderma-sensibio-h2o-micellar-water",
+    "image": "/products/bioderma-sensibio-h2o-micellar-water.svg",
+    "desc": "A gentle, no-rinse micellar water that removes makeup and impurities without disrupting the skin's natural barrier \u2014 formulated for sensitive skin."
   },
   {
-    "name": "Cashmere Crewneck",
-    "category": "Apparel",
-    "price": 215,
-    "color": "#c9beac",
-    "desc": "Two-ply cashmere knit in a relaxed crew silhouette. Soft-brushed finish, ribbed cuffs and hem.",
+    "name": "S\u00e9bium Foaming Gel",
+    "brand": "Bioderma",
+    "type": "Cleanser",
+    "concerns": [
+      "Acne"
+    ],
+    "price": 17,
+    "color": "#8fae9e",
     "id": 2,
-    "slug": "cashmere-crewneck",
-    "image": "/products/cashmere-crewneck.svg"
+    "slug": "bioderma-sebium-foaming-gel",
+    "image": "/products/bioderma-sebium-foaming-gel.svg",
+    "desc": "A purifying foaming cleanser for oily, acne-prone skin that removes excess sebum without over-drying."
   },
   {
-    "name": "Linen Shirt",
-    "category": "Apparel",
-    "price": 128,
-    "color": "#e3dcc9",
-    "desc": "Garment-dyed European linen with a soft hand-feel. Breathable, relaxed fit for warm days.",
+    "name": "Atoderm Cream",
+    "brand": "Bioderma",
+    "type": "Moisturizer",
+    "concerns": [
+      "Dryness & Hydration"
+    ],
+    "price": 20,
+    "color": "#c9d6c9",
     "id": 3,
-    "slug": "linen-shirt",
-    "image": "/products/linen-shirt.svg"
+    "slug": "bioderma-atoderm-cream",
+    "image": "/products/bioderma-atoderm-cream.svg",
+    "desc": "A rich, fast-absorbing body and face cream that restores comfort to very dry, fragile skin."
   },
   {
-    "name": "Tapered Trouser",
-    "category": "Apparel",
-    "price": 165,
-    "color": "#4b4640",
-    "desc": "A tailored tapered trouser in mid-weight cotton twill, finished with a clean waistband and no visible pockets.",
+    "name": "Node Anti-Dandruff Shampoo",
+    "brand": "Bioderma",
+    "type": "Shampoo",
+    "concerns": [
+      "Hair & Scalp"
+    ],
+    "price": 16,
+    "color": "#7f9c96",
     "id": 4,
-    "slug": "tapered-trouser",
-    "image": "/products/tapered-trouser.svg"
+    "slug": "bioderma-node-anti-dandruff-shampoo",
+    "image": "/products/bioderma-node-anti-dandruff-shampoo.svg",
+    "desc": "A soothing shampoo that reduces flaking and scalp irritation with regular use."
   },
   {
-    "name": "Merino Turtleneck",
-    "category": "Apparel",
-    "price": 148,
-    "color": "#6b6459",
-    "desc": "Fine-gauge merino wool turtleneck, naturally temperature-regulating and soft against the skin.",
+    "name": "Foaming Facial Cleanser",
+    "brand": "CeraVe",
+    "type": "Cleanser",
+    "concerns": [
+      "Acne"
+    ],
+    "price": 15,
+    "color": "#9cb8c9",
     "id": 5,
-    "slug": "merino-turtleneck",
-    "image": "/products/merino-turtleneck.svg"
+    "slug": "cerave-foaming-facial-cleanser",
+    "image": "/products/cerave-foaming-facial-cleanser.svg",
+    "desc": "A foaming gel cleanser with ceramides and niacinamide that removes excess oil without disrupting the skin barrier."
   },
   {
-    "name": "Leather Belt",
-    "category": "Accessories",
-    "price": 92,
-    "color": "#5c4632",
-    "desc": "Full-grain vegetable-tanned leather belt with a solid brass buckle. Ages beautifully with wear.",
+    "name": "Hydrating Facial Cleanser",
+    "brand": "CeraVe",
+    "type": "Cleanser",
+    "concerns": [
+      "Dryness & Hydration",
+      "Sensitive Skin"
+    ],
+    "price": 15,
+    "color": "#aec7d6",
     "id": 6,
-    "slug": "leather-belt",
-    "image": "/products/leather-belt.svg"
+    "slug": "cerave-hydrating-facial-cleanser",
+    "image": "/products/cerave-hydrating-facial-cleanser.svg",
+    "desc": "A non-foaming, gentle cleanser with hyaluronic acid and ceramides for normal to dry, sensitive skin."
   },
   {
-    "name": "Wool Scarf",
-    "category": "Accessories",
-    "price": 78,
-    "color": "#9c8468",
-    "desc": "Oversized wool scarf woven in a subtle herringbone. Generous length for multiple wrap styles.",
+    "name": "Moisturizing Cream",
+    "brand": "CeraVe",
+    "type": "Moisturizer",
+    "concerns": [
+      "Dryness & Hydration"
+    ],
+    "price": 19,
+    "color": "#c3d3dd",
     "id": 7,
-    "slug": "wool-scarf",
-    "image": "/products/wool-scarf.svg"
+    "slug": "cerave-moisturizing-cream",
+    "image": "/products/cerave-moisturizing-cream.svg",
+    "desc": "A rich, non-greasy 24-hour moisturizer with three essential ceramides to help restore the skin barrier."
   },
   {
-    "name": "Card Holder",
-    "category": "Accessories",
-    "price": 58,
-    "color": "#3f3a34",
-    "desc": "Slim leather card holder with four card slots and a central pocket for folded notes.",
+    "name": "SA Renewing Lotion",
+    "brand": "CeraVe",
+    "type": "Moisturizer",
+    "concerns": [
+      "Dryness & Hydration"
+    ],
+    "price": 18,
+    "color": "#b3c9d4",
     "id": 8,
-    "slug": "card-holder",
-    "image": "/products/card-holder.svg"
+    "slug": "cerave-sa-renewing-lotion",
+    "image": "/products/cerave-sa-renewing-lotion.svg",
+    "desc": "A lightweight lotion with salicylic acid that gently exfoliates rough, bumpy skin while moisturizing."
   },
   {
-    "name": "Canvas Tote",
-    "category": "Accessories",
-    "price": 68,
-    "color": "#d8cfb8",
-    "desc": "Heavyweight canvas tote with leather handles, structured base, and an interior zip pocket.",
+    "name": "Resurfacing Retinol Serum",
+    "brand": "CeraVe",
+    "type": "Serum",
+    "concerns": [
+      "Anti-Aging"
+    ],
+    "price": 21,
+    "color": "#7d97a8",
     "id": 9,
-    "slug": "canvas-tote",
-    "image": "/products/canvas-tote.svg"
+    "slug": "cerave-resurfacing-retinol-serum",
+    "image": "/products/cerave-resurfacing-retinol-serum.svg",
+    "desc": "An encapsulated retinol serum that smooths texture and fine lines overnight, formulated to minimize irritation."
   },
   {
-    "name": "Signet Ring",
-    "category": "Accessories",
-    "price": 145,
-    "color": "#b08d57",
-    "desc": "Solid brass signet ring with a hand-polished face. Sold individually, sized to order.",
+    "name": "Skin Renewing Vitamin C Serum",
+    "brand": "CeraVe",
+    "type": "Serum",
+    "concerns": [
+      "Hyperpigmentation",
+      "Anti-Aging"
+    ],
+    "price": 29,
+    "color": "#e0c88f",
     "id": 10,
-    "slug": "signet-ring",
-    "image": "/products/signet-ring.svg"
+    "slug": "cerave-skin-renewing-vitamin-c-serum",
+    "image": "/products/cerave-skin-renewing-vitamin-c-serum.svg",
+    "desc": "A brightening serum with pure vitamin C and hyaluronic acid to even tone and support collagen production."
   },
   {
-    "name": "Ceramic Vase",
-    "category": "Home",
-    "price": 86,
-    "color": "#cbb59c",
-    "desc": "Hand-thrown stoneware vase with a matte reactive glaze. No two pieces are exactly alike.",
+    "name": "Dandruff Relief Shampoo",
+    "brand": "CeraVe",
+    "type": "Shampoo",
+    "concerns": [
+      "Hair & Scalp"
+    ],
+    "price": 14,
+    "color": "#93aebd",
     "id": 11,
-    "slug": "ceramic-vase",
-    "image": "/products/ceramic-vase.svg"
+    "slug": "cerave-dandruff-relief-shampoo",
+    "image": "/products/cerave-dandruff-relief-shampoo.svg",
+    "desc": "A medicated shampoo that targets flaking and itch while being gentle enough for daily use."
   },
   {
-    "name": "Linen Bedding Set",
-    "category": "Home",
-    "price": 195,
-    "color": "#e8e1d1",
-    "desc": "Stonewashed linen duvet cover and pillowcase set. Softens with every wash.",
+    "name": "Effaclar Duo Acne Treatment",
+    "brand": "La Roche-Posay",
+    "type": "Treatment",
+    "concerns": [
+      "Acne"
+    ],
+    "price": 31,
+    "color": "#7c8f7d",
     "id": 12,
-    "slug": "linen-bedding-set",
-    "image": "/products/linen-bedding-set.svg"
+    "slug": "la-roche-posay-effaclar-duo-acne-treatment",
+    "image": "/products/la-roche-posay-effaclar-duo-acne-treatment.svg",
+    "desc": "A dual-action gel that targets acne and helps reduce the appearance of post-acne marks."
   },
   {
-    "name": "Oak Cutting Board",
-    "category": "Home",
-    "price": 74,
-    "color": "#8f7048",
-    "desc": "Solid oak end-grain cutting board, finished with food-safe mineral oil.",
+    "name": "Anthelios Sunscreen SPF 50",
+    "brand": "La Roche-Posay",
+    "type": "Sunscreen",
+    "concerns": [
+      "Sun Protection"
+    ],
+    "price": 37,
+    "color": "#e3d9b8",
     "id": 13,
-    "slug": "oak-cutting-board",
-    "image": "/products/oak-cutting-board.svg"
+    "slug": "la-roche-posay-anthelios-sunscreen-spf-50",
+    "image": "/products/la-roche-posay-anthelios-sunscreen-spf-50.svg",
+    "desc": "A broad-spectrum, lightweight sunscreen with high UVA/UVB protection for daily wear, even under makeup."
   },
   {
-    "name": "Wool Throw",
-    "category": "Home",
-    "price": 118,
-    "color": "#a99a7c",
-    "desc": "Lambswool throw blanket woven in a classic herringbone weave, finished with a whipped edge.",
+    "name": "Toleriane Sensitive Cream",
+    "brand": "La Roche-Posay",
+    "type": "Moisturizer",
+    "concerns": [
+      "Sensitive Skin"
+    ],
+    "price": 23,
+    "color": "#d9cfc2",
     "id": 14,
-    "slug": "wool-throw",
-    "image": "/products/wool-throw.svg"
+    "slug": "la-roche-posay-toleriane-sensitive-cream",
+    "image": "/products/la-roche-posay-toleriane-sensitive-cream.svg",
+    "desc": "A fragrance-free moisturizer formulated to soothe and hydrate reactive, sensitive skin."
   },
   {
-    "name": "Glass Carafe",
-    "category": "Home",
-    "price": 48,
-    "color": "#dfe4df",
-    "desc": "Hand-blown borosilicate glass carafe with a natural cork stopper.",
+    "name": "Lipikar Balm AP+",
+    "brand": "La Roche-Posay",
+    "type": "Moisturizer",
+    "concerns": [
+      "Eczema",
+      "Dryness & Hydration"
+    ],
+    "price": 25,
+    "color": "#c7cbb8",
     "id": 15,
-    "slug": "glass-carafe",
-    "image": "/products/glass-carafe.svg"
+    "slug": "la-roche-posay-lipikar-balm-ap-plus",
+    "image": "/products/la-roche-posay-lipikar-balm-ap-plus.svg",
+    "desc": "An intensive repairing balm for very dry, eczema-prone skin, clinically proven to soothe irritation."
   },
   {
-    "name": "Brass Candle Holder",
-    "category": "Objects",
-    "price": 54,
-    "color": "#a67c3d",
-    "desc": "Solid brass candle holder with a raw, unlacquered finish that will patina over time.",
+    "name": "Pigmentclar Serum",
+    "brand": "La Roche-Posay",
+    "type": "Serum",
+    "concerns": [
+      "Hyperpigmentation"
+    ],
+    "price": 35,
+    "color": "#d8b98f",
     "id": 16,
-    "slug": "brass-candle-holder",
-    "image": "/products/brass-candle-holder.svg"
+    "slug": "la-roche-posay-pigmentclar-serum",
+    "image": "/products/la-roche-posay-pigmentclar-serum.svg",
+    "desc": "A targeted serum that helps fade dark spots and even out skin tone over time."
   },
   {
-    "name": "Marble Coasters",
-    "category": "Objects",
-    "price": 42,
-    "color": "#d9d5cd",
-    "desc": "Set of four honed marble coasters with cork backing. Each piece uniquely veined.",
+    "name": "Hydro Boost Water Gel",
+    "brand": "Neutrogena",
+    "type": "Moisturizer",
+    "concerns": [
+      "Dryness & Hydration"
+    ],
+    "price": 22,
+    "color": "#a9c9c4",
     "id": 17,
-    "slug": "marble-coasters",
-    "image": "/products/marble-coasters.svg"
+    "slug": "neutrogena-hydro-boost-water-gel",
+    "image": "/products/neutrogena-hydro-boost-water-gel.svg",
+    "desc": "An oil-free, water-based gel moisturizer with hyaluronic acid that hydrates without heaviness."
   },
   {
-    "name": "Ceramic Bowl Set",
-    "category": "Objects",
-    "price": 96,
-    "color": "#c2ad8f",
-    "desc": "Set of three nesting ceramic bowls in a soft matte glaze, stackable for easy storage.",
+    "name": "Rapid Wrinkle Repair Serum",
+    "brand": "Neutrogena",
+    "type": "Serum",
+    "concerns": [
+      "Anti-Aging"
+    ],
+    "price": 28,
+    "color": "#8fa89f",
     "id": 18,
-    "slug": "ceramic-bowl-set",
-    "image": "/products/ceramic-bowl-set.svg"
+    "slug": "neutrogena-rapid-wrinkle-repair-serum",
+    "image": "/products/neutrogena-rapid-wrinkle-repair-serum.svg",
+    "desc": "A fast-absorbing serum with retinol that targets fine lines and uneven texture."
+  },
+  {
+    "name": "Ultra Sheer Sunscreen SPF 55",
+    "brand": "Neutrogena",
+    "type": "Sunscreen",
+    "concerns": [
+      "Sun Protection"
+    ],
+    "price": 18,
+    "color": "#e6dcc0",
+    "id": 19,
+    "slug": "neutrogena-ultra-sheer-sunscreen-spf-55",
+    "image": "/products/neutrogena-ultra-sheer-sunscreen-spf-55.svg",
+    "desc": "A lightweight, non-greasy sunscreen that absorbs quickly and layers well under makeup."
+  },
+  {
+    "name": "Advanced Repair Cream",
+    "brand": "Eucerin",
+    "type": "Moisturizer",
+    "concerns": [
+      "Dryness & Hydration",
+      "Eczema"
+    ],
+    "price": 17,
+    "color": "#bcd0cf",
+    "id": 20,
+    "slug": "eucerin-advanced-repair-cream",
+    "image": "/products/eucerin-advanced-repair-cream.svg",
+    "desc": "A fragrance-free cream with ceramides and urea that provides 48-hour relief for very dry skin."
+  },
+  {
+    "name": "Eczema Relief Cream",
+    "brand": "Eucerin",
+    "type": "Moisturizer",
+    "concerns": [
+      "Eczema"
+    ],
+    "price": 19,
+    "color": "#a3bdba",
+    "id": 21,
+    "slug": "eucerin-eczema-relief-cream",
+    "image": "/products/eucerin-eczema-relief-cream.svg",
+    "desc": "A steroid-free cream formulated to relieve itching and redness associated with eczema flare-ups."
+  },
+  {
+    "name": "Gentle Facial Cleanser",
+    "brand": "Vanicream",
+    "type": "Cleanser",
+    "concerns": [
+      "Sensitive Skin"
+    ],
+    "price": 13,
+    "color": "#cfd6cf",
+    "id": 22,
+    "slug": "vanicream-gentle-facial-cleanser",
+    "image": "/products/vanicream-gentle-facial-cleanser.svg",
+    "desc": "A soap-free, fragrance-free cleanser formulated for sensitive and easily irritated skin."
+  },
+  {
+    "name": "Cicalfate+ Repair Cream",
+    "brand": "Av\u00e8ne",
+    "type": "Treatment",
+    "concerns": [
+      "Eczema",
+      "Sensitive Skin"
+    ],
+    "price": 24,
+    "color": "#b8c9bf",
+    "id": 23,
+    "slug": "avene-cicalfate-plus-repair-cream",
+    "image": "/products/avene-cicalfate-plus-repair-cream.svg",
+    "desc": "A restorative cream that helps soothe and protect compromised, irritated, or eczema-prone skin."
+  },
+  {
+    "name": "Anti-Dandruff Shampoo",
+    "brand": "Nizoral",
+    "type": "Shampoo",
+    "concerns": [
+      "Hair & Scalp"
+    ],
+    "price": 18,
+    "color": "#94a6ad",
+    "id": 24,
+    "slug": "nizoral-anti-dandruff-shampoo",
+    "image": "/products/nizoral-anti-dandruff-shampoo.svg",
+    "desc": "A medicated shampoo with ketoconazole that treats and helps prevent dandruff."
   }
 ]

@@ -21,9 +21,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Aurel — Considered Everyday Essentials",
+  title: "SkinWise — Dermatologist-Trusted Skincare",
   description:
-    "A demo premium storefront for apparel, accessories, home goods and objects.",
+    "A demo storefront for authentic dermatology and skincare products, sorted by skin concern.",
 };
 
 export default function RootLayout({
