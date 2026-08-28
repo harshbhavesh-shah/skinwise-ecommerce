@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Wool Overcoat",
+    "category": "Apparel",
+    "price": 428,
+    "color": "#8a7862",
+    "desc": "A structured wool overcoat cut from a heavyweight Italian melton, built for cold-weather layering without the bulk.",
+    "id": 1,
+    "slug": "wool-overcoat",
+    "image": "/products/wool-overcoat.svg"
+  },
+  {
+    "name": "Cashmere Crewneck",
+    "category": "Apparel",
+    "price": 215,
+    "color": "#c9beac",
+    "desc": "Two-ply cashmere knit in a relaxed crew silhouette. Soft-brushed finish, ribbed cuffs and hem.",
+    "id": 2,
+    "slug": "cashmere-crewneck",
+    "image": "/products/cashmere-crewneck.svg"
+  },
+  {
+    "name": "Linen Shirt",
+    "category": "Apparel",
+    "price": 128,
+    "color": "#e3dcc9",
+    "desc": "Garment-dyed European linen with a soft hand-feel. Breathable, relaxed fit for warm days.",
+    "id": 3,
+    "slug": "linen-shirt",
+    "image": "/products/linen-shirt.svg"
+  },
+  {
+    "name": "Tapered Trouser",
+    "category": "Apparel",
+    "price": 165,
+    "color": "#4b4640",
+    "desc": "A tailored tapered trouser in mid-weight cotton twill, finished with a clean waistband and no visible pockets.",
+    "id": 4,
+    "slug": "tapered-trouser",
+    "image": "/products/tapered-trouser.svg"
+  },
+  {
+    "name": "Merino Turtleneck",
+    "category": "Apparel",
+    "price": 148,
+    "color": "#6b6459",
+    "desc": "Fine-gauge merino wool turtleneck, naturally temperature-regulating and soft against the skin.",
+    "id": 5,
+    "slug": "merino-turtleneck",
+    "image": "/products/merino-turtleneck.svg"
+  },
+  {
+    "name": "Leather Belt",
+    "category": "Accessories",
+    "price": 92,
+    "color": "#5c4632",
+    "desc": "Full-grain vegetable-tanned leather belt with a solid brass buckle. Ages beautifully with wear.",
+    "id": 6,
+    "slug": "leather-belt",
+    "image": "/products/leather-belt.svg"
+  },
+  {
+    "name": "Wool Scarf",
+    "category": "Accessories",
+    "price": 78,
+    "color": "#9c8468",
+    "desc": "Oversized wool scarf woven in a subtle herringbone. Generous length for multiple wrap styles.",
+    "id": 7,
+    "slug": "wool-scarf",
+    "image": "/products/wool-scarf.svg"
+  },
+  {
+    "name": "Card Holder",
+    "category": "Accessories",
+    "price": 58,
+    "color": "#3f3a34",
+    "desc": "Slim leather card holder with four card slots and a central pocket for folded notes.",
+    "id": 8,
+    "slug": "card-holder",
+    "image": "/products/card-holder.svg"
+  },
+  {
+    "name": "Canvas Tote",
+    "category": "Accessories",
+    "price": 68,
+    "color": "#d8cfb8",
+    "desc": "Heavyweight canvas tote with leather handles, structured base, and an interior zip pocket.",
+    "id": 9,
+    "slug": "canvas-tote",
+    "image": "/products/canvas-tote.svg"
+  },
+  {
+    "name": "Signet Ring",
+    "category": "Accessories",
+    "price": 145,
+    "color": "#b08d57",
+    "desc": "Solid brass signet ring with a hand-polished face. Sold individually, sized to order.",
+    "id": 10,
+    "slug": "signet-ring",
+    "image": "/products/signet-ring.svg"
+  },
+  {
+    "name": "Ceramic Vase",
+    "category": "Home",
+    "price": 86,
+    "color": "#cbb59c",
+    "desc": "Hand-thrown stoneware vase with a matte reactive glaze. No two pieces are exactly alike.",
+    "id": 11,
+    "slug": "ceramic-vase",
+    "image": "/products/ceramic-vase.svg"
+  },
+  {
+    "name": "Linen Bedding Set",
+    "category": "Home",
+    "price": 195,
+    "color": "#e8e1d1",
+    "desc": "Stonewashed linen duvet cover and pillowcase set. Softens with every wash.",
+    "id": 12,
+    "slug": "linen-bedding-set",
+    "image": "/products/linen-bedding-set.svg"
+  },
+  {
+    "name": "Oak Cutting Board",
+    "category": "Home",
+    "price": 74,
+    "color": "#8f7048",
+    "desc": "Solid oak end-grain cutting board, finished with food-safe mineral oil.",
+    "id": 13,
+    "slug": "oak-cutting-board",
+    "image": "/products/oak-cutting-board.svg"
+  },
+  {
+    "name": "Wool Throw",
+    "category": "Home",
+    "price": 118,
+    "color": "#a99a7c",
+    "desc": "Lambswool throw blanket woven in a classic herringbone weave, finished with a whipped edge.",
+    "id": 14,
+    "slug": "wool-throw",
+    "image": "/products/wool-throw.svg"
+  },
+  {
+    "name": "Glass Carafe",
+    "category": "Home",
+    "price": 48,
+    "color": "#dfe4df",
+    "desc": "Hand-blown borosilicate glass carafe with a natural cork stopper.",
+    "id": 15,
+    "slug": "glass-carafe",
+    "image": "/products/glass-carafe.svg"
+  },
+  {
+    "name": "Brass Candle Holder",
+    "category": "Objects",
+    "price": 54,
+    "color": "#a67c3d",
+    "desc": "Solid brass candle holder with a raw, unlacquered finish that will patina over time.",
+    "id": 16,
+    "slug": "brass-candle-holder",
+    "image": "/products/brass-candle-holder.svg"
+  },
+  {
+    "name": "Marble Coasters",
+    "category": "Objects",
+    "price": 42,
+    "color": "#d9d5cd",
+    "desc": "Set of four honed marble coasters with cork backing. Each piece uniquely veined.",
+    "id": 17,
+    "slug": "marble-coasters",
+    "image": "/products/marble-coasters.svg"
+  },
+  {
+    "name": "Ceramic Bowl Set",
+    "category": "Objects",
+    "price": 96,
+    "color": "#c2ad8f",
+    "desc": "Set of three nesting ceramic bowls in a soft matte glaze, stackable for easy storage.",
+    "id": 18,
+    "slug": "ceramic-bowl-set",
+    "image": "/products/ceramic-bowl-set.svg"
+  }
+]
