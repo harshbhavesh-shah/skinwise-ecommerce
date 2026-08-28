@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
+import ConcernIcon from "./ConcernIcon";
 
 export default function FilterBar({
   concerns,
@@ -27,22 +28,31 @@ export default function FilterBar({
     router.push(`/${qs ? `?${qs}` : ""}`);
   };
 
-  const allConcerns = ["All", ...concerns];
-
   return (
-    <div className="mb-9">
-      <div className="mb-4 flex flex-wrap items-center gap-2.5">
-        {allConcerns.map((c) => (
+    <div className="mb-10">
+      <div className="mb-5 flex flex-wrap items-center gap-2.5">
+        <button
+          onClick={() => updateParam("concern", "All")}
+          className={`cursor-pointer rounded-full border px-5 py-2.5 text-[13.5px] font-medium transition-colors ${
+            activeConcern === "All"
+              ? "border-ink bg-ink text-white"
+              : "border-line bg-white text-ink-soft hover:border-ink hover:text-ink"
+          }`}
+        >
+          All Concerns
+        </button>
+        {concerns.map((c) => (
           <button
             key={c}
             onClick={() => updateParam("concern", c)}
-            className={`cursor-pointer rounded-full border px-5 py-2.5 text-[13.5px] font-medium transition-colors ${
+            className={`flex cursor-pointer items-center gap-2 rounded-full border px-5 py-2.5 text-[13.5px] font-medium transition-colors ${
               activeConcern === c
                 ? "border-ink bg-ink text-white"
                 : "border-line bg-white text-ink-soft hover:border-ink hover:text-ink"
             }`}
           >
-            {c === "All" ? "All Concerns" : c}
+            <ConcernIcon name={c} className="h-4 w-4 shrink-0" />
+            {c}
           </button>
         ))}
       </div>

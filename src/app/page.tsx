@@ -44,23 +44,33 @@ export default function Home({
   searchParams: Promise<{ concern?: string; type?: string; q?: string }>;
 }) {
   return (
-    <div className="mx-auto max-w-7xl px-8">
-      <section className="py-16 text-center md:py-20">
-        <div className="mb-4 text-[12.5px] font-semibold uppercase tracking-[2px] text-accent">
-          Clinically Formulated
+    <div>
+      <section
+        className="border-b border-line py-16 text-center md:py-20"
+        style={{
+          background:
+            "radial-gradient(120% 100% at 50% 0%, var(--bg-2) 0%, var(--bg) 60%)",
+        }}
+      >
+        <div className="mx-auto max-w-7xl px-8">
+          <div className="mb-4 text-[12.5px] font-semibold uppercase tracking-[2px] text-accent">
+            Clinically Formulated
+          </div>
+          <h1 className="mx-auto mb-4 max-w-2xl text-[34px] font-medium leading-tight md:text-[48px]">
+            Dermatologist-trusted skincare, <em className="text-accent">sorted by what you need.</em>
+          </h1>
+          <p className="mx-auto max-w-lg text-[16px] text-ink-soft">
+            Authentic products from Bioderma, CeraVe, La Roche-Posay and more —
+            browse by skin concern to find what actually works for you.
+          </p>
         </div>
-        <h1 className="mx-auto mb-4 max-w-2xl text-[34px] font-medium leading-tight md:text-[48px]">
-          Dermatologist-trusted skincare, sorted by what you need.
-        </h1>
-        <p className="mx-auto max-w-lg text-[16px] text-ink-soft">
-          Authentic products from Bioderma, CeraVe, La Roche-Posay and more —
-          browse by skin concern to find what actually works for you.
-        </p>
       </section>
 
-      <Suspense fallback={<div className="pb-24 text-center text-ink-soft">Loading…</div>}>
-        <ProductResults searchParams={searchParams} />
-      </Suspense>
+      <div className="mx-auto max-w-7xl px-8 pt-14">
+        <Suspense fallback={<div className="pb-24 text-center text-ink-soft">Loading…</div>}>
+          <ProductResults searchParams={searchParams} />
+        </Suspense>
+      </div>
     </div>
   );
 }

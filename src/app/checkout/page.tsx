@@ -6,14 +6,18 @@ import { useCart } from "@/lib/cart-context";
 import { getProductBySlug, formatPrice } from "@/lib/products";
 
 export default function CheckoutPage() {
-  const { lines, subtotal, clear } = useCart();
+  const { lines, subtotal, clear, hydrated } = useCart();
   const router = useRouter();
   const [placing, setPlacing] = useState(false);
+  // Treat the cart as empty until localStorage has been read, so the first
+  // client render always matches the server's (necessarily empty) render.
+  const visibleLines = hydrated ? lines : [];
+  const visibleSubtotal = hydrated ? subtotal : 0;
 
-  const shipping = subtotal > 150 || subtotal === 0 ? 0 : 12;
-  const total = subtotal + shipping;
+  const shipping = visibleSubtotal > 999 || visibleSubtotal === 0 ? 0 : 99;
+  const total = visibleSubtotal + shipping;
 
-  if (lines.length === 0 && !placing) {
+  if (visibleLines.length === 0 && !placing) {
     return (
       <div className="mx-auto max-w-7xl px-8 py-24 text-center">
         <h1 className="mb-3 text-[28px] font-medium">Nothing to check out</h1>
@@ -72,7 +76,7 @@ export default function CheckoutPage() {
         <div className="h-fit rounded-2xl border border-line bg-white p-7">
           <h3 className="mb-5 text-lg font-medium">Order Summary</h3>
           <div className="mb-5 flex flex-col gap-4">
-            {lines.map((line) => {
+            {visibleLines.map((line) => {
               const product = getProductBySlug(line.slug);
               if (!product) return null;
               return (
@@ -87,7 +91,7 @@ export default function CheckoutPage() {
           </div>
           <div className="mb-3 flex justify-between border-t border-line pt-4 text-[14.5px] text-ink-soft">
             <span>Subtotal</span>
-            <span>{formatPrice(subtotal)}</span>
+            <span>{formatPrice(visibleSubtotal)}</span>
           </div>
           <div className="mb-3 flex justify-between text-[14.5px] text-ink-soft">
             <span>Shipping</span>

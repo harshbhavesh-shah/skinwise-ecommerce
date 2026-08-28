@@ -24,6 +24,11 @@ type CartContextValue = {
   count: number;
   subtotal: number;
   clear: () => void;
+  // False until the client has read localStorage. Anything derived from
+  // `lines` that renders differently before/after that read (the cart
+  // badge, in particular) should stay gated on this to avoid a hydration
+  // mismatch against the server's always-empty initial render.
+  hydrated: boolean;
 };
 
 const CartContext = createContext<CartContextValue | null>(null);
@@ -103,6 +108,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     count,
     subtotal,
     clear,
+    hydrated,
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

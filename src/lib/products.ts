@@ -76,5 +76,5 @@ export function filterProducts(
 }
 
 export function formatPrice(price: number): string {
-  return `$${price.toFixed(0)}`;
+  return `₹${price.toLocaleString("en-IN")}`;
 }

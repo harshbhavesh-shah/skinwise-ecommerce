@@ -8,6 +8,10 @@ export type Product = {
   price: number;
   color: string;
   desc: string;
+  longDesc: string;
+  keyIngredients: string[];
+  fullIngredients: string;
+  doctorOpinion: string;
   image: string;
 };
 
