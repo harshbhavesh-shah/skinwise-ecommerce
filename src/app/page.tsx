@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { filterProducts, getConcerns, getTypes } from "@/lib/products";
 import FilterBar from "@/components/FilterBar";
 import ProductCard from "@/components/ProductCard";
+import HeroAskSlot from "@/components/HeroAskSlot";
 
 function EmptyState() {
   return (
@@ -59,10 +60,11 @@ export default function Home({
           <h1 className="mx-auto mb-4 max-w-2xl text-[34px] font-medium leading-tight md:text-[48px]">
             Dermatologist-trusted skincare, <em className="text-accent">sorted by what you need.</em>
           </h1>
-          <p className="mx-auto max-w-lg text-[16px] text-ink-soft">
+          <p className="mx-auto mb-9 max-w-lg text-[16px] text-ink-soft">
             Authentic products from Bioderma, CeraVe, La Roche-Posay and more —
             browse by skin concern to find what actually works for you.
           </p>
+          <HeroAskSlot />
         </div>
       </section>
 

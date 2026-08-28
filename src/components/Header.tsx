@@ -8,7 +8,7 @@ import { useCart } from "@/lib/cart-context";
 export default function Header() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { count, openCart, hydrated } = useCart();
+  const { count, openCart } = useCart();
   const [query, setQuery] = useState(searchParams.get("q") ?? "");
 
   useEffect(() => {
@@ -77,7 +77,7 @@ export default function Header() {
                 <circle cx="9" cy="20" r="1.4" />
                 <circle cx="18" cy="20" r="1.4" />
               </svg>
-              {hydrated && count > 0 && (
+              {count > 0 && (
                 <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[10px] font-semibold text-white">
                   {count}
                 </span>

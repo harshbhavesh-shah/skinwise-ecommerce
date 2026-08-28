@@ -3,9 +3,12 @@ import { Suspense } from "react";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/lib/cart-context";
+import { AskAgentProvider } from "@/lib/ask-agent-context";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
+import AskAgentPanel from "@/components/AskAgentPanel";
+import FloatingAskButton from "@/components/FloatingAskButton";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -35,12 +38,16 @@ export default function RootLayout({
     <html lang="en" className={`${fraunces.variable} ${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <CartProvider>
-          <Suspense fallback={null}>
-            <Header />
-          </Suspense>
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <CartDrawer />
+          <AskAgentProvider>
+            <Suspense fallback={null}>
+              <Header />
+            </Suspense>
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <CartDrawer />
+            <AskAgentPanel />
+            <FloatingAskButton />
+          </AskAgentProvider>
         </CartProvider>
       </body>
     </html>

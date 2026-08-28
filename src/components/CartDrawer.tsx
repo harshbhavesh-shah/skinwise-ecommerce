@@ -6,10 +6,7 @@ import { useCart } from "@/lib/cart-context";
 import { getProductBySlug, formatPrice } from "@/lib/products";
 
 export default function CartDrawer() {
-  const { lines, isOpen, closeCart, setQty, removeItem, subtotal, hydrated } = useCart();
-  // Treat the cart as empty until localStorage has been read, so the first
-  // client render always matches the server's (necessarily empty) render.
-  const visibleLines = hydrated ? lines : [];
+  const { lines, isOpen, closeCart, setQty, removeItem, subtotal } = useCart();
 
   return (
     <>
@@ -37,12 +34,12 @@ export default function CartDrawer() {
         </div>
 
         <div className="flex-1 overflow-y-auto px-6 py-5">
-          {visibleLines.length === 0 ? (
+          {lines.length === 0 ? (
             <p className="py-16 text-center text-sm text-ink-soft">
               Your cart is empty.
             </p>
           ) : (
-            visibleLines.map((line) => {
+            lines.map((line) => {
               const product = getProductBySlug(line.slug);
               if (!product) return null;
               return (
@@ -86,7 +83,7 @@ export default function CartDrawer() {
         <div className="border-t border-line px-6 py-6">
           <div className="mb-4 flex justify-between text-[15px] font-medium">
             <span>Subtotal</span>
-            <span>{formatPrice(hydrated ? subtotal : 0)}</span>
+            <span>{formatPrice(subtotal)}</span>
           </div>
           <Link
             href="/cart"
