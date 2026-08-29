@@ -5,13 +5,13 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/lib/cart-context";
 import { getProductBySlug, formatPrice } from "@/lib/products";
+import { computeOrderTotal } from "@/lib/pricing";
 
 export default function CartPage() {
-  const { lines, setQty, removeItem, subtotal } = useCart();
+  const { lines, setQty, removeItem } = useCart();
   const router = useRouter();
 
-  const shipping = subtotal > 999 || subtotal === 0 ? 0 : 99;
-  const total = subtotal + shipping;
+  const { subtotal, shipping, total } = computeOrderTotal(lines);
 
   if (lines.length === 0) {
     return (

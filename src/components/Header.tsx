@@ -41,7 +41,9 @@ export default function Header() {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} className="h-6 w-6 text-accent">
               <path d="M12 3c3 4.5 6 8 6 11.5A6 6 0 0 1 6 14.5C6 11 9 7.5 12 3z" />
             </svg>
-            SkinWise
+            <span>
+              SkinWise<span className="ml-px align-super text-[11px] font-normal">&trade;</span>
+            </span>
           </Link>
           <nav className="hidden shrink-0 gap-6 text-sm text-ink-soft md:flex">
             <Link href="/" className="hover:text-ink">Shop All</Link>

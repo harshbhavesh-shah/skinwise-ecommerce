@@ -6,7 +6,9 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-8">
         <div className="grid grid-cols-1 gap-10 border-b border-white/10 pb-11 md:grid-cols-3">
           <div>
-            <div className="mb-3.5 font-serif text-xl text-white">SkinWise</div>
+            <div className="mb-3.5 font-serif text-xl text-white">
+              SkinWise<span className="ml-px align-super text-[11px] font-normal">&trade;</span>
+            </div>
             <p className="text-[13.5px]">
               Authentic, dermatologist-trusted skincare from Bioderma, CeraVe,
               La Roche-Posay and more — sorted by skin concern, not guesswork.
