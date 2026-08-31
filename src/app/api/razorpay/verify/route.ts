@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
-import { createOrder } from "@/lib/orders";
+import { appendEmailLog, createOrder, getOrder } from "@/lib/orders";
 import { computeOrderTotal } from "@/lib/pricing";
+import { buildConfirmationEmail, sendEmail } from "@/lib/email";
 import type { CartLine, CustomerInfo } from "@/lib/types";
 
 export const runtime = "nodejs";
@@ -95,6 +96,17 @@ export async function POST(req: NextRequest) {
       shipping,
       total,
     });
+
+    // Best-effort confirmation email — a failure here shouldn't affect the
+    // checkout response, the customer already has a working order either way.
+    const order = await getOrder(razorpay_payment_id);
+    if (order) {
+      const { subject, html } = buildConfirmationEmail(order);
+      const result = await sendEmail(order.customer.email, subject, html);
+      if (result.sent) {
+        await appendEmailLog(order.id, subject);
+      }
+    }
   } catch (err) {
     // The payment already succeeded at this point — don't fail the customer's
     // checkout over a storage hiccup, but make sure it's loud in the logs
