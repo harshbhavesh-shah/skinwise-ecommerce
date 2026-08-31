@@ -2,23 +2,63 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import type { Product } from "@/lib/types";
 import { formatPrice } from "@/lib/products";
 import { useCart } from "@/lib/cart-context";
 
+const CYCLE_INTERVAL_MS = 900;
+
 export default function ProductCard({ product }: { product: Product }) {
   const { addItem } = useCart();
+  const images = product.images && product.images.length > 0 ? product.images : [product.image];
+  const [activeIndex, setActiveIndex] = useState(0);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const startCycling = () => {
+    if (images.length <= 1 || intervalRef.current) return;
+    intervalRef.current = setInterval(() => {
+      setActiveIndex((i) => (i + 1) % images.length);
+    }, CYCLE_INTERVAL_MS);
+  };
+
+  const stopCycling = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+    setActiveIndex(0);
+  };
+
+  useEffect(() => stopCycling, []);
 
   return (
-    <Link href={`/product/${product.slug}`} className="group block">
+    <Link
+      href={`/product/${product.slug}`}
+      className="group block"
+      onMouseEnter={startCycling}
+      onMouseLeave={stopCycling}
+    >
       <div className="relative mb-3.5 aspect-[5/6] overflow-hidden rounded-2xl bg-bg-2">
         <Image
-          src={product.image}
+          src={images[activeIndex]}
           alt={product.name}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-[1.045]"
           sizes="(max-width: 640px) 50vw, (max-width: 980px) 33vw, 25vw"
         />
+        {images.length > 1 && (
+          <div className="absolute inset-x-0 top-2.5 flex justify-center gap-1">
+            {images.map((_, i) => (
+              <span
+                key={i}
+                className={`h-1 w-1 rounded-full transition-colors duration-200 ${
+                  i === activeIndex ? "bg-white" : "bg-white/40"
+                }`}
+              />
+            ))}
+          </div>
+        )}
         <button
           onClick={(e) => {
             e.preventDefault();

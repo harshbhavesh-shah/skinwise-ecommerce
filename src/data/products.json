@@ -11,7 +11,7 @@
     "id": 1,
     "slug": "bioderma-sensibio-h2o-micellar-water",
     "image": "/products/bioderma-sensibio-h2o-micellar-water.svg",
-    "desc": "A gentle, no-rinse micellar water that removes makeup and impurities without disrupting the skin's natural barrier \u2014 formulated for sensitive skin.",
+    "desc": "A gentle, no-rinse micellar water that removes makeup and impurities without disrupting the skin's natural barrier — formulated for sensitive skin.",
     "keyIngredients": [
       "Micellar technology",
       "Cucumber extract",
@@ -19,10 +19,10 @@
     ],
     "longDesc": "Formulated for the most reactive skin types, this iconic micellar water uses patented biomimetic technology to lift away makeup, sunscreen, and daily grime without rubbing or rinsing. It respects the skin's natural pH and helps calm redness and tightness immediately after use, making it a staple first step for sensitive, intolerant, and allergy-prone skin.",
     "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "I recommend Sensibio H2O as a first step for almost every patient with reactive or intolerant skin \u2014 it's one of the few cleansing waters I've seen genuinely calm redness rather than provoke it. A good baseline product to build a routine around."
+    "doctorOpinion": "I recommend Sensibio H2O as a first step for almost every patient with reactive or intolerant skin — it's one of the few cleansing waters I've seen genuinely calm redness rather than provoke it. A good baseline product to build a routine around."
   },
   {
-    "name": "S\u00e9bium Foaming Gel",
+    "name": "Sébium Foaming Gel",
     "brand": "Bioderma",
     "type": "Cleanser",
     "concerns": [
@@ -32,7 +32,7 @@
     "color": "#8fae9e",
     "id": 2,
     "slug": "bioderma-sebium-foaming-gel",
-    "image": "/products/bioderma-sebium-foaming-gel.svg",
+    "image": "/products/bioderma-sebium-foaming-gel-real-v2.jpg",
     "desc": "A purifying foaming cleanser for oily, acne-prone skin that removes excess sebum without over-drying.",
     "keyIngredients": [
       "Fluidactiv complex",
@@ -54,7 +54,7 @@
     "color": "#c9d6c9",
     "id": 3,
     "slug": "bioderma-atoderm-cream",
-    "image": "/products/bioderma-atoderm-cream.svg",
+    "image": "/products/bioderma-atoderm-cream-real.jpg",
     "desc": "A rich, fast-absorbing body and face cream that restores comfort to very dry, fragile skin.",
     "keyIngredients": [
       "Skin barrier lipids",
@@ -76,7 +76,7 @@
     "color": "#7f9c96",
     "id": 4,
     "slug": "bioderma-node-anti-dandruff-shampoo",
-    "image": "/products/bioderma-node-anti-dandruff-shampoo.svg",
+    "image": "/products/bioderma-node-anti-dandruff-shampoo-real-v2.jpg",
     "desc": "A soothing shampoo that reduces flaking and scalp irritation with regular use.",
     "keyIngredients": [
       "Piroctone olamine",
@@ -85,7 +85,7 @@
     ],
     "longDesc": "A soothing, frequent-use shampoo that gently cleanses the scalp while reducing flaking and the itch-scratch cycle associated with dandruff. Free from harsh sulfates, it's gentle enough for daily use while remaining effective against persistent scalp flaking.",
     "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "A well-tolerated option for patients who need frequent washing but still deal with flaking \u2014 I recommend it particularly for those who find medicated shampoos too harsh for daily use."
+    "doctorOpinion": "A well-tolerated option for patients who need frequent washing but still deal with flaking — I recommend it particularly for those who find medicated shampoos too harsh for daily use."
   },
   {
     "name": "Foaming Facial Cleanser",
@@ -105,9 +105,9 @@
       "Niacinamide",
       "Hyaluronic acid"
     ],
-    "longDesc": "Developed with dermatologists, this foaming gel cleanser removes excess oil and impurities from normal to oily skin while three essential ceramides and niacinamide work to maintain and restore the skin's natural barrier \u2014 so your skin feels clean, never tight or stripped.",
+    "longDesc": "Developed with dermatologists, this foaming gel cleanser removes excess oil and impurities from normal to oily skin while three essential ceramides and niacinamide work to maintain and restore the skin's natural barrier — so your skin feels clean, never tight or stripped.",
     "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "CeraVe's ceramide-based cleansers are among the most frequently recommended in my practice \u2014 the science is solid, the formulations are consistent, and patients rarely react badly to them, even with compromised skin barriers."
+    "doctorOpinion": "CeraVe's ceramide-based cleansers are among the most frequently recommended in my practice — the science is solid, the formulations are consistent, and patients rarely react badly to them, even with compromised skin barriers."
   },
   {
     "name": "Hydrating Facial Cleanser",
@@ -172,9 +172,9 @@
       "3 essential ceramides",
       "Urea"
     ],
-    "longDesc": "A lightweight, fast-absorbing lotion that combines salicylic acid with ceramides to gently exfoliate rough, bumpy skin texture (including keratosis pilaris) while restoring hydration and barrier function \u2014 without the irritation typically associated with exfoliating acids.",
+    "longDesc": "A lightweight, fast-absorbing lotion that combines salicylic acid with ceramides to gently exfoliate rough, bumpy skin texture (including keratosis pilaris) while restoring hydration and barrier function — without the irritation typically associated with exfoliating acids.",
     "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "Useful for patients dealing with rough, bumpy skin texture \u2014 the combination of salicylic acid with ceramides means we get gentle exfoliation without the irritation I'd otherwise worry about."
+    "doctorOpinion": "Useful for patients dealing with rough, bumpy skin texture — the combination of salicylic acid with ceramides means we get gentle exfoliation without the irritation I'd otherwise worry about."
   },
   {
     "name": "Resurfacing Retinol Serum",
@@ -217,9 +217,9 @@
       "Hyaluronic acid",
       "Vitamin E"
     ],
-    "longDesc": "A potent brightening serum combining 10% pure L-ascorbic acid with hyaluronic acid to visibly brighten skin tone, soften the look of fine lines, and support the skin's natural collagen production \u2014 formulated to minimize the sting often associated with vitamin C serums.",
+    "longDesc": "A potent brightening serum combining 10% pure L-ascorbic acid with hyaluronic acid to visibly brighten skin tone, soften the look of fine lines, and support the skin's natural collagen production — formulated to minimize the sting often associated with vitamin C serums.",
     "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "I recommend this to patients looking to address dullness or early pigmentation who haven't tolerated vitamin C serums well in the past \u2014 the formulation is better buffered than most drugstore options."
+    "doctorOpinion": "I recommend this to patients looking to address dullness or early pigmentation who haven't tolerated vitamin C serums well in the past — the formulation is better buffered than most drugstore options."
   },
   {
     "name": "Dandruff Relief Shampoo",
@@ -261,9 +261,9 @@
       "Salicylic acid (LHA)",
       "Micro-exfoliating agents"
     ],
-    "longDesc": "A dual-action leave-on treatment gel that targets active blemishes with micro-exfoliating LHA while niacinamide works to visibly reduce the appearance of post-acne marks \u2014 formulated to be non-comedogenic and suitable for sensitive, acne-prone skin.",
+    "longDesc": "A dual-action leave-on treatment gel that targets active blemishes with micro-exfoliating LHA while niacinamide works to visibly reduce the appearance of post-acne marks — formulated to be non-comedogenic and suitable for sensitive, acne-prone skin.",
     "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "I frequently suggest Effaclar Duo as an adjunct to prescription acne treatment \u2014 the niacinamide component genuinely helps with the post-inflammatory marks that bother patients as much as active breakouts."
+    "doctorOpinion": "I frequently suggest Effaclar Duo as an adjunct to prescription acne treatment — the niacinamide component genuinely helps with the post-inflammatory marks that bother patients as much as active breakouts."
   },
   {
     "name": "Anthelios Sunscreen SPF 50",
@@ -305,7 +305,7 @@
       "Ceramide-3",
       "Niacinamide"
     ],
-    "longDesc": "A fragrance-free daily moisturizer built around La Roche-Posay's prebiotic thermal spring water, designed to soothe reactivity while replenishing the skin barrier \u2014 dermatologist-recommended for sensitive and allergy-prone skin, including post-procedure care.",
+    "longDesc": "A fragrance-free daily moisturizer built around La Roche-Posay's prebiotic thermal spring water, designed to soothe reactivity while replenishing the skin barrier — dermatologist-recommended for sensitive and allergy-prone skin, including post-procedure care.",
     "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
     "doctorOpinion": "A dependable choice for patients recovering from procedures or dealing with reactive, easily-irritated skin. Fragrance-free and genuinely gentle, not just labeled as such."
   },
@@ -352,7 +352,7 @@
     ],
     "longDesc": "A targeted serum formulated to visibly reduce the appearance of dark spots, post-acne marks, and uneven skin tone. LHA gently resurfaces while niacinamide and Vitamin CG work beneath the surface to interrupt excess pigment production.",
     "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "A solid option for early hyperpigmentation and post-acne marks. I set realistic expectations with patients \u2014 visible improvement takes 8-12 weeks of consistent use, but the formulation is sound."
+    "doctorOpinion": "A solid option for early hyperpigmentation and post-acne marks. I set realistic expectations with patients — visible improvement takes 8-12 weeks of consistent use, but the formulation is sound."
   },
   {
     "name": "Hydro Boost Water Gel",
@@ -372,7 +372,7 @@
       "Glycerin",
       "Dimethicone"
     ],
-    "longDesc": "An oil-free gel-cream that instantly quenches dry skin and continues hydrating over time. Its hyaluronic acid-infused formula plumps skin with intense moisture while feeling completely weightless \u2014 never greasy or heavy, even in humid climates.",
+    "longDesc": "An oil-free gel-cream that instantly quenches dry skin and continues hydrating over time. Its hyaluronic acid-infused formula plumps skin with intense moisture while feeling completely weightless — never greasy or heavy, even in humid climates.",
     "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
     "doctorOpinion": "A good, accessible hydrating option for patients with normal to oily skin who find heavier creams too much. The hyaluronic acid base does real work without adding weight."
   },
@@ -394,9 +394,9 @@
       "Hyaluronic acid",
       "Glucose complex"
     ],
-    "longDesc": "A fast-absorbing anti-aging serum with accelerated retinol SA technology that visibly reduces the look of fine lines and wrinkles, with results dermatologists say are comparable to prescription retinoids \u2014 without a prescription.",
+    "longDesc": "A fast-absorbing anti-aging serum with accelerated retinol SA technology that visibly reduces the look of fine lines and wrinkles, with results dermatologists say are comparable to prescription retinoids — without a prescription.",
     "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "For patients not ready for a prescription retinoid, this is a reasonable stepping stone with real, published clinical data behind it \u2014 not just marketing claims."
+    "doctorOpinion": "For patients not ready for a prescription retinoid, this is a reasonable stepping stone with real, published clinical data behind it — not just marketing claims."
   },
   {
     "name": "Ultra Sheer Sunscreen SPF 55",
@@ -439,9 +439,9 @@
       "Natural moisturizing factors",
       "Urea"
     ],
-    "longDesc": "A fragrance-free, fast-absorbing cream formulated with ceramide-3 and natural moisturizing factors to provide 48-hour relief for very dry, flaking skin \u2014 clinically shown to repair the driest of skin without a greasy after-feel.",
+    "longDesc": "A fragrance-free, fast-absorbing cream formulated with ceramide-3 and natural moisturizing factors to provide 48-hour relief for very dry, flaking skin — clinically shown to repair the driest of skin without a greasy after-feel.",
     "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "I recommend this often for patients with chronic dry skin conditions who need something dependable for daily maintenance \u2014 it consistently performs well without irritating already-compromised skin."
+    "doctorOpinion": "I recommend this often for patients with chronic dry skin conditions who need something dependable for daily maintenance — it consistently performs well without irritating already-compromised skin."
   },
   {
     "name": "Eczema Relief Cream",
@@ -485,11 +485,11 @@
     ],
     "longDesc": "Free of dyes, fragrance, lanolin, parabens, and formaldehyde, this cleanser was developed for people with the most easily irritated skin. It removes makeup and impurities effectively while leaving skin feeling calm, never tight or reactive.",
     "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "For my most sensitive and reactive patients \u2014 including those with confirmed contact allergies \u2014 Vanicream is usually where I start. The minimal ingredient list matters more than people realize."
+    "doctorOpinion": "For my most sensitive and reactive patients — including those with confirmed contact allergies — Vanicream is usually where I start. The minimal ingredient list matters more than people realize."
   },
   {
     "name": "Cicalfate+ Repair Cream",
-    "brand": "Av\u00e8ne",
+    "brand": "Avène",
     "type": "Treatment",
     "concerns": [
       "Eczema",
@@ -502,11 +502,11 @@
     "image": "/products/avene-cicalfate-plus-repair-cream.svg",
     "desc": "A restorative cream that helps soothe and protect compromised, irritated, or eczema-prone skin.",
     "keyIngredients": [
-      "Av\u00e8ne thermal spring water",
+      "Avène thermal spring water",
       "Copper & zinc sulfate",
       "Postbiotic complex"
     ],
-    "longDesc": "A restorative, fast-acting cream that helps soothe and protect skin affected by irritation, minor wounds, or eczema flare-ups. Av\u00e8ne thermal spring water combined with copper and zinc sulfate helps calm compromised skin and support visible recovery.",
+    "longDesc": "A restorative, fast-acting cream that helps soothe and protect skin affected by irritation, minor wounds, or eczema flare-ups. Avène thermal spring water combined with copper and zinc sulfate helps calm compromised skin and support visible recovery.",
     "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
     "doctorOpinion": "Useful for patients recovering from minor skin trauma, procedures, or eczema flares where the skin barrier needs active support alongside routine care."
   },
@@ -528,8 +528,76 @@
       "Anti-fungal complex",
       "Conditioning agents"
     ],
-    "longDesc": "A clinical-strength, dermatologist-recommended shampoo with 1% ketoconazole that treats the fungus associated with stubborn dandruff at its source \u2014 visibly reducing flaking and itch, often within the first few uses.",
+    "longDesc": "A clinical-strength, dermatologist-recommended shampoo with 1% ketoconazole that treats the fungus associated with stubborn dandruff at its source — visibly reducing flaking and itch, often within the first few uses.",
     "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
     "doctorOpinion": "For persistent, fungal-driven dandruff that hasn't responded to gentler shampoos, ketoconazole-based options like this one are usually my next recommendation before considering prescription alternatives."
+  },
+  {
+    "name": "Pigmentbio Foaming Cream",
+    "brand": "Bioderma",
+    "type": "Cleanser",
+    "concerns": [
+      "Hyperpigmentation",
+      "Sensitive Skin"
+    ],
+    "price": 1349,
+    "color": "#d9d9d9",
+    "id": 25,
+    "slug": "bioderma-pigmentbio-foaming-cream",
+    "image": "/products/bioderma-pigmentbio-foaming-cream-real-01.jpg",
+    "desc": "A brightening cleanser with gentle exfoliating microbeads that evens tone and fades dark spots over time.",
+    "keyIngredients": [
+      "Soluble microbeads",
+      "Patented brightening complex",
+      "Gentle surfactants"
+    ],
+    "longDesc": "A brightening foaming cleanser formulated for skin with dark spots and uneven tone. Soluble microbeads gently exfoliate while a patented combination of active ingredients works to unify and illuminate the complexion, without compromising the sensitive skin barrier.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "A good first step for patients tackling post-inflammatory dark spots who also need a cleanser gentle enough for reactive skin — the exfoliation is mild enough not to aggravate sensitivity."
+  },
+  {
+    "name": "Atoderm Intensive Baume",
+    "brand": "Bioderma",
+    "type": "Moisturizer",
+    "concerns": [
+      "Eczema",
+      "Dryness & Hydration"
+    ],
+    "price": 1599,
+    "color": "#bcd3e6",
+    "id": 26,
+    "slug": "bioderma-atoderm-intensive-baume",
+    "image": "/products/bioderma-atoderm-intensive-baume-real-v2.jpg",
+    "desc": "An ultra-soothing balm that restores comfort to irritated skin with an atopic tendency.",
+    "keyIngredients": [
+      "Skin Barrier Therapy complex",
+      "Lipid-replenishing actives",
+      "Anti-itch agents"
+    ],
+    "longDesc": "An intensive, ultra-soothing balm designed for irritated skin with an atopic tendency. It restores and replenishes the skin's lipid barrier while calming itching, making it well suited to daily use on very dry, reactive areas prone to flare-ups.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "I recommend this balm for patients managing atopic-tendency skin day to day — it's rich enough to calm active itching but still comfortable enough for regular use, not just flare-ups."
+  },
+  {
+    "name": "Blemish Control Cleanser",
+    "brand": "CeraVe",
+    "type": "Cleanser",
+    "concerns": [
+      "Acne"
+    ],
+    "price": 949,
+    "color": "#8fc4c9",
+    "id": 27,
+    "slug": "cerave-blemish-control-cleanser",
+    "image": "/products/cerave-blemish-control-cleanser-01.jpg",
+    "desc": "An oil-absorbing foaming gel cleanser with 3 essential ceramides, salicylic acid and niacinamide for blemish-prone skin.",
+    "keyIngredients": [
+      "Salicylic acid 2%",
+      "Niacinamide",
+      "3 essential ceramides"
+    ],
+    "longDesc": "A gel cleanser that dispenses clear and transforms into a foam as you lather, formulated with 3 essential ceramides, 2% salicylic acid and niacinamide. Its oil-absorbing technology and hectorite clay unclog pores and reduce excess shine, while visibly reducing blackheads and breakouts in as little as one week, without disrupting the skin barrier.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "A well-balanced option for blemish-prone skin — the salicylic acid and clay handle excess oil while the ceramides keep the barrier from getting stripped, which is where a lot of acne cleansers go wrong."
   }
 ]

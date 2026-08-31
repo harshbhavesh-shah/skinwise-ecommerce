@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { products, getProductBySlug, getRelated, formatPrice } from "@/lib/products";
 import ProductCard from "@/components/ProductCard";
+import ProductGallery from "@/components/ProductGallery";
 import AddToCartForm from "@/components/AddToCartForm";
 
 export function generateStaticParams() {
@@ -51,15 +51,25 @@ export default async function ProductPage({
       </div>
 
       <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
-        <div className="relative aspect-[5/6] overflow-hidden rounded-[20px] bg-bg-2 md:sticky md:top-28">
-          <Image
-            src={product.image}
+        <div className="md:sticky md:top-28">
+          <ProductGallery
+            images={product.images && product.images.length > 0 ? product.images : [product.image]}
             alt={`${product.brand} ${product.name}`}
-            fill
-            className="object-cover"
-            priority
-            sizes="(max-width: 768px) 100vw, 50vw"
           />
+          {product.imageAttribution && (
+            <p className="mt-2.5 text-[11.5px] text-ink-soft">
+              Photo:{" "}
+              <a
+                href={product.imageAttribution.url}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="underline hover:text-ink"
+              >
+                {product.imageAttribution.source}
+              </a>{" "}
+              contributor, {product.imageAttribution.license}
+            </p>
+          )}
         </div>
 
         <div>

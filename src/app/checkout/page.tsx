@@ -57,10 +57,17 @@ export default function CheckoutPage() {
     setPlacing(true);
 
     const form = new FormData(e.currentTarget);
-    const firstName = String(form.get("firstName") || "");
-    const lastName = String(form.get("lastName") || "");
-    const email = String(form.get("email") || "");
-    const phone = String(form.get("phone") || "");
+    const customer = {
+      firstName: String(form.get("firstName") || ""),
+      lastName: String(form.get("lastName") || ""),
+      email: String(form.get("email") || ""),
+      phone: String(form.get("phone") || ""),
+      address: String(form.get("address") || ""),
+      city: String(form.get("city") || ""),
+      state: String(form.get("state") || ""),
+      pincode: String(form.get("pincode") || ""),
+    };
+    const { firstName, lastName, email, phone } = customer;
 
     try {
       const scriptLoaded = await loadRazorpayScript();
@@ -105,7 +112,7 @@ export default function CheckoutPage() {
             const verifyRes = await fetch("/api/razorpay/verify", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(r),
+              body: JSON.stringify({ ...r, customer, lines }),
             });
             const verifyData = await verifyRes.json();
             if (!verifyRes.ok || !verifyData.verified) {

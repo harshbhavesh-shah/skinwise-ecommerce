@@ -37,6 +37,11 @@ yarn-error.log*
 # vercel
 .vercel
 
+# Real brand photography used for local trial only — not licensed for
+# publishing. Never commit; swap back to placeholder art before deploying.
+/assets/
+public/products/*-real.*
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

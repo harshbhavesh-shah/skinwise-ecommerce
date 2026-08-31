@@ -1,4 +1,9 @@
 import Link from "next/link";
+import { products } from "@/lib/products";
+
+const hasOpenBeautyFactsPhotos = products.some(
+  (p) => p.imageAttribution?.source === "Open Beauty Facts"
+);
 
 export default function Footer() {
   return (
@@ -34,8 +39,22 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex justify-between pt-6 text-[12.5px] text-[#8a9289]">
+        <div className="flex flex-col gap-1.5 pt-6 text-[12.5px] text-[#8a9289] sm:flex-row sm:items-center sm:justify-between">
           <span>&copy; 2026 SkinWise. Demo storefront.</span>
+          {hasOpenBeautyFactsPhotos && (
+            <span>
+              Some product photos courtesy of{" "}
+              <a
+                href="https://world.openbeautyfacts.org/"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="underline hover:text-white"
+              >
+                Open Beauty Facts
+              </a>{" "}
+              contributors, CC BY-SA
+            </span>
+          )}
           <span>Built with Next.js</span>
         </div>
       </div>

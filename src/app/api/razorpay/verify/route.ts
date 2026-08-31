@@ -1,7 +1,42 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
+import { createOrder } from "@/lib/orders";
+import { computeOrderTotal } from "@/lib/pricing";
+import type { CartLine, CustomerInfo } from "@/lib/types";
 
 export const runtime = "nodejs";
+
+const REQUIRED_CUSTOMER_FIELDS: (keyof CustomerInfo)[] = [
+  "firstName",
+  "lastName",
+  "email",
+  "phone",
+  "address",
+  "city",
+  "state",
+  "pincode",
+];
+
+function isValidCustomer(value: unknown): value is CustomerInfo {
+  if (!value || typeof value !== "object") return false;
+  const c = value as Record<string, unknown>;
+  return REQUIRED_CUSTOMER_FIELDS.every(
+    (field) => typeof c[field] === "string" && c[field].trim().length > 0
+  );
+}
+
+function isValidLines(value: unknown): value is CartLine[] {
+  return (
+    Array.isArray(value) &&
+    value.every(
+      (l) =>
+        l &&
+        typeof l.slug === "string" &&
+        typeof l.qty === "number" &&
+        l.qty > 0
+    )
+  );
+}
 
 export async function POST(req: NextRequest) {
   const keySecret = process.env.RAZORPAY_KEY_SECRET;
@@ -13,6 +48,8 @@ export async function POST(req: NextRequest) {
     razorpay_order_id?: string;
     razorpay_payment_id?: string;
     razorpay_signature?: string;
+    customer?: unknown;
+    lines?: unknown;
   };
   try {
     body = await req.json();
@@ -20,9 +57,12 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
 
-  const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = body;
+  const { razorpay_order_id, razorpay_payment_id, razorpay_signature, customer, lines } = body;
   if (!razorpay_order_id || !razorpay_payment_id || !razorpay_signature) {
     return NextResponse.json({ error: "Missing payment details." }, { status: 400 });
+  }
+  if (!isValidCustomer(customer) || !isValidLines(lines)) {
+    return NextResponse.json({ error: "Missing order details." }, { status: 400 });
   }
 
   // Razorpay's documented verification: HMAC-SHA256 of "order_id|payment_id"
@@ -39,6 +79,27 @@ export async function POST(req: NextRequest) {
   if (!verified) {
     console.error("Razorpay signature mismatch for order", razorpay_order_id);
     return NextResponse.json({ verified: false, error: "Payment verification failed." }, { status: 400 });
+  }
+
+  // Recompute the total server-side rather than trusting the client, same
+  // as create-order — the customer/shipping fields are just record-keeping.
+  const { subtotal, shipping, total } = computeOrderTotal(lines);
+
+  try {
+    await createOrder({
+      razorpayOrderId: razorpay_order_id,
+      razorpayPaymentId: razorpay_payment_id,
+      customer,
+      lines,
+      subtotal,
+      shipping,
+      total,
+    });
+  } catch (err) {
+    // The payment already succeeded at this point — don't fail the customer's
+    // checkout over a storage hiccup, but make sure it's loud in the logs
+    // since it means this order won't show up in the admin dashboard.
+    console.error("Failed to persist order", razorpay_payment_id, err);
   }
 
   return NextResponse.json({ verified: true, paymentId: razorpay_payment_id });

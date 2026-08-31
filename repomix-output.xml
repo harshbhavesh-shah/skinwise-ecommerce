@@ -1,0 +1,3507 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.claude/
+  launch.json
+public/
+  products/
+    avene-cicalfate-plus-repair-cream.svg
+    bioderma-atoderm-cream.svg
+    bioderma-node-anti-dandruff-shampoo.svg
+    bioderma-sebium-foaming-gel.svg
+    bioderma-sensibio-h2o-micellar-water.svg
+    cerave-dandruff-relief-shampoo.svg
+    cerave-foaming-facial-cleanser.svg
+    cerave-hydrating-facial-cleanser.svg
+    cerave-moisturizing-cream.svg
+    cerave-resurfacing-retinol-serum.svg
+    cerave-sa-renewing-lotion.svg
+    cerave-skin-renewing-vitamin-c-serum.svg
+    eucerin-advanced-repair-cream.svg
+    eucerin-eczema-relief-cream.svg
+    la-roche-posay-anthelios-sunscreen-spf-50.svg
+    la-roche-posay-effaclar-duo-acne-treatment.svg
+    la-roche-posay-lipikar-balm-ap-plus.svg
+    la-roche-posay-pigmentclar-serum.svg
+    la-roche-posay-toleriane-sensitive-cream.svg
+    neutrogena-hydro-boost-water-gel.svg
+    neutrogena-rapid-wrinkle-repair-serum.svg
+    neutrogena-ultra-sheer-sunscreen-spf-55.svg
+    nizoral-anti-dandruff-shampoo.svg
+    vanicream-gentle-facial-cleanser.svg
+src/
+  app/
+    api/
+      razorpay/
+        create-order/
+          route.ts
+        verify/
+          route.ts
+      recommend/
+        route.ts
+    cart/
+      page.tsx
+    checkout/
+      page.tsx
+    order-confirmed/
+      page.tsx
+    product/
+      [slug]/
+        page.tsx
+    favicon.ico
+    globals.css
+    layout.tsx
+    page.tsx
+  components/
+    AddToCartForm.tsx
+    AskAgentPanel.tsx
+    AskCtaButton.tsx
+    CartDrawer.tsx
+    ConcernIcon.tsx
+    FilterBar.tsx
+    FloatingAskButton.tsx
+    Footer.tsx
+    Header.tsx
+    HeroAskSlot.tsx
+    ProductCard.tsx
+  data/
+    products.json
+  lib/
+    ask-agent-context.tsx
+    cart-context.tsx
+    pricing.ts
+    products.ts
+    types.ts
+.env.example
+.gitignore
+AGENTS.md
+CLAUDE.md
+eslint.config.mjs
+next.config.ts
+package.json
+postcss.config.mjs
+README.md
+tsconfig.json
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path=".claude/launch.json">
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "aurel-store",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 3000
+    }
+  ]
+}
+</file>
+
+<file path="public/products/avene-cicalfate-plus-repair-cream.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g23" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b8c9bf"/>
+      <stop offset="100%" stop-color="#8b9891"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g23)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">AVÈNE</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">TREATMENT</text>
+</svg>
+</file>
+
+<file path="public/products/bioderma-atoderm-cream.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c9d6c9"/>
+      <stop offset="100%" stop-color="#98a298"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g3)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">BIODERMA</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">MOISTURIZER</text>
+</svg>
+</file>
+
+<file path="public/products/bioderma-node-anti-dandruff-shampoo.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7f9c96"/>
+      <stop offset="100%" stop-color="#607672"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g4)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#f7f6f0" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#f7f6f0" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#f7f6f0" text-anchor="middle" opacity="0.8" letter-spacing="1">BIODERMA</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#f7f6f0" text-anchor="middle" opacity="0.55">SHAMPOO</text>
+</svg>
+</file>
+
+<file path="public/products/bioderma-sebium-foaming-gel.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8fae9e"/>
+      <stop offset="100%" stop-color="#6c8478"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g2)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">BIODERMA</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">CLEANSER</text>
+</svg>
+</file>
+
+<file path="public/products/bioderma-sensibio-h2o-micellar-water.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a7c4bd"/>
+      <stop offset="100%" stop-color="#7e948f"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g1)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">BIODERMA</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">CLEANSER</text>
+</svg>
+</file>
+
+<file path="public/products/cerave-dandruff-relief-shampoo.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g11" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#93aebd"/>
+      <stop offset="100%" stop-color="#6f848f"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g11)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">CERAVE</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">SHAMPOO</text>
+</svg>
+</file>
+
+<file path="public/products/cerave-foaming-facial-cleanser.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9cb8c9"/>
+      <stop offset="100%" stop-color="#768b98"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g5)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">CERAVE</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">CLEANSER</text>
+</svg>
+</file>
+
+<file path="public/products/cerave-hydrating-facial-cleanser.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#aec7d6"/>
+      <stop offset="100%" stop-color="#8497a2"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g6)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">CERAVE</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">CLEANSER</text>
+</svg>
+</file>
+
+<file path="public/products/cerave-moisturizing-cream.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c3d3dd"/>
+      <stop offset="100%" stop-color="#94a0a7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g7)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">CERAVE</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">MOISTURIZER</text>
+</svg>
+</file>
+
+<file path="public/products/cerave-resurfacing-retinol-serum.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7d97a8"/>
+      <stop offset="100%" stop-color="#5f727f"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g9)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#f7f6f0" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#f7f6f0" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#f7f6f0" text-anchor="middle" opacity="0.8" letter-spacing="1">CERAVE</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#f7f6f0" text-anchor="middle" opacity="0.55">SERUM</text>
+</svg>
+</file>
+
+<file path="public/products/cerave-sa-renewing-lotion.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g8" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b3c9d4"/>
+      <stop offset="100%" stop-color="#8898a1"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g8)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">CERAVE</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">MOISTURIZER</text>
+</svg>
+</file>
+
+<file path="public/products/cerave-skin-renewing-vitamin-c-serum.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g10" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0c88f"/>
+      <stop offset="100%" stop-color="#aa986c"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g10)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">CERAVE</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">SERUM</text>
+</svg>
+</file>
+
+<file path="public/products/eucerin-advanced-repair-cream.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g20" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bcd0cf"/>
+      <stop offset="100%" stop-color="#8e9e9d"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g20)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">EUCERIN</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">MOISTURIZER</text>
+</svg>
+</file>
+
+<file path="public/products/eucerin-eczema-relief-cream.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g21" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a3bdba"/>
+      <stop offset="100%" stop-color="#7b8f8d"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g21)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">EUCERIN</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">MOISTURIZER</text>
+</svg>
+</file>
+
+<file path="public/products/la-roche-posay-anthelios-sunscreen-spf-50.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g13" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e3d9b8"/>
+      <stop offset="100%" stop-color="#aca48b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g13)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">LA ROCHE-POSAY</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">SUNSCREEN</text>
+</svg>
+</file>
+
+<file path="public/products/la-roche-posay-effaclar-duo-acne-treatment.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g12" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c8f7d"/>
+      <stop offset="100%" stop-color="#5e6c5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g12)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#f7f6f0" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#f7f6f0" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#f7f6f0" text-anchor="middle" opacity="0.8" letter-spacing="1">LA ROCHE-POSAY</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#f7f6f0" text-anchor="middle" opacity="0.55">TREATMENT</text>
+</svg>
+</file>
+
+<file path="public/products/la-roche-posay-lipikar-balm-ap-plus.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g15" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c7cbb8"/>
+      <stop offset="100%" stop-color="#979a8b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g15)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">LA ROCHE-POSAY</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">MOISTURIZER</text>
+</svg>
+</file>
+
+<file path="public/products/la-roche-posay-pigmentclar-serum.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g16" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d8b98f"/>
+      <stop offset="100%" stop-color="#a48c6c"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g16)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">LA ROCHE-POSAY</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">SERUM</text>
+</svg>
+</file>
+
+<file path="public/products/la-roche-posay-toleriane-sensitive-cream.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g14" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d9cfc2"/>
+      <stop offset="100%" stop-color="#a49d93"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g14)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">LA ROCHE-POSAY</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">MOISTURIZER</text>
+</svg>
+</file>
+
+<file path="public/products/neutrogena-hydro-boost-water-gel.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g17" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a9c9c4"/>
+      <stop offset="100%" stop-color="#809894"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g17)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">NEUTROGENA</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">MOISTURIZER</text>
+</svg>
+</file>
+
+<file path="public/products/neutrogena-rapid-wrinkle-repair-serum.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g18" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8fa89f"/>
+      <stop offset="100%" stop-color="#6c7f78"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g18)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">NEUTROGENA</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">SERUM</text>
+</svg>
+</file>
+
+<file path="public/products/neutrogena-ultra-sheer-sunscreen-spf-55.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g19" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e6dcc0"/>
+      <stop offset="100%" stop-color="#aea791"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g19)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">NEUTROGENA</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">SUNSCREEN</text>
+</svg>
+</file>
+
+<file path="public/products/nizoral-anti-dandruff-shampoo.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g24" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#94a6ad"/>
+      <stop offset="100%" stop-color="#707e83"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g24)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">NIZORAL</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">SHAMPOO</text>
+</svg>
+</file>
+
+<file path="public/products/vanicream-gentle-facial-cleanser.svg">
+<svg viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g22" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cfd6cf"/>
+      <stop offset="100%" stop-color="#9da29d"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" fill="url(#g22)"/>
+  <rect x="230" y="220" width="140" height="220" rx="14" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <rect x="255" y="190" width="90" height="45" rx="8" fill="none" stroke="#22281f" stroke-width="2" opacity="0.55"/>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="15" fill="#22281f" text-anchor="middle" opacity="0.8" letter-spacing="1">VANICREAM</text>
+  <text x="300" y="640" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#22281f" text-anchor="middle" opacity="0.55">CLEANSER</text>
+</svg>
+</file>
+
+<file path="src/app/api/razorpay/create-order/route.ts">
+import { NextRequest, NextResponse } from "next/server";
+import { computeOrderTotal } from "@/lib/pricing";
+import type { CartLine } from "@/lib/types";
+
+export const runtime = "nodejs";
+
+export async function POST(req: NextRequest) {
+  const keyId = process.env.RAZORPAY_KEY_ID;
+  const keySecret = process.env.RAZORPAY_KEY_SECRET;
+
+  if (!keyId || !keySecret) {
+    return NextResponse.json(
+      { error: "Payments aren't configured yet — RAZORPAY_KEY_ID / RAZORPAY_KEY_SECRET are missing on the server." },
+      { status: 503 }
+    );
+  }
+
+  let lines: CartLine[];
+  try {
+    const body = await req.json();
+    lines = Array.isArray(body?.lines) ? body.lines : [];
+  } catch {
+    return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
+  }
+
+  // Never trust a client-supplied amount — recompute it server-side from
+  // the real catalog so the checkout total can't be tampered with.
+  const { total } = computeOrderTotal(lines);
+
+  if (total <= 0) {
+    return NextResponse.json({ error: "Your cart is empty." }, { status: 400 });
+  }
+
+  try {
+    const res = await fetch("https://api.razorpay.com/v1/orders", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Basic ${Buffer.from(`${keyId}:${keySecret}`).toString("base64")}`,
+      },
+      body: JSON.stringify({
+        amount: Math.round(total * 100), // paise
+        currency: "INR",
+        receipt: `skinwise_${Date.now()}`,
+      }),
+    });
+
+    if (!res.ok) {
+      const errText = await res.text();
+      console.error("Razorpay order creation failed:", res.status, errText);
+      return NextResponse.json(
+        { error: "Couldn't start payment. Please try again shortly." },
+        { status: 502 }
+      );
+    }
+
+    const order = await res.json();
+    return NextResponse.json({
+      orderId: order.id,
+      amount: order.amount,
+      currency: order.currency,
+      keyId, // safe to return — this is the publishable key, not the secret
+    });
+  } catch (err) {
+    console.error("Razorpay create-order error:", err);
+    return NextResponse.json({ error: "Something went wrong starting payment." }, { status: 500 });
+  }
+}
+</file>
+
+<file path="src/app/api/razorpay/verify/route.ts">
+import { NextRequest, NextResponse } from "next/server";
+import crypto from "crypto";
+
+export const runtime = "nodejs";
+
+export async function POST(req: NextRequest) {
+  const keySecret = process.env.RAZORPAY_KEY_SECRET;
+  if (!keySecret) {
+    return NextResponse.json({ error: "Payments aren't configured yet." }, { status: 503 });
+  }
+
+  let body: {
+    razorpay_order_id?: string;
+    razorpay_payment_id?: string;
+    razorpay_signature?: string;
+  };
+  try {
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
+  }
+
+  const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = body;
+  if (!razorpay_order_id || !razorpay_payment_id || !razorpay_signature) {
+    return NextResponse.json({ error: "Missing payment details." }, { status: 400 });
+  }
+
+  // Razorpay's documented verification: HMAC-SHA256 of "order_id|payment_id"
+  // signed with the account's key secret must match what they sent back.
+  const expectedSignature = crypto
+    .createHmac("sha256", keySecret)
+    .update(`${razorpay_order_id}|${razorpay_payment_id}`)
+    .digest("hex");
+
+  const verified =
+    expectedSignature.length === razorpay_signature.length &&
+    crypto.timingSafeEqual(Buffer.from(expectedSignature), Buffer.from(razorpay_signature));
+
+  if (!verified) {
+    console.error("Razorpay signature mismatch for order", razorpay_order_id);
+    return NextResponse.json({ verified: false, error: "Payment verification failed." }, { status: 400 });
+  }
+
+  return NextResponse.json({ verified: true, paymentId: razorpay_payment_id });
+}
+</file>
+
+<file path="src/app/api/recommend/route.ts">
+import { NextRequest, NextResponse } from "next/server";
+import { products } from "@/lib/products";
+
+export const runtime = "nodejs";
+
+const MODEL = process.env.GEMINI_MODEL || "gemini-3.6-flash";
+
+// A trimmed view of the catalog — just enough for the model to match
+// concerns/types without burning tokens on long descriptions.
+const catalogForPrompt = products.map((p) => ({
+  slug: p.slug,
+  brand: p.brand,
+  name: p.name,
+  type: p.type,
+  concerns: p.concerns,
+  price: p.price,
+  summary: p.desc,
+}));
+
+const responseSchema = {
+  type: "OBJECT",
+  properties: {
+    summary: {
+      type: "STRING",
+      description:
+        "One short, warm sentence acknowledging the user's concern before the recommendations.",
+    },
+    recommendations: {
+      type: "ARRAY",
+      items: {
+        type: "OBJECT",
+        properties: {
+          slug: {
+            type: "STRING",
+            description: "Must exactly match a slug from the provided catalog.",
+          },
+          reason: {
+            type: "STRING",
+            description: "One or two sentences on why this product fits their concern.",
+          },
+        },
+        required: ["slug", "reason"],
+      },
+    },
+  },
+  required: ["summary", "recommendations"],
+};
+
+const SYSTEM_INSTRUCTION = `You are the SkinWise shopping assistant, helping customers of a dermatology-focused skincare store find suitable products.
+
+Rules:
+- Only recommend products from the catalog JSON provided in the user message. Never invent a product or a slug that isn't in that list.
+- Recommend 2 to 4 products that best match the customer's described concern.
+- Prefer products whose "concerns" array matches what the customer describes, then consider "type" for a well-rounded routine (e.g. a cleanser plus a treatment, not five of the same type).
+- Keep "reason" specific to their situation, not generic marketing copy.
+- This is general product guidance, not medical advice. If the customer describes something that sounds severe, unusual, or potentially serious (e.g. rapidly spreading rash, signs of infection, suspicious moles, severe pain), say so plainly in the summary and recommend they see a dermatologist in person, in addition to or instead of product suggestions.
+- Respond ONLY with JSON matching the given schema.`;
+
+const RETRYABLE_STATUSES = new Set([429, 503]);
+const MAX_ATTEMPTS = 3;
+
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// Google's free tier intermittently returns 429/503 "model overloaded"
+// under load — usually resolved by a short retry, so we absorb that here
+// instead of surfacing it to the customer on the first hiccup.
+async function callGeminiWithRetry(
+  apiKey: string,
+  userPrompt: string
+): Promise<{ res: Response | null; errText: string }> {
+  let lastErrText = "";
+  let lastRes: Response | null = null;
+
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    const res = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${apiKey}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          systemInstruction: { parts: [{ text: SYSTEM_INSTRUCTION }] },
+          contents: [{ role: "user", parts: [{ text: userPrompt }] }],
+          generationConfig: {
+            responseMimeType: "application/json",
+            responseSchema,
+            temperature: 0.4,
+          },
+        }),
+      }
+    );
+
+    if (res.ok) return { res, errText: "" };
+
+    lastRes = res;
+    lastErrText = await res.text();
+
+    if (!RETRYABLE_STATUSES.has(res.status) || attempt === MAX_ATTEMPTS) {
+      return { res, errText: lastErrText };
+    }
+
+    await sleep(attempt * 700); // 700ms, then 1400ms
+  }
+
+  return { res: lastRes, errText: lastErrText };
+}
+
+export async function POST(req: NextRequest) {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) {
+    return NextResponse.json(
+      {
+        error:
+          "The recommendation agent isn't configured yet — GEMINI_API_KEY is missing on the server.",
+      },
+      { status: 503 }
+    );
+  }
+
+  let message: string;
+  try {
+    const body = await req.json();
+    message = typeof body?.message === "string" ? body.message.trim() : "";
+  } catch {
+    return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
+  }
+
+  if (!message) {
+    return NextResponse.json({ error: "Please describe your skin concern first." }, { status: 400 });
+  }
+  if (message.length > 1000) {
+    return NextResponse.json({ error: "That's a bit long — try summarizing in a sentence or two." }, { status: 400 });
+  }
+
+  const userPrompt = `Customer's description of their concern:\n"""${message}"""\n\nProduct catalog (JSON):\n${JSON.stringify(catalogForPrompt)}`;
+
+  try {
+    const { res, errText } = await callGeminiWithRetry(apiKey, userPrompt);
+
+    if (!res || !res.ok) {
+      console.error("Gemini API error:", res?.status, errText);
+      // Google's free tier occasionally reports the model as overloaded
+      // (429/503) under load — distinct from a real outage or misconfig.
+      const overloaded = res?.status === 429 || res?.status === 503;
+      return NextResponse.json(
+        {
+          error: overloaded
+            ? "SkinWise's AI agent is getting a lot of requests right now. Please try again in a few seconds."
+            : "The recommendation agent is temporarily unavailable. Please try again shortly.",
+        },
+        { status: 502 }
+      );
+    }
+
+    const data = await res.json();
+    const text: string | undefined = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (!text) {
+      return NextResponse.json(
+        { error: "The agent didn't return a usable response. Please try rephrasing." },
+        { status: 502 }
+      );
+    }
+
+    let parsed: { summary: string; recommendations: { slug: string; reason: string }[] };
+    try {
+      parsed = JSON.parse(text);
+    } catch {
+      return NextResponse.json(
+        { error: "The agent's response couldn't be read. Please try again." },
+        { status: 502 }
+      );
+    }
+
+    // Never trust the model's slugs blindly — drop anything that isn't a
+    // real product so the UI can't render a broken "Add to cart" card.
+    const validSlugs = new Set(products.map((p) => p.slug));
+    const recommendations = (parsed.recommendations || []).filter((r) =>
+      validSlugs.has(r.slug)
+    );
+
+    return NextResponse.json({
+      summary: parsed.summary || "",
+      recommendations,
+    });
+  } catch (err) {
+    console.error("Recommendation agent error:", err);
+    return NextResponse.json(
+      { error: "Something went wrong reaching the recommendation agent." },
+      { status: 500 }
+    );
+  }
+}
+</file>
+
+<file path="src/components/AddToCartForm.tsx">
+"use client";
+
+import { useState } from "react";
+import type { Product } from "@/lib/types";
+import { useCart } from "@/lib/cart-context";
+
+export default function AddToCartForm({ product }: { product: Product }) {
+  const [qty, setQty] = useState(1);
+  const [justAdded, setJustAdded] = useState(false);
+  const { addItem } = useCart();
+
+  const handleAdd = () => {
+    addItem(product.slug, qty);
+    setJustAdded(true);
+    setTimeout(() => setJustAdded(false), 1800);
+  };
+
+  return (
+    <div>
+      <div className="mb-5 flex items-center gap-4">
+        <span className="text-[13px] font-medium text-ink-soft">Quantity</span>
+        <div className="flex items-center overflow-hidden rounded-full border border-line">
+          <button
+            onClick={() => setQty((q) => Math.max(1, q - 1))}
+            className="h-10 w-[38px] cursor-pointer text-base"
+            aria-label="Decrease quantity"
+          >
+            &minus;
+          </button>
+          <span className="w-8 text-center text-sm">{qty}</span>
+          <button
+            onClick={() => setQty((q) => q + 1)}
+            className="h-10 w-[38px] cursor-pointer text-base"
+            aria-label="Increase quantity"
+          >
+            +
+          </button>
+        </div>
+      </div>
+      <button
+        onClick={handleAdd}
+        className="w-full cursor-pointer rounded-full bg-ink py-4 text-[15px] font-semibold tracking-wide text-white transition-colors hover:bg-[#3a352d]"
+      >
+        {justAdded ? "Added ✓" : "Add to Cart"}
+      </button>
+    </div>
+  );
+}
+</file>
+
+<file path="src/components/AskAgentPanel.tsx">
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useCart } from "@/lib/cart-context";
+import { useAskAgent } from "@/lib/ask-agent-context";
+import { getProductBySlug, formatPrice } from "@/lib/products";
+
+type Recommendation = { slug: string; reason: string };
+type Result = { summary: string; recommendations: Recommendation[] };
+
+export default function AskAgentPanel() {
+  const { isOpen, close } = useAskAgent();
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [result, setResult] = useState<Result | null>(null);
+  const [addedSlug, setAddedSlug] = useState<string | null>(null);
+  const [allAdded, setAllAdded] = useState(false);
+  const { addItem } = useCart();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!message.trim() || loading) return;
+    setLoading(true);
+    setError(null);
+    setResult(null);
+    setAllAdded(false);
+    try {
+      const res = await fetch("/api/recommend", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data?.error || "Something went wrong. Please try again.");
+        return;
+      }
+      setResult(data);
+    } catch {
+      setError("Couldn't reach the recommendation agent. Check your connection and try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleAdd = (slug: string) => {
+    addItem(slug, 1);
+    setAddedSlug(slug);
+    setTimeout(() => setAddedSlug((s) => (s === slug ? null : s)), 1600);
+  };
+
+  const handleAddAll = () => {
+    if (!result) return;
+    result.recommendations.forEach((rec) => {
+      if (getProductBySlug(rec.slug)) addItem(rec.slug, 1);
+    });
+    setAllAdded(true);
+    setTimeout(() => setAllAdded(false), 1800);
+  };
+
+  const reset = () => {
+    setMessage("");
+    setResult(null);
+    setError(null);
+    setAllAdded(false);
+  };
+
+  return (
+    <>
+      <div
+        className={`fixed inset-0 z-[96] bg-ink/40 transition-opacity duration-250 ${
+          isOpen ? "opacity-100" : "pointer-events-none opacity-0"
+        }`}
+        onClick={close}
+      />
+      <div
+        className={`fixed bottom-0 right-0 z-[97] flex h-[min(680px,100dvh)] w-[440px] max-w-[94vw] flex-col rounded-t-2xl border border-line bg-white shadow-[0_-10px_50px_rgba(0,0,0,0.2)] transition-transform duration-300 sm:bottom-6 sm:right-6 sm:h-[620px] sm:rounded-2xl ${
+          isOpen ? "translate-y-0" : "translate-y-[110%]"
+        }`}
+        role="dialog"
+        aria-label="Ask SkinWise for recommendations"
+      >
+        <div className="flex items-center justify-between border-b border-line px-5 py-4">
+          <div className="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5 text-accent">
+              <path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8L12 3z" />
+            </svg>
+            <h2 className="text-[16px] font-medium">Ask SkinWise</h2>
+          </div>
+          <button
+            onClick={close}
+            aria-label="Close"
+            className="cursor-pointer text-[22px] leading-none text-ink-soft"
+          >
+            &times;
+          </button>
+        </div>
+
+        <div className="flex-1 overflow-y-auto px-5 py-5">
+          {!result && !loading && (
+            <>
+              <p className="mb-4 text-[14px] leading-relaxed text-ink-soft">
+                Describe what&rsquo;s going on with your skin or hair, and we&rsquo;ll suggest
+                products from our catalog that fit.
+              </p>
+              <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+                <textarea
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="e.g. I have oily, acne-prone skin and my forehead breaks out constantly. What should I use?"
+                  rows={5}
+                  className="w-full resize-none rounded-xl border border-line bg-bg px-4 py-3 text-[14px] outline-none focus:border-accent"
+                />
+                <button
+                  type="submit"
+                  disabled={!message.trim()}
+                  className="w-full cursor-pointer rounded-full bg-ink py-3.5 text-[14.5px] font-semibold text-white transition-opacity hover:bg-[#2c352f] disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  Get Recommendations
+                </button>
+              </form>
+              {error && (
+                <p className="mt-3 rounded-lg bg-red-50 px-3 py-2.5 text-[13px] text-red-700">
+                  {error}
+                </p>
+              )}
+            </>
+          )}
+
+          {loading && (
+            <div className="flex flex-col items-center gap-3 py-16 text-center">
+              <div className="h-7 w-7 animate-spin rounded-full border-2 border-line border-t-accent" />
+              <p className="text-[13.5px] text-ink-soft">Finding the right products…</p>
+            </div>
+          )}
+
+          {result && !loading && (
+            <div>
+              <p className="mb-5 text-[14.5px] leading-relaxed text-ink">{result.summary}</p>
+
+              {result.recommendations.length === 0 ? (
+                <p className="text-[13.5px] text-ink-soft">
+                  No close matches in our current catalog — try describing your concern
+                  differently, or browse by concern from the homepage.
+                </p>
+              ) : (
+                <>
+                  <button
+                    onClick={handleAddAll}
+                    className="mb-4 w-full cursor-pointer rounded-full bg-accent py-3 text-[13.5px] font-semibold text-white transition-opacity hover:opacity-90"
+                  >
+                    {allAdded
+                      ? "All Added ✓"
+                      : `Add All ${result.recommendations.length} to Cart`}
+                  </button>
+
+                  <div className="flex flex-col gap-3">
+                    {result.recommendations.map((rec) => {
+                      const product = getProductBySlug(rec.slug);
+                      if (!product) return null;
+                      return (
+                        <div
+                          key={rec.slug}
+                          className="flex gap-3 rounded-xl border border-line p-3"
+                        >
+                          <Link
+                            href={`/product/${product.slug}`}
+                            onClick={close}
+                            className="relative h-[72px] w-[60px] shrink-0 overflow-hidden rounded-lg bg-bg-2"
+                          >
+                            <Image src={product.image} alt={product.name} fill className="object-cover" />
+                          </Link>
+                          <div className="min-w-0 flex-1">
+                            <div className="text-[10.5px] uppercase tracking-wide text-accent">
+                              {product.brand}
+                            </div>
+                            <Link
+                              href={`/product/${product.slug}`}
+                              onClick={close}
+                              className="text-[14px] font-medium hover:underline"
+                            >
+                              {product.name}
+                            </Link>
+                            <p className="mb-1.5 text-[13px] text-ink-soft">{formatPrice(product.price)}</p>
+                            <p className="mb-2 text-[12.5px] leading-snug text-ink-soft">{rec.reason}</p>
+                            <button
+                              onClick={() => handleAdd(product.slug)}
+                              className="cursor-pointer rounded-full bg-ink px-4 py-1.5 text-[12px] font-semibold text-white hover:bg-[#2c352f]"
+                            >
+                              {addedSlug === product.slug ? "Added ✓" : "Add to Cart"}
+                            </button>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </>
+              )}
+
+              <button
+                onClick={reset}
+                className="mt-5 w-full cursor-pointer rounded-full border border-line py-3 text-[13.5px] font-medium text-ink-soft hover:border-ink hover:text-ink"
+              >
+                Ask something else
+              </button>
+            </div>
+          )}
+        </div>
+
+        <div className="border-t border-line px-5 py-3 text-center text-[11px] leading-snug text-ink-soft">
+          General guidance only, not a medical diagnosis. For persistent or severe
+          concerns, please see a dermatologist.
+        </div>
+      </div>
+    </>
+  );
+}
+</file>
+
+<file path="src/components/AskCtaButton.tsx">
+"use client";
+
+export default function AskCtaButton({
+  onClick,
+  className = "",
+}: {
+  onClick: () => void;
+  className?: string;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      aria-label="Ask SkinWise for product recommendations"
+      className={`group relative inline-flex cursor-pointer items-center gap-2 overflow-hidden rounded-full bg-ink px-5 py-4 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(0,0,0,0.3)] ${className}`}
+    >
+      {/* Fill sweep — scales in from the left on hover, clipped by the
+          button's own rounded corners + overflow-hidden. */}
+      <span
+        aria-hidden
+        className="absolute inset-0 origin-left scale-x-0 bg-accent transition-transform duration-700 ease-out group-hover:scale-x-100"
+      />
+      <span className="relative z-10 flex items-center gap-2 text-white">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.8}
+          className="h-5 w-5 shrink-0"
+        >
+          <path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8L12 3z" />
+          <path d="M19 14l.8 1.9L21.7 16.7 19.8 17.5 19 19.4 18.2 17.5 16.3 16.7 18.2 15.9 19 14z" />
+        </svg>
+        Ask SkinWise
+      </span>
+    </button>
+  );
+}
+</file>
+
+<file path="src/components/ConcernIcon.tsx">
+const paths: Record<string, React.ReactNode> = {
+  Acne: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="9" cy="10" r="1.2" fill="currentColor" stroke="none" />
+      <circle cx="14" cy="14" r="1.4" fill="currentColor" stroke="none" />
+      <circle cx="15" cy="9" r="0.9" fill="currentColor" stroke="none" />
+    </>
+  ),
+  Eczema: (
+    <path d="M12 3l7 4v5c0 5-3 8-7 9-4-1-7-4-7-9V7l7-4z" />
+  ),
+  "Dryness & Hydration": (
+    <path d="M12 3c3 4.5 6 8 6 11.5A6 6 0 0 1 6 14.5C6 11 9 7.5 12 3z" />
+  ),
+  "Anti-Aging": (
+    <>
+      <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" />
+    </>
+  ),
+  Hyperpigmentation: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="10" cy="11" r="2" fill="currentColor" stroke="none" opacity="0.6" />
+      <circle cx="14.5" cy="14" r="1.3" fill="currentColor" stroke="none" opacity="0.6" />
+    </>
+  ),
+  "Sensitive Skin": (
+    <path d="M12 21s-7-4.35-9.5-9C.7 8.1 3 4 7 4c2 0 4 1.2 5 3 1-1.8 3-3 5-3 4 0 6.3 4.1 4.5 8-2.5 4.65-9.5 9-9.5 9z" />
+  ),
+  "Sun Protection": (
+    <>
+      <circle cx="12" cy="12" r="4.5" />
+      <path d="M12 2.5v2M12 19.5v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2.5 12h2M19.5 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+    </>
+  ),
+  "Hair & Scalp": (
+    <path d="M4 6c1.5-2 4-3 8-3s6.5 1 8 3M4 6c0 4 1.5 6 1.5 10.5a2.5 2.5 0 0 0 5 0V13M20 6c0 4-1.5 6-1.5 10.5a2.5 2.5 0 0 1-5 0V13" />
+  ),
+};
+
+export default function ConcernIcon({ name, className }: { name: string; className?: string }) {
+  const path = paths[name];
+  if (!path) return null;
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.6}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      {path}
+    </svg>
+  );
+}
+</file>
+
+<file path="src/components/FloatingAskButton.tsx">
+"use client";
+
+import { useAskAgent } from "@/lib/ask-agent-context";
+import AskCtaButton from "./AskCtaButton";
+
+export default function FloatingAskButton() {
+  const { open, isOpen, heroButtonVisible } = useAskAgent();
+  const visible = !isOpen && !heroButtonVisible;
+
+  return (
+    <div
+      className={`fixed bottom-6 right-6 z-[95] transition-all duration-300 ease-out ${
+        visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-3 opacity-0"
+      }`}
+    >
+      <AskCtaButton onClick={open} />
+    </div>
+  );
+}
+</file>
+
+<file path="src/components/HeroAskSlot.tsx">
+"use client";
+
+import { useEffect, useRef } from "react";
+import { useAskAgent } from "@/lib/ask-agent-context";
+import AskCtaButton from "./AskCtaButton";
+
+// Lives inside the homepage hero. While this button is on screen, the
+// floating bottom-right launcher hides itself — as soon as this scrolls
+// out of view (or the user leaves the homepage, since this unmounts), the
+// floating button takes over.
+export default function HeroAskSlot() {
+  const { open, setHeroButtonVisible } = useAskAgent();
+  const sentinelRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = sentinelRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setHeroButtonVisible(entry.isIntersecting),
+      { threshold: 0.2 }
+    );
+    observer.observe(el);
+    return () => {
+      observer.disconnect();
+      setHeroButtonVisible(false);
+    };
+  }, [setHeroButtonVisible]);
+
+  return (
+    <div ref={sentinelRef} className="inline-block">
+      <AskCtaButton onClick={open} className="px-7 py-4 text-[15px]" />
+    </div>
+  );
+}
+</file>
+
+<file path="src/lib/ask-agent-context.tsx">
+"use client";
+
+import { createContext, useCallback, useContext, useState } from "react";
+
+type AskAgentContextValue = {
+  isOpen: boolean;
+  open: () => void;
+  close: () => void;
+  // True while the homepage hero's own "Ask SkinWise" button is on screen —
+  // lets the floating launcher hide itself so there's never a duplicate.
+  heroButtonVisible: boolean;
+  setHeroButtonVisible: (visible: boolean) => void;
+};
+
+const AskAgentContext = createContext<AskAgentContextValue | null>(null);
+
+export function AskAgentProvider({ children }: { children: React.ReactNode }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [heroButtonVisible, setHeroButtonVisible] = useState(false);
+
+  const open = useCallback(() => setIsOpen(true), []);
+  const close = useCallback(() => setIsOpen(false), []);
+
+  return (
+    <AskAgentContext.Provider
+      value={{ isOpen, open, close, heroButtonVisible, setHeroButtonVisible }}
+    >
+      {children}
+    </AskAgentContext.Provider>
+  );
+}
+
+export function useAskAgent() {
+  const ctx = useContext(AskAgentContext);
+  if (!ctx) throw new Error("useAskAgent must be used within AskAgentProvider");
+  return ctx;
+}
+</file>
+
+<file path="src/lib/pricing.ts">
+import { getProductBySlug } from "./products";
+import type { CartLine } from "./types";
+
+const FREE_SHIPPING_THRESHOLD = 999;
+const SHIPPING_FEE = 99;
+
+// Single source of truth for turning cart lines into a rupee total —
+// used both by the client display and, more importantly, re-run
+// server-side before creating a Razorpay order so a tampered client
+// total can never be charged.
+export function computeOrderTotal(lines: CartLine[]) {
+  const subtotal = lines.reduce((sum, line) => {
+    const product = getProductBySlug(line.slug);
+    if (!product || line.qty <= 0) return sum;
+    return sum + product.price * line.qty;
+  }, 0);
+
+  const shipping = subtotal > FREE_SHIPPING_THRESHOLD || subtotal === 0 ? 0 : SHIPPING_FEE;
+
+  return { subtotal, shipping, total: subtotal + shipping };
+}
+</file>
+
+<file path="AGENTS.md">
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
+</file>
+
+<file path="CLAUDE.md">
+@AGENTS.md
+</file>
+
+<file path="eslint.config.mjs">
+import { defineConfig, globalIgnores } from "eslint/config";
+import nextVitals from "eslint-config-next/core-web-vitals";
+import nextTs from "eslint-config-next/typescript";
+
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  // Override default ignores of eslint-config-next.
+  globalIgnores([
+    // Default ignores of eslint-config-next:
+    ".next/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts",
+  ]),
+]);
+
+export default eslintConfig;
+</file>
+
+<file path="next.config.ts">
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  images: {
+    // Product thumbnails are locally-generated placeholder SVGs.
+    dangerouslyAllowSVG: true,
+    contentDispositionType: "inline",
+  },
+};
+
+export default nextConfig;
+</file>
+
+<file path="package.json">
+{
+  "name": "ecommerce-store",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "next": "16.3.3",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
+</file>
+
+<file path="postcss.config.mjs">
+const config = {
+  plugins: {
+    "@tailwindcss/postcss": {},
+  },
+};
+
+export default config;
+</file>
+
+<file path="README.md">
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+</file>
+
+<file path="tsconfig.json">
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts"
+  ],
+  "exclude": ["node_modules"]
+}
+</file>
+
+<file path="src/app/order-confirmed/page.tsx">
+import Link from "next/link";
+
+export default async function OrderConfirmedPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ payment_id?: string }>;
+}) {
+  const { payment_id } = await searchParams;
+
+  return (
+    <div className="mx-auto max-w-7xl px-8 py-28 text-center">
+      <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent-soft text-[28px] text-accent">
+        ✓
+      </div>
+      <h1 className="mb-3.5 text-[30px] font-medium">Payment successful</h1>
+      <p className="mx-auto mb-3 max-w-md text-[15px] text-ink-soft">
+        Thanks for your order! This ran through Razorpay in <strong>test mode</strong> —
+        no real money was charged.
+      </p>
+      {payment_id && (
+        <p className="mx-auto mb-8 max-w-md text-[13px] text-ink-soft">
+          Payment reference: <code className="rounded bg-bg-2 px-1.5 py-0.5">{payment_id}</code>
+        </p>
+      )}
+      <Link
+        href="/"
+        className="inline-block rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-white hover:bg-[#3a352d]"
+      >
+        Continue Shopping
+      </Link>
+    </div>
+  );
+}
+</file>
+
+<file path="src/app/globals.css">
+@import "tailwindcss";
+
+:root {
+  --bg: #f6f7f2;
+  --bg-2: #eceee4;
+  --ink: #1e2420;
+  --ink-soft: #5f6b62;
+  --line: #dde1d6;
+  --white: #fdfdfa;
+  --accent: #3f6d5c;
+  --accent-soft: #cfe0d3;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-line: var(--line);
+  --color-white: var(--white);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --font-serif: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+</file>
+
+<file path="src/components/ProductCard.tsx">
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import type { Product } from "@/lib/types";
+import { formatPrice } from "@/lib/products";
+import { useCart } from "@/lib/cart-context";
+
+export default function ProductCard({ product }: { product: Product }) {
+  const { addItem } = useCart();
+
+  return (
+    <Link href={`/product/${product.slug}`} className="group block">
+      <div className="relative mb-3.5 aspect-[5/6] overflow-hidden rounded-2xl bg-bg-2">
+        <Image
+          src={product.image}
+          alt={product.name}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-[1.045]"
+          sizes="(max-width: 640px) 50vw, (max-width: 980px) 33vw, 25vw"
+        />
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            addItem(product.slug, 1);
+          }}
+          className="absolute inset-x-2.5 bottom-2.5 translate-y-1.5 rounded-full bg-white/95 py-2.5 text-[12.5px] font-semibold uppercase tracking-wide opacity-0 transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100 cursor-pointer"
+        >
+          Quick Add
+        </button>
+      </div>
+      <div className="mb-1 text-[11px] uppercase tracking-wide text-accent">
+        {product.brand}
+      </div>
+      <h3 className="mb-1.5 text-[16px] font-medium">{product.name}</h3>
+      <p className="mb-1.5 text-[14.5px] text-ink-soft">{formatPrice(product.price)}</p>
+      <div className="flex flex-wrap gap-1.5">
+        {product.concerns.slice(0, 2).map((c) => (
+          <span
+            key={c}
+            className="rounded-full bg-bg-2 px-2.5 py-1 text-[10.5px] text-ink-soft"
+          >
+            {c}
+          </span>
+        ))}
+      </div>
+    </Link>
+  );
+}
+</file>
+
+<file path=".env.example">
+# Copy this file to .env.local and fill in your own key.
+# .env.local is gitignored — never commit real API keys.
+
+# Free API key from Google AI Studio: https://aistudio.google.com/apikey
+# Powers the "Ask SkinWise" product recommendation agent.
+GEMINI_API_KEY=
+
+# Optional — defaults to gemini-3.6-flash if not set.
+# GEMINI_MODEL=gemini-3.6-flash
+
+# Razorpay Test Mode keys — from your Razorpay Dashboard > Settings > API Keys
+# (Test Mode toggle in the top bar). These are "rzp_test_..." keys and are
+# safe to use even while your account's live-mode verification is pending.
+# Both stay server-only — never exposed to the browser.
+RAZORPAY_KEY_ID=
+RAZORPAY_KEY_SECRET=
+</file>
+
+<file path=".gitignore">
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+# Real brand photography used for local trial only — not licensed for
+# publishing. Never commit; swap back to placeholder art before deploying.
+/assets/
+public/products/*-real.*
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+</file>
+
+<file path="src/app/product/[slug]/page.tsx">
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
+import { products, getProductBySlug, getRelated, formatPrice } from "@/lib/products";
+import ProductCard from "@/components/ProductCard";
+import AddToCartForm from "@/components/AddToCartForm";
+
+export function generateStaticParams() {
+  return products.map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const product = getProductBySlug(slug);
+  if (!product) return {};
+  return {
+    title: `${product.brand} ${product.name} — SkinWise`,
+    description: product.desc,
+  };
+}
+
+export default async function ProductPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const product = getProductBySlug(slug);
+  if (!product) notFound();
+
+  const related = getRelated(product);
+  const primaryConcern = product.concerns[0];
+
+  return (
+    <div className="mx-auto max-w-7xl px-8 py-12 md:py-14">
+      <div className="mb-8 text-[13px] text-ink-soft">
+        <Link href="/" className="hover:text-ink">Home</Link>
+        {" / "}
+        <Link
+          href={{ pathname: "/", query: { concern: primaryConcern } }}
+          className="hover:text-ink"
+        >
+          {primaryConcern}
+        </Link>
+        {" / "}
+        <span>{product.name}</span>
+      </div>
+
+      <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
+        <div className="relative aspect-[5/6] overflow-hidden rounded-[20px] bg-bg-2 md:sticky md:top-28">
+          <Image
+            src={product.image}
+            alt={`${product.brand} ${product.name}`}
+            fill
+            className="object-cover"
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
+
+        <div>
+          <div className="mb-3.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[1.5px] text-accent">
+            <span>{product.brand}</span>
+            <span className="text-ink-soft/50">&middot;</span>
+            <span className="text-ink-soft">{product.type}</span>
+          </div>
+          <h1 className="mb-3.5 text-[30px] font-medium leading-tight md:text-[34px]">
+            {product.name}
+          </h1>
+          <p className="mb-5 text-2xl font-medium">{formatPrice(product.price)}</p>
+          <div className="mb-7 flex flex-wrap gap-2">
+            {product.concerns.map((c) => (
+              <Link
+                key={c}
+                href={{ pathname: "/", query: { concern: c } }}
+                className="rounded-full bg-accent-soft px-3 py-1.5 text-[12.5px] font-medium text-accent hover:opacity-80"
+              >
+                {c}
+              </Link>
+            ))}
+          </div>
+          <p className="mb-8 max-w-md text-[15.5px] leading-relaxed text-ink-soft">
+            {product.desc}
+          </p>
+
+          <AddToCartForm product={product} />
+
+          <dl className="mt-9 border-t border-line pt-6">
+            <dt className="mb-1 flex items-center gap-1.5 text-[13px] font-semibold">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4 text-accent">
+                <path d="M9 12l2 2 4-4" />
+                <circle cx="12" cy="12" r="9" />
+              </svg>
+              Authenticity Guaranteed
+            </dt>
+            <dd className="mb-4 text-[13.5px] text-ink-soft">
+              Sourced directly from authorized distributors — every product is
+              genuine, sealed, and within its use-by date.
+            </dd>
+            <dt className="mb-1 text-[13px] font-semibold">Shipping</dt>
+            <dd className="text-[13.5px] text-ink-soft">
+              Free shipping on orders over ₹999. Delivered in 3–5 business days.
+            </dd>
+          </dl>
+        </div>
+      </div>
+
+      {/* ---- About / Ingredients / Doctor's opinion ---- */}
+      <div className="mt-16 grid grid-cols-1 gap-12 border-t border-line pt-14 md:grid-cols-2 md:gap-16">
+        <section>
+          <h2 className="mb-4 text-[22px] font-medium">About This Product</h2>
+          <p className="mb-8 text-[15px] leading-relaxed text-ink-soft">
+            {product.longDesc}
+          </p>
+
+          <h3 className="mb-3 text-[15px] font-semibold">Key Ingredients</h3>
+          <div className="mb-5 flex flex-wrap gap-2">
+            {product.keyIngredients.map((ing) => (
+              <span
+                key={ing}
+                className="rounded-full border border-line bg-white px-3.5 py-1.5 text-[13px] text-ink"
+              >
+                {ing}
+              </span>
+            ))}
+          </div>
+          <details className="group">
+            <summary className="cursor-pointer text-[13.5px] font-medium text-accent underline-offset-2 hover:underline">
+              View full ingredient list
+            </summary>
+            <p className="mt-3 text-[13px] leading-relaxed text-ink-soft">
+              {product.fullIngredients}
+            </p>
+          </details>
+        </section>
+
+        <section>
+          <h2 className="mb-4 text-[22px] font-medium">Dr. Shah&rsquo;s Opinion</h2>
+          <div className="rounded-2xl border border-line bg-accent-soft/40 p-7">
+            <div className="mb-4 flex items-center gap-3">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent text-[14px] font-semibold text-white">
+                BS
+              </div>
+              <div>
+                <div className="text-[14.5px] font-semibold">Dr. Bhavesh Shah</div>
+                <div className="text-[12.5px] text-ink-soft">
+                  MD Dermatology &middot; Advanced Skin Clinic
+                </div>
+              </div>
+            </div>
+            <p className="text-[15px] italic leading-relaxed text-ink">
+              &ldquo;{product.doctorOpinion}&rdquo;
+            </p>
+          </div>
+        </section>
+      </div>
+
+      {related.length > 0 && (
+        <section className="mt-20 border-t border-line pt-20">
+          <h2 className="mb-8 text-[26px] font-medium">You may also like</h2>
+          <div className="grid grid-cols-2 gap-x-6 gap-y-9 md:grid-cols-4">
+            {related.map((p) => (
+              <ProductCard key={p.slug} product={p} />
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+</file>
+
+<file path="src/app/layout.tsx">
+import type { Metadata } from "next";
+import { Suspense } from "react";
+import { Fraunces, Inter } from "next/font/google";
+import "./globals.css";
+import { CartProvider } from "@/lib/cart-context";
+import { AskAgentProvider } from "@/lib/ask-agent-context";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import CartDrawer from "@/components/CartDrawer";
+import AskAgentPanel from "@/components/AskAgentPanel";
+import FloatingAskButton from "@/components/FloatingAskButton";
+
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  weight: ["300", "500"],
+  style: ["normal", "italic"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
+
+export const metadata: Metadata = {
+  title: "SkinWise — Dermatologist-Trusted Skincare",
+  description:
+    "A demo storefront for authentic dermatology and skincare products, sorted by skin concern.",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en" className={`${fraunces.variable} ${inter.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col">
+        <CartProvider>
+          <AskAgentProvider>
+            <Suspense fallback={null}>
+              <Header />
+            </Suspense>
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <CartDrawer />
+            <AskAgentPanel />
+            <FloatingAskButton />
+          </AskAgentProvider>
+        </CartProvider>
+      </body>
+    </html>
+  );
+}
+</file>
+
+<file path="src/components/CartDrawer.tsx">
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useCart } from "@/lib/cart-context";
+import { getProductBySlug, formatPrice } from "@/lib/products";
+
+export default function CartDrawer() {
+  const { lines, isOpen, closeCart, setQty, removeItem, subtotal } = useCart();
+
+  return (
+    <>
+      <div
+        className={`fixed inset-0 z-[90] bg-ink/40 transition-opacity duration-250 ${
+          isOpen ? "opacity-100" : "pointer-events-none opacity-0"
+        }`}
+        onClick={closeCart}
+      />
+      <aside
+        className={`fixed right-0 top-0 bottom-0 z-[100] flex w-[420px] max-w-[92vw] flex-col bg-white shadow-[-20px_0_60px_rgba(0,0,0,0.15)] transition-transform duration-300 ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+        aria-label="Shopping cart"
+      >
+        <div className="flex items-center justify-between border-b border-line px-6 py-6">
+          <h2 className="text-[19px] font-medium">Your Cart</h2>
+          <button
+            onClick={closeCart}
+            aria-label="Close cart"
+            className="cursor-pointer text-[22px] leading-none text-ink-soft"
+          >
+            &times;
+          </button>
+        </div>
+
+        <div className="flex-1 overflow-y-auto px-6 py-5">
+          {lines.length === 0 ? (
+            <p className="py-16 text-center text-sm text-ink-soft">
+              Your cart is empty.
+            </p>
+          ) : (
+            lines.map((line) => {
+              const product = getProductBySlug(line.slug);
+              if (!product) return null;
+              return (
+                <div key={line.slug} className="flex gap-3.5 border-b border-line py-4">
+                  <div className="relative h-[86px] w-[72px] shrink-0 overflow-hidden rounded-lg bg-bg-2">
+                    <Image src={product.image} alt={product.name} fill className="object-cover" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <h4 className="mb-1 truncate text-[14.5px] font-medium">{product.name}</h4>
+                    <p className="mb-2.5 text-[13.5px] text-ink-soft">{formatPrice(product.price)}</p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center overflow-hidden rounded-full border border-line">
+                        <button
+                          className="h-8 w-8 cursor-pointer text-sm"
+                          onClick={() => setQty(line.slug, line.qty - 1)}
+                        >
+                          &minus;
+                        </button>
+                        <span className="w-7 text-center text-[13px]">{line.qty}</span>
+                        <button
+                          className="h-8 w-8 cursor-pointer text-sm"
+                          onClick={() => setQty(line.slug, line.qty + 1)}
+                        >
+                          +
+                        </button>
+                      </div>
+                      <button
+                        onClick={() => removeItem(line.slug)}
+                        className="cursor-pointer text-[12.5px] text-ink-soft underline"
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })
+          )}
+        </div>
+
+        <div className="border-t border-line px-6 py-6">
+          <div className="mb-4 flex justify-between text-[15px] font-medium">
+            <span>Subtotal</span>
+            <span>{formatPrice(subtotal)}</span>
+          </div>
+          <Link
+            href="/cart"
+            onClick={closeCart}
+            className="block rounded-full bg-ink py-3.5 text-center text-[14.5px] font-semibold text-white hover:bg-[#3a352d]"
+          >
+            View Cart &amp; Checkout
+          </Link>
+          <p className="mt-3 text-center text-[12px] text-ink-soft">
+            Shipping and taxes calculated at checkout.
+          </p>
+        </div>
+      </aside>
+    </>
+  );
+}
+</file>
+
+<file path="src/components/FilterBar.tsx">
+"use client";
+
+import { useRouter, useSearchParams } from "next/navigation";
+import ConcernIcon from "./ConcernIcon";
+
+export default function FilterBar({
+  concerns,
+  types,
+  resultCount,
+}: {
+  concerns: string[];
+  types: string[];
+  resultCount: number;
+}) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const activeConcern = searchParams.get("concern") ?? "All";
+  const activeType = searchParams.get("type") ?? "All";
+
+  const updateParam = (key: string, value: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    if (value === "All") {
+      params.delete(key);
+    } else {
+      params.set(key, value);
+    }
+    const qs = params.toString();
+    router.push(`/${qs ? `?${qs}` : ""}`);
+  };
+
+  return (
+    <div className="mb-10">
+      <div className="mb-5 flex flex-wrap items-center gap-2.5">
+        <button
+          onClick={() => updateParam("concern", "All")}
+          className={`cursor-pointer rounded-full border px-5 py-2.5 text-[13.5px] font-medium transition-colors ${
+            activeConcern === "All"
+              ? "border-ink bg-ink text-white"
+              : "border-line bg-white text-ink-soft hover:border-ink hover:text-ink"
+          }`}
+        >
+          All Concerns
+        </button>
+        {concerns.map((c) => (
+          <button
+            key={c}
+            onClick={() => updateParam("concern", c)}
+            className={`flex cursor-pointer items-center gap-2 rounded-full border px-5 py-2.5 text-[13.5px] font-medium transition-colors ${
+              activeConcern === c
+                ? "border-ink bg-ink text-white"
+                : "border-line bg-white text-ink-soft hover:border-ink hover:text-ink"
+            }`}
+          >
+            <ConcernIcon name={c} className="h-4 w-4 shrink-0" />
+            {c}
+          </button>
+        ))}
+      </div>
+      <div className="flex flex-wrap items-center gap-3 border-t border-line pt-4">
+        <label className="text-[13px] font-medium text-ink-soft" htmlFor="type-filter">
+          Product type
+        </label>
+        <select
+          id="type-filter"
+          value={activeType}
+          onChange={(e) => updateParam("type", e.target.value)}
+          className="cursor-pointer rounded-full border border-line bg-white px-4 py-2 text-[13.5px] outline-none focus:border-accent"
+        >
+          <option value="All">All types</option>
+          {types.map((t) => (
+            <option key={t} value={t}>
+              {t}
+            </option>
+          ))}
+        </select>
+        <span className="ml-auto text-[13px] text-ink-soft">
+          {resultCount} {resultCount === 1 ? "product" : "products"}
+        </span>
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="src/components/Footer.tsx">
+import Link from "next/link";
+
+export default function Footer() {
+  return (
+    <footer className="mt-5 bg-ink py-16 text-[#c3cbc4]">
+      <div className="mx-auto max-w-7xl px-8">
+        <div className="grid grid-cols-1 gap-10 border-b border-white/10 pb-11 md:grid-cols-3">
+          <div>
+            <div className="mb-3.5 font-serif text-xl text-white">
+              SkinWise<span className="ml-px align-super text-[11px] font-normal">&trade;</span>
+            </div>
+            <p className="text-[13.5px]">
+              Authentic, dermatologist-trusted skincare from Bioderma, CeraVe,
+              La Roche-Posay and more — sorted by skin concern, not guesswork.
+            </p>
+          </div>
+          <div>
+            <h5 className="mb-4 text-sm font-semibold text-white">Shop by Concern</h5>
+            <div className="flex flex-col gap-2.5 text-[13.5px]">
+              <Link href={{ pathname: "/", query: { concern: "Acne" } }} className="hover:text-white">Acne</Link>
+              <Link href={{ pathname: "/", query: { concern: "Eczema" } }} className="hover:text-white">Eczema</Link>
+              <Link href={{ pathname: "/", query: { concern: "Dryness & Hydration" } }} className="hover:text-white">Dryness & Hydration</Link>
+              <Link href={{ pathname: "/", query: { concern: "Anti-Aging" } }} className="hover:text-white">Anti-Aging</Link>
+              <Link href={{ pathname: "/", query: { concern: "Hyperpigmentation" } }} className="hover:text-white">Hyperpigmentation</Link>
+              <Link href={{ pathname: "/", query: { concern: "Hair & Scalp" } }} className="hover:text-white">Hair & Scalp</Link>
+            </div>
+          </div>
+          <div>
+            <h5 className="mb-4 text-sm font-semibold text-white">Support</h5>
+            <div className="flex flex-col gap-2.5 text-[13.5px]">
+              <Link href="/cart" className="hover:text-white">Cart</Link>
+              <p>hello@skinwise-demo.com</p>
+              <p>This is a demo storefront — no real orders are placed.</p>
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-between pt-6 text-[12.5px] text-[#8a9289]">
+          <span>&copy; 2026 SkinWise. Demo storefront.</span>
+          <span>Built with Next.js</span>
+        </div>
+      </div>
+    </footer>
+  );
+}
+</file>
+
+<file path="src/data/products.json">
+[
+  {
+    "name": "Sensibio H2O Micellar Water",
+    "brand": "Bioderma",
+    "type": "Cleanser",
+    "concerns": [
+      "Sensitive Skin"
+    ],
+    "price": 699,
+    "color": "#a7c4bd",
+    "id": 1,
+    "slug": "bioderma-sensibio-h2o-micellar-water",
+    "image": "/products/bioderma-sensibio-h2o-micellar-water.svg",
+    "desc": "A gentle, no-rinse micellar water that removes makeup and impurities without disrupting the skin's natural barrier \u2014 formulated for sensitive skin.",
+    "keyIngredients": [
+      "Micellar technology",
+      "Cucumber extract",
+      "Fluorohydroxy acid"
+    ],
+    "longDesc": "Formulated for the most reactive skin types, this iconic micellar water uses patented biomimetic technology to lift away makeup, sunscreen, and daily grime without rubbing or rinsing. It respects the skin's natural pH and helps calm redness and tightness immediately after use, making it a staple first step for sensitive, intolerant, and allergy-prone skin.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "I recommend Sensibio H2O as a first step for almost every patient with reactive or intolerant skin \u2014 it's one of the few cleansing waters I've seen genuinely calm redness rather than provoke it. A good baseline product to build a routine around."
+  },
+  {
+    "name": "S\u00e9bium Foaming Gel",
+    "brand": "Bioderma",
+    "type": "Cleanser",
+    "concerns": [
+      "Acne"
+    ],
+    "price": 849,
+    "color": "#8fae9e",
+    "id": 2,
+    "slug": "bioderma-sebium-foaming-gel",
+    "image": "/products/bioderma-sebium-foaming-gel.svg",
+    "desc": "A purifying foaming cleanser for oily, acne-prone skin that removes excess sebum without over-drying.",
+    "keyIngredients": [
+      "Fluidactiv complex",
+      "Zinc gluconate",
+      "Salicylic acid"
+    ],
+    "longDesc": "A gentle-yet-effective foaming cleanser designed specifically for oily and acne-prone skin. It clears away excess sebum and impurities while its Fluidactiv complex works to regulate oil production over time, helping reduce shine and the recurrence of blemishes without stripping the skin barrier.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "For patients with oily, acne-prone skin, this is my go-to recommendation when a foaming cleanser is appropriate. It clears excess oil effectively without the over-drying rebound that often worsens acne in the long run."
+  },
+  {
+    "name": "Atoderm Cream",
+    "brand": "Bioderma",
+    "type": "Moisturizer",
+    "concerns": [
+      "Dryness & Hydration"
+    ],
+    "price": 1099,
+    "color": "#c9d6c9",
+    "id": 3,
+    "slug": "bioderma-atoderm-cream",
+    "image": "/products/bioderma-atoderm-cream-real.jpg",
+    "desc": "A rich, fast-absorbing body and face cream that restores comfort to very dry, fragile skin.",
+    "keyIngredients": [
+      "Skin barrier lipids",
+      "Glycerin",
+      "Vitamin PP"
+    ],
+    "longDesc": "A rich, ultra-nourishing cream that replenishes lipids in very dry to extremely dry skin. Its patented AtoDerm complex helps restore the skin's protective barrier, reducing tightness and discomfort within days of regular use, and is suitable for use on both face and body, including for sensitive and reactive skin.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "Patients with chronic dryness or barrier-compromised skin consistently report real relief with Atoderm within the first week. It's rich without feeling occlusive, and I often pair it with gentler cleansers for eczema-prone patients."
+  },
+  {
+    "name": "Node Anti-Dandruff Shampoo",
+    "brand": "Bioderma",
+    "type": "Shampoo",
+    "concerns": [
+      "Hair & Scalp"
+    ],
+    "price": 799,
+    "color": "#7f9c96",
+    "id": 4,
+    "slug": "bioderma-node-anti-dandruff-shampoo",
+    "image": "/products/bioderma-node-anti-dandruff-shampoo.svg",
+    "desc": "A soothing shampoo that reduces flaking and scalp irritation with regular use.",
+    "keyIngredients": [
+      "Piroctone olamine",
+      "Panthenol",
+      "Zinc PCA"
+    ],
+    "longDesc": "A soothing, frequent-use shampoo that gently cleanses the scalp while reducing flaking and the itch-scratch cycle associated with dandruff. Free from harsh sulfates, it's gentle enough for daily use while remaining effective against persistent scalp flaking.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "A well-tolerated option for patients who need frequent washing but still deal with flaking \u2014 I recommend it particularly for those who find medicated shampoos too harsh for daily use."
+  },
+  {
+    "name": "Foaming Facial Cleanser",
+    "brand": "CeraVe",
+    "type": "Cleanser",
+    "concerns": [
+      "Acne"
+    ],
+    "price": 899,
+    "color": "#9cb8c9",
+    "id": 5,
+    "slug": "cerave-foaming-facial-cleanser",
+    "image": "/products/cerave-foaming-facial-cleanser.svg",
+    "desc": "A foaming gel cleanser with ceramides and niacinamide that removes excess oil without disrupting the skin barrier.",
+    "keyIngredients": [
+      "3 essential ceramides",
+      "Niacinamide",
+      "Hyaluronic acid"
+    ],
+    "longDesc": "Developed with dermatologists, this foaming gel cleanser removes excess oil and impurities from normal to oily skin while three essential ceramides and niacinamide work to maintain and restore the skin's natural barrier \u2014 so your skin feels clean, never tight or stripped.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "CeraVe's ceramide-based cleansers are among the most frequently recommended in my practice \u2014 the science is solid, the formulations are consistent, and patients rarely react badly to them, even with compromised skin barriers."
+  },
+  {
+    "name": "Hydrating Facial Cleanser",
+    "brand": "CeraVe",
+    "type": "Cleanser",
+    "concerns": [
+      "Dryness & Hydration",
+      "Sensitive Skin"
+    ],
+    "price": 899,
+    "color": "#aec7d6",
+    "id": 6,
+    "slug": "cerave-hydrating-facial-cleanser",
+    "image": "/products/cerave-hydrating-facial-cleanser.svg",
+    "desc": "A non-foaming, gentle cleanser with hyaluronic acid and ceramides for normal to dry, sensitive skin.",
+    "keyIngredients": [
+      "3 essential ceramides",
+      "Hyaluronic acid",
+      "MVE technology"
+    ],
+    "longDesc": "A non-foaming, soap-free cleanser that removes dirt and makeup while helping restore the protective skin barrier. Formulated with hyaluronic acid to attract moisture and ceramides to lock it in, this cleanser is gentle enough for daily use on normal to dry, sensitive skin.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "This is my default cleanser recommendation for dry or sensitive skin patients starting a new routine. It cleanses without stripping, which matters enormously for anyone already dealing with barrier issues."
+  },
+  {
+    "name": "Moisturizing Cream",
+    "brand": "CeraVe",
+    "type": "Moisturizer",
+    "concerns": [
+      "Dryness & Hydration"
+    ],
+    "price": 1199,
+    "color": "#c3d3dd",
+    "id": 7,
+    "slug": "cerave-moisturizing-cream",
+    "image": "/products/cerave-moisturizing-cream.svg",
+    "desc": "A rich, non-greasy 24-hour moisturizer with three essential ceramides to help restore the skin barrier.",
+    "keyIngredients": [
+      "3 essential ceramides",
+      "Hyaluronic acid",
+      "MVE technology"
+    ],
+    "longDesc": "A rich, 24-hour moisturizing cream with a unique blend of three essential ceramides that helps restore and maintain the skin's natural barrier. MVE delivery technology provides a continuous release of moisturizing ingredients, making it ideal for very dry to normal skin on the face and body.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "One of the most well-studied moisturizers available over the counter. I recommend it routinely for eczema, post-procedure care, and simply as a reliable daily moisturizer for dry to normal skin."
+  },
+  {
+    "name": "SA Renewing Lotion",
+    "brand": "CeraVe",
+    "type": "Moisturizer",
+    "concerns": [
+      "Dryness & Hydration"
+    ],
+    "price": 1099,
+    "color": "#b3c9d4",
+    "id": 8,
+    "slug": "cerave-sa-renewing-lotion",
+    "image": "/products/cerave-sa-renewing-lotion.svg",
+    "desc": "A lightweight lotion with salicylic acid that gently exfoliates rough, bumpy skin while moisturizing.",
+    "keyIngredients": [
+      "Salicylic acid",
+      "3 essential ceramides",
+      "Urea"
+    ],
+    "longDesc": "A lightweight, fast-absorbing lotion that combines salicylic acid with ceramides to gently exfoliate rough, bumpy skin texture (including keratosis pilaris) while restoring hydration and barrier function \u2014 without the irritation typically associated with exfoliating acids.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "Useful for patients dealing with rough, bumpy skin texture \u2014 the combination of salicylic acid with ceramides means we get gentle exfoliation without the irritation I'd otherwise worry about."
+  },
+  {
+    "name": "Resurfacing Retinol Serum",
+    "brand": "CeraVe",
+    "type": "Serum",
+    "concerns": [
+      "Anti-Aging"
+    ],
+    "price": 1499,
+    "color": "#7d97a8",
+    "id": 9,
+    "slug": "cerave-resurfacing-retinol-serum",
+    "image": "/products/cerave-resurfacing-retinol-serum.svg",
+    "desc": "An encapsulated retinol serum that smooths texture and fine lines overnight, formulated to minimize irritation.",
+    "keyIngredients": [
+      "Encapsulated retinol",
+      "Niacinamide",
+      "Ceramides"
+    ],
+    "longDesc": "A nightly resurfacing serum with encapsulated retinol, designed to smooth the appearance of post-acne marks and uneven texture while minimizing common retinol irritation. Ceramides and niacinamide help maintain barrier comfort throughout your retinization journey.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "A sensible entry point for patients new to retinoids. The encapsulation technology genuinely reduces the irritation I see with stronger prescription retinoids, making it easier for patients to stay consistent."
+  },
+  {
+    "name": "Skin Renewing Vitamin C Serum",
+    "brand": "CeraVe",
+    "type": "Serum",
+    "concerns": [
+      "Hyperpigmentation",
+      "Anti-Aging"
+    ],
+    "price": 1799,
+    "color": "#e0c88f",
+    "id": 10,
+    "slug": "cerave-skin-renewing-vitamin-c-serum",
+    "image": "/products/cerave-skin-renewing-vitamin-c-serum.svg",
+    "desc": "A brightening serum with pure vitamin C and hyaluronic acid to even tone and support collagen production.",
+    "keyIngredients": [
+      "L-ascorbic acid (Vitamin C)",
+      "Hyaluronic acid",
+      "Vitamin E"
+    ],
+    "longDesc": "A potent brightening serum combining 10% pure L-ascorbic acid with hyaluronic acid to visibly brighten skin tone, soften the look of fine lines, and support the skin's natural collagen production \u2014 formulated to minimize the sting often associated with vitamin C serums.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "I recommend this to patients looking to address dullness or early pigmentation who haven't tolerated vitamin C serums well in the past \u2014 the formulation is better buffered than most drugstore options."
+  },
+  {
+    "name": "Dandruff Relief Shampoo",
+    "brand": "CeraVe",
+    "type": "Shampoo",
+    "concerns": [
+      "Hair & Scalp"
+    ],
+    "price": 799,
+    "color": "#93aebd",
+    "id": 11,
+    "slug": "cerave-dandruff-relief-shampoo",
+    "image": "/products/cerave-dandruff-relief-shampoo.svg",
+    "desc": "A medicated shampoo that targets flaking and itch while being gentle enough for daily use.",
+    "keyIngredients": [
+      "Pyrithione zinc",
+      "Ceramides",
+      "Niacinamide"
+    ],
+    "longDesc": "A medicated, dermatologist-developed shampoo that relieves itching and flaking from dandruff, while ceramides and niacinamide help maintain scalp barrier health for comfortable, ongoing use.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "A reasonable maintenance option for mild to moderate dandruff, especially for patients who want to avoid the drying effect of stronger medicated shampoos with long-term use."
+  },
+  {
+    "name": "Effaclar Duo Acne Treatment",
+    "brand": "La Roche-Posay",
+    "type": "Treatment",
+    "concerns": [
+      "Acne"
+    ],
+    "price": 1699,
+    "color": "#7c8f7d",
+    "id": 12,
+    "slug": "la-roche-posay-effaclar-duo-acne-treatment",
+    "image": "/products/la-roche-posay-effaclar-duo-acne-treatment.svg",
+    "desc": "A dual-action gel that targets acne and helps reduce the appearance of post-acne marks.",
+    "keyIngredients": [
+      "Niacinamide",
+      "Salicylic acid (LHA)",
+      "Micro-exfoliating agents"
+    ],
+    "longDesc": "A dual-action leave-on treatment gel that targets active blemishes with micro-exfoliating LHA while niacinamide works to visibly reduce the appearance of post-acne marks \u2014 formulated to be non-comedogenic and suitable for sensitive, acne-prone skin.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "I frequently suggest Effaclar Duo as an adjunct to prescription acne treatment \u2014 the niacinamide component genuinely helps with the post-inflammatory marks that bother patients as much as active breakouts."
+  },
+  {
+    "name": "Anthelios Sunscreen SPF 50",
+    "brand": "La Roche-Posay",
+    "type": "Sunscreen",
+    "concerns": [
+      "Sun Protection"
+    ],
+    "price": 1899,
+    "color": "#e3d9b8",
+    "id": 13,
+    "slug": "la-roche-posay-anthelios-sunscreen-spf-50",
+    "image": "/products/la-roche-posay-anthelios-sunscreen-spf-50.svg",
+    "desc": "A broad-spectrum, lightweight sunscreen with high UVA/UVB protection for daily wear, even under makeup.",
+    "keyIngredients": [
+      "Mexoryl SX/XL filters",
+      "Antioxidants",
+      "Thermal spring water"
+    ],
+    "longDesc": "An advanced broad-spectrum sunscreen using patented Mexoryl filter technology for superior, photostable UVA/UVB protection. Its fluid, non-greasy texture absorbs quickly and layers seamlessly under makeup, making daily reapplication genuinely pleasant.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "This is the sunscreen I recommend most often when patients tell me they 'hate how sunscreen feels.' The texture compliance alone makes a real difference in whether people actually reapply it."
+  },
+  {
+    "name": "Toleriane Sensitive Cream",
+    "brand": "La Roche-Posay",
+    "type": "Moisturizer",
+    "concerns": [
+      "Sensitive Skin"
+    ],
+    "price": 1599,
+    "color": "#d9cfc2",
+    "id": 14,
+    "slug": "la-roche-posay-toleriane-sensitive-cream",
+    "image": "/products/la-roche-posay-toleriane-sensitive-cream.svg",
+    "desc": "A fragrance-free moisturizer formulated to soothe and hydrate reactive, sensitive skin.",
+    "keyIngredients": [
+      "Prebiotic thermal spring water",
+      "Ceramide-3",
+      "Niacinamide"
+    ],
+    "longDesc": "A fragrance-free daily moisturizer built around La Roche-Posay's prebiotic thermal spring water, designed to soothe reactivity while replenishing the skin barrier \u2014 dermatologist-recommended for sensitive and allergy-prone skin, including post-procedure care.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "A dependable choice for patients recovering from procedures or dealing with reactive, easily-irritated skin. Fragrance-free and genuinely gentle, not just labeled as such."
+  },
+  {
+    "name": "Lipikar Balm AP+",
+    "brand": "La Roche-Posay",
+    "type": "Moisturizer",
+    "concerns": [
+      "Eczema",
+      "Dryness & Hydration"
+    ],
+    "price": 1799,
+    "color": "#c7cbb8",
+    "id": 15,
+    "slug": "la-roche-posay-lipikar-balm-ap-plus",
+    "image": "/products/la-roche-posay-lipikar-balm-ap-plus.svg",
+    "desc": "An intensive repairing balm for very dry, eczema-prone skin, clinically proven to soothe irritation.",
+    "keyIngredients": [
+      "Shea butter",
+      "Niacinamide",
+      "Microresyl"
+    ],
+    "longDesc": "An intensive, fast-absorbing balm clinically proven to relieve dryness and discomfort associated with eczema-prone skin. Shea butter and niacinamide soothe irritation, while Microresyl technology helps reduce the recurrence of dry patches with continued use.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "For my eczema patients, this balm is often part of the maintenance plan between flare-ups. It's rich enough to matter but doesn't feel like it's sitting on top of the skin."
+  },
+  {
+    "name": "Pigmentclar Serum",
+    "brand": "La Roche-Posay",
+    "type": "Serum",
+    "concerns": [
+      "Hyperpigmentation"
+    ],
+    "price": 2199,
+    "color": "#d8b98f",
+    "id": 16,
+    "slug": "la-roche-posay-pigmentclar-serum",
+    "image": "/products/la-roche-posay-pigmentclar-serum.svg",
+    "desc": "A targeted serum that helps fade dark spots and even out skin tone over time.",
+    "keyIngredients": [
+      "LHA",
+      "Niacinamide",
+      "Vitamin CG"
+    ],
+    "longDesc": "A targeted serum formulated to visibly reduce the appearance of dark spots, post-acne marks, and uneven skin tone. LHA gently resurfaces while niacinamide and Vitamin CG work beneath the surface to interrupt excess pigment production.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "A solid option for early hyperpigmentation and post-acne marks. I set realistic expectations with patients \u2014 visible improvement takes 8-12 weeks of consistent use, but the formulation is sound."
+  },
+  {
+    "name": "Hydro Boost Water Gel",
+    "brand": "Neutrogena",
+    "type": "Moisturizer",
+    "concerns": [
+      "Dryness & Hydration"
+    ],
+    "price": 899,
+    "color": "#a9c9c4",
+    "id": 17,
+    "slug": "neutrogena-hydro-boost-water-gel",
+    "image": "/products/neutrogena-hydro-boost-water-gel.svg",
+    "desc": "An oil-free, water-based gel moisturizer with hyaluronic acid that hydrates without heaviness.",
+    "keyIngredients": [
+      "Hyaluronic acid",
+      "Glycerin",
+      "Dimethicone"
+    ],
+    "longDesc": "An oil-free gel-cream that instantly quenches dry skin and continues hydrating over time. Its hyaluronic acid-infused formula plumps skin with intense moisture while feeling completely weightless \u2014 never greasy or heavy, even in humid climates.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "A good, accessible hydrating option for patients with normal to oily skin who find heavier creams too much. The hyaluronic acid base does real work without adding weight."
+  },
+  {
+    "name": "Rapid Wrinkle Repair Serum",
+    "brand": "Neutrogena",
+    "type": "Serum",
+    "concerns": [
+      "Anti-Aging"
+    ],
+    "price": 1399,
+    "color": "#8fa89f",
+    "id": 18,
+    "slug": "neutrogena-rapid-wrinkle-repair-serum",
+    "image": "/products/neutrogena-rapid-wrinkle-repair-serum.svg",
+    "desc": "A fast-absorbing serum with retinol that targets fine lines and uneven texture.",
+    "keyIngredients": [
+      "Retinol SA",
+      "Hyaluronic acid",
+      "Glucose complex"
+    ],
+    "longDesc": "A fast-absorbing anti-aging serum with accelerated retinol SA technology that visibly reduces the look of fine lines and wrinkles, with results dermatologists say are comparable to prescription retinoids \u2014 without a prescription.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "For patients not ready for a prescription retinoid, this is a reasonable stepping stone with real, published clinical data behind it \u2014 not just marketing claims."
+  },
+  {
+    "name": "Ultra Sheer Sunscreen SPF 55",
+    "brand": "Neutrogena",
+    "type": "Sunscreen",
+    "concerns": [
+      "Sun Protection"
+    ],
+    "price": 599,
+    "color": "#e6dcc0",
+    "id": 19,
+    "slug": "neutrogena-ultra-sheer-sunscreen-spf-55",
+    "image": "/products/neutrogena-ultra-sheer-sunscreen-spf-55.svg",
+    "desc": "A lightweight, non-greasy sunscreen that absorbs quickly and layers well under makeup.",
+    "keyIngredients": [
+      "Helioplex technology",
+      "Avobenzone",
+      "Oxybenzone"
+    ],
+    "longDesc": "A lightweight, non-greasy sunscreen with Helioplex broad-spectrum technology that stays photostable in the sun, offering reliable daily protection that absorbs quickly and doesn't leave a white cast.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "A practical, no-fuss daily sunscreen recommendation for patients who want reliable protection without a complicated skincare routine."
+  },
+  {
+    "name": "Advanced Repair Cream",
+    "brand": "Eucerin",
+    "type": "Moisturizer",
+    "concerns": [
+      "Dryness & Hydration",
+      "Eczema"
+    ],
+    "price": 999,
+    "color": "#bcd0cf",
+    "id": 20,
+    "slug": "eucerin-advanced-repair-cream",
+    "image": "/products/eucerin-advanced-repair-cream.svg",
+    "desc": "A fragrance-free cream with ceramides and urea that provides 48-hour relief for very dry skin.",
+    "keyIngredients": [
+      "Ceramide-3",
+      "Natural moisturizing factors",
+      "Urea"
+    ],
+    "longDesc": "A fragrance-free, fast-absorbing cream formulated with ceramide-3 and natural moisturizing factors to provide 48-hour relief for very dry, flaking skin \u2014 clinically shown to repair the driest of skin without a greasy after-feel.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "I recommend this often for patients with chronic dry skin conditions who need something dependable for daily maintenance \u2014 it consistently performs well without irritating already-compromised skin."
+  },
+  {
+    "name": "Eczema Relief Cream",
+    "brand": "Eucerin",
+    "type": "Moisturizer",
+    "concerns": [
+      "Eczema"
+    ],
+    "price": 1199,
+    "color": "#a3bdba",
+    "id": 21,
+    "slug": "eucerin-eczema-relief-cream",
+    "image": "/products/eucerin-eczema-relief-cream.svg",
+    "desc": "A steroid-free cream formulated to relieve itching and redness associated with eczema flare-ups.",
+    "keyIngredients": [
+      "Colloidal oatmeal",
+      "Ceramide-3",
+      "Licochalcone A"
+    ],
+    "longDesc": "A steroid-free cream developed to calm the itching, redness and irritation of eczema flare-ups. Colloidal oatmeal and licochalcone A work together to soothe compromised skin while restoring the barrier over time.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "A steroid-free option I suggest for maintenance between eczema flare-ups, when we want to calm the skin without escalating to topical steroids for every episode."
+  },
+  {
+    "name": "Gentle Facial Cleanser",
+    "brand": "Vanicream",
+    "type": "Cleanser",
+    "concerns": [
+      "Sensitive Skin"
+    ],
+    "price": 799,
+    "color": "#cfd6cf",
+    "id": 22,
+    "slug": "vanicream-gentle-facial-cleanser",
+    "image": "/products/vanicream-gentle-facial-cleanser.svg",
+    "desc": "A soap-free, fragrance-free cleanser formulated for sensitive and easily irritated skin.",
+    "keyIngredients": [
+      "Glycerin",
+      "No dyes, fragrance or lanolin",
+      "Sunflower seed oil"
+    ],
+    "longDesc": "Free of dyes, fragrance, lanolin, parabens, and formaldehyde, this cleanser was developed for people with the most easily irritated skin. It removes makeup and impurities effectively while leaving skin feeling calm, never tight or reactive.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "For my most sensitive and reactive patients \u2014 including those with confirmed contact allergies \u2014 Vanicream is usually where I start. The minimal ingredient list matters more than people realize."
+  },
+  {
+    "name": "Cicalfate+ Repair Cream",
+    "brand": "Av\u00e8ne",
+    "type": "Treatment",
+    "concerns": [
+      "Eczema",
+      "Sensitive Skin"
+    ],
+    "price": 1299,
+    "color": "#b8c9bf",
+    "id": 23,
+    "slug": "avene-cicalfate-plus-repair-cream",
+    "image": "/products/avene-cicalfate-plus-repair-cream.svg",
+    "desc": "A restorative cream that helps soothe and protect compromised, irritated, or eczema-prone skin.",
+    "keyIngredients": [
+      "Av\u00e8ne thermal spring water",
+      "Copper & zinc sulfate",
+      "Postbiotic complex"
+    ],
+    "longDesc": "A restorative, fast-acting cream that helps soothe and protect skin affected by irritation, minor wounds, or eczema flare-ups. Av\u00e8ne thermal spring water combined with copper and zinc sulfate helps calm compromised skin and support visible recovery.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "Useful for patients recovering from minor skin trauma, procedures, or eczema flares where the skin barrier needs active support alongside routine care."
+  },
+  {
+    "name": "Anti-Dandruff Shampoo",
+    "brand": "Nizoral",
+    "type": "Shampoo",
+    "concerns": [
+      "Hair & Scalp"
+    ],
+    "price": 599,
+    "color": "#94a6ad",
+    "id": 24,
+    "slug": "nizoral-anti-dandruff-shampoo",
+    "image": "/products/nizoral-anti-dandruff-shampoo.svg",
+    "desc": "A medicated shampoo with ketoconazole that treats and helps prevent dandruff.",
+    "keyIngredients": [
+      "Ketoconazole 1%",
+      "Anti-fungal complex",
+      "Conditioning agents"
+    ],
+    "longDesc": "A clinical-strength, dermatologist-recommended shampoo with 1% ketoconazole that treats the fungus associated with stubborn dandruff at its source \u2014 visibly reducing flaking and itch, often within the first few uses.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "For persistent, fungal-driven dandruff that hasn't responded to gentler shampoos, ketoconazole-based options like this one are usually my next recommendation before considering prescription alternatives."
+  }
+]
+</file>
+
+<file path="src/lib/cart-context.tsx">
+"use client";
+
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useMemo,
+  useSyncExternalStore,
+} from "react";
+import type { CartLine } from "./types";
+import { products } from "./products";
+
+const STORAGE_KEY = "aurel-cart";
+const EMPTY_LINES: CartLine[] = [];
+
+// A tiny external store (outside React) for cart lines + drawer-open state.
+// useSyncExternalStore is the React-blessed way to read browser-only state
+// (localStorage here) without a server/client hydration mismatch: React
+// renders `getServerSnapshot` (always the safe default) during hydration,
+// then swaps in the real `getSnapshot` value right after — no manual
+// "hydrated" gating needed anywhere that reads it.
+let linesState: CartLine[] = EMPTY_LINES;
+let openState = false;
+let storeInitialized = false;
+const listeners = new Set<() => void>();
+
+function notify() {
+  listeners.forEach((l) => l());
+}
+
+function ensureLoaded() {
+  if (storeInitialized || typeof window === "undefined") return;
+  storeInitialized = true;
+  try {
+    const raw = window.localStorage.getItem(STORAGE_KEY);
+    if (raw) linesState = JSON.parse(raw);
+  } catch {
+    // ignore malformed storage
+  }
+}
+
+function persist() {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(linesState));
+  } catch {
+    // storage unavailable (private mode etc.) — fail silently
+  }
+}
+
+function setLines(updater: (prev: CartLine[]) => CartLine[]) {
+  ensureLoaded();
+  linesState = updater(linesState);
+  persist();
+  notify();
+}
+
+function subscribe(callback: () => void) {
+  listeners.add(callback);
+  return () => listeners.delete(callback);
+}
+
+function getLinesSnapshot() {
+  ensureLoaded();
+  return linesState;
+}
+
+function getServerLinesSnapshot() {
+  return EMPTY_LINES;
+}
+
+function getOpenSnapshot() {
+  return openState;
+}
+
+function getServerOpenSnapshot() {
+  return false;
+}
+
+function setOpen(value: boolean) {
+  openState = value;
+  notify();
+}
+
+type CartContextValue = {
+  lines: CartLine[];
+  isOpen: boolean;
+  openCart: () => void;
+  closeCart: () => void;
+  addItem: (slug: string, qty?: number) => void;
+  removeItem: (slug: string) => void;
+  setQty: (slug: string, qty: number) => void;
+  count: number;
+  subtotal: number;
+  clear: () => void;
+};
+
+const CartContext = createContext<CartContextValue | null>(null);
+
+export function CartProvider({ children }: { children: React.ReactNode }) {
+  const lines = useSyncExternalStore(subscribe, getLinesSnapshot, getServerLinesSnapshot);
+  const isOpen = useSyncExternalStore(subscribe, getOpenSnapshot, getServerOpenSnapshot);
+
+  const addItem = useCallback((slug: string, qty = 1) => {
+    setLines((prev) => {
+      const existing = prev.find((l) => l.slug === slug);
+      if (existing) {
+        return prev.map((l) => (l.slug === slug ? { ...l, qty: l.qty + qty } : l));
+      }
+      return [...prev, { slug, qty }];
+    });
+    setOpen(true);
+  }, []);
+
+  const removeItem = useCallback((slug: string) => {
+    setLines((prev) => prev.filter((l) => l.slug !== slug));
+  }, []);
+
+  const setQty = useCallback((slug: string, qty: number) => {
+    setLines((prev) => {
+      if (qty <= 0) return prev.filter((l) => l.slug !== slug);
+      return prev.map((l) => (l.slug === slug ? { ...l, qty } : l));
+    });
+  }, []);
+
+  const clear = useCallback(() => setLines(() => []), []);
+  const openCart = useCallback(() => setOpen(true), []);
+  const closeCart = useCallback(() => setOpen(false), []);
+
+  const count = useMemo(() => lines.reduce((n, l) => n + l.qty, 0), [lines]);
+
+  const subtotal = useMemo(() => {
+    return lines.reduce((sum, l) => {
+      const p = products.find((pr) => pr.slug === l.slug);
+      return sum + (p ? p.price * l.qty : 0);
+    }, 0);
+  }, [lines]);
+
+  const value: CartContextValue = {
+    lines,
+    isOpen,
+    openCart,
+    closeCart,
+    addItem,
+    removeItem,
+    setQty,
+    count,
+    subtotal,
+    clear,
+  };
+
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
+}
+
+export function useCart() {
+  const ctx = useContext(CartContext);
+  if (!ctx) throw new Error("useCart must be used within CartProvider");
+  return ctx;
+}
+</file>
+
+<file path="src/lib/products.ts">
+import productsData from "@/data/products.json";
+import type { Product } from "./types";
+
+export const products = productsData as Product[];
+
+// Fixed, sensible order for concern pills rather than JSON insertion order.
+const CONCERN_ORDER = [
+  "Acne",
+  "Eczema",
+  "Dryness & Hydration",
+  "Anti-Aging",
+  "Hyperpigmentation",
+  "Sensitive Skin",
+  "Sun Protection",
+  "Hair & Scalp",
+];
+
+export function getConcerns(): string[] {
+  const present = new Set(products.flatMap((p) => p.concerns));
+  return CONCERN_ORDER.filter((c) => present.has(c));
+}
+
+export function getTypes(): string[] {
+  return Array.from(new Set(products.map((p) => p.type))).sort();
+}
+
+export function getBrands(): string[] {
+  return Array.from(new Set(products.map((p) => p.brand))).sort();
+}
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find((p) => p.slug === slug);
+}
+
+export function getRelated(product: Product, count = 4): Product[] {
+  const sameConcern = products.filter(
+    (p) =>
+      p.slug !== product.slug &&
+      p.concerns.some((c) => product.concerns.includes(c))
+  );
+  if (sameConcern.length >= count) return sameConcern.slice(0, count);
+
+  const sameType = products.filter(
+    (p) =>
+      p.slug !== product.slug &&
+      p.type === product.type &&
+      !sameConcern.includes(p)
+  );
+  return [...sameConcern, ...sameType].slice(0, count);
+}
+
+export function filterProducts(
+  concern?: string,
+  type?: string,
+  query?: string
+): Product[] {
+  let result = products;
+  if (concern && concern !== "All") {
+    result = result.filter((p) => p.concerns.includes(concern));
+  }
+  if (type && type !== "All") {
+    result = result.filter((p) => p.type === type);
+  }
+  if (query && query.trim()) {
+    const q = query.trim().toLowerCase();
+    result = result.filter(
+      (p) =>
+        p.name.toLowerCase().includes(q) ||
+        p.brand.toLowerCase().includes(q) ||
+        p.type.toLowerCase().includes(q) ||
+        p.concerns.some((c) => c.toLowerCase().includes(q)) ||
+        p.desc.toLowerCase().includes(q)
+    );
+  }
+  return result;
+}
+
+export function formatPrice(price: number): string {
+  return `₹${price.toLocaleString("en-IN")}`;
+}
+</file>
+
+<file path="src/lib/types.ts">
+export type Product = {
+  id: number;
+  slug: string;
+  name: string;
+  brand: string;
+  type: string;
+  concerns: string[];
+  price: number;
+  color: string;
+  desc: string;
+  longDesc: string;
+  keyIngredients: string[];
+  fullIngredients: string;
+  doctorOpinion: string;
+  image: string;
+};
+
+export type CartLine = {
+  slug: string;
+  qty: number;
+};
+</file>
+
+<file path="src/app/checkout/page.tsx">
+"use client";
+
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { useCart } from "@/lib/cart-context";
+import { getProductBySlug, formatPrice } from "@/lib/products";
+import { computeOrderTotal } from "@/lib/pricing";
+
+declare global {
+  interface Window {
+    Razorpay: new (options: Record<string, unknown>) => {
+      open: () => void;
+      on: (event: string, handler: (response: unknown) => void) => void;
+    };
+  }
+}
+
+const RAZORPAY_SCRIPT_SRC = "https://checkout.razorpay.com/v1/checkout.js";
+
+function loadRazorpayScript(): Promise<boolean> {
+  return new Promise((resolve) => {
+    if (window.Razorpay) return resolve(true);
+    const existing = document.querySelector(`script[src="${RAZORPAY_SCRIPT_SRC}"]`);
+    if (existing) {
+      existing.addEventListener("load", () => resolve(true));
+      existing.addEventListener("error", () => resolve(false));
+      return;
+    }
+    const script = document.createElement("script");
+    script.src = RAZORPAY_SCRIPT_SRC;
+    script.onload = () => resolve(true);
+    script.onerror = () => resolve(false);
+    document.body.appendChild(script);
+  });
+}
+
+export default function CheckoutPage() {
+  const { lines, clear } = useCart();
+  const router = useRouter();
+  const [placing, setPlacing] = useState(false);
+  const [payError, setPayError] = useState<string | null>(null);
+
+  const { subtotal, shipping, total } = computeOrderTotal(lines);
+
+  if (lines.length === 0 && !placing) {
+    return (
+      <div className="mx-auto max-w-7xl px-8 py-24 text-center">
+        <h1 className="mb-3 text-[28px] font-medium">Nothing to check out</h1>
+        <p className="text-ink-soft">Add something to your cart first.</p>
+      </div>
+    );
+  }
+
+  const handlePlaceOrder = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setPayError(null);
+    setPlacing(true);
+
+    const form = new FormData(e.currentTarget);
+    const firstName = String(form.get("firstName") || "");
+    const lastName = String(form.get("lastName") || "");
+    const email = String(form.get("email") || "");
+    const phone = String(form.get("phone") || "");
+
+    try {
+      const scriptLoaded = await loadRazorpayScript();
+      if (!scriptLoaded) {
+        setPayError("Couldn't load the payment gateway. Check your connection and try again.");
+        setPlacing(false);
+        return;
+      }
+
+      const orderRes = await fetch("/api/razorpay/create-order", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ lines }),
+      });
+      const orderData = await orderRes.json();
+      if (!orderRes.ok) {
+        setPayError(orderData?.error || "Couldn't start payment. Please try again.");
+        setPlacing(false);
+        return;
+      }
+
+      const razorpay = new window.Razorpay({
+        key: orderData.keyId,
+        order_id: orderData.orderId,
+        amount: orderData.amount,
+        currency: orderData.currency,
+        name: "SkinWise",
+        description: "Dermatology & skincare order",
+        prefill: {
+          name: `${firstName} ${lastName}`.trim(),
+          email,
+          contact: phone,
+        },
+        theme: { color: "#3f6d5c" },
+        handler: async (response: unknown) => {
+          const r = response as {
+            razorpay_order_id: string;
+            razorpay_payment_id: string;
+            razorpay_signature: string;
+          };
+          try {
+            const verifyRes = await fetch("/api/razorpay/verify", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(r),
+            });
+            const verifyData = await verifyRes.json();
+            if (!verifyRes.ok || !verifyData.verified) {
+              setPayError(
+                "We couldn't verify your payment. If money was deducted, it will be refunded automatically — please contact support."
+              );
+              setPlacing(false);
+              return;
+            }
+            clear();
+            router.push(`/order-confirmed?payment_id=${encodeURIComponent(verifyData.paymentId)}`);
+          } catch {
+            setPayError("Payment verification failed. Please contact support if you were charged.");
+            setPlacing(false);
+          }
+        },
+        modal: {
+          ondismiss: () => {
+            setPlacing(false);
+          },
+        },
+      });
+
+      razorpay.on("payment.failed", () => {
+        setPayError("Payment failed. Please try again, or use a different method.");
+        setPlacing(false);
+      });
+
+      razorpay.open();
+    } catch (err) {
+      console.error(err);
+      setPayError("Something went wrong starting payment. Please try again.");
+      setPlacing(false);
+    }
+  };
+
+  return (
+    <div className="mx-auto max-w-7xl px-8 py-14">
+      <h1 className="mb-2 text-[32px] font-medium">Checkout</h1>
+      <p className="mb-10 text-sm text-ink-soft">
+        Payments are handled by Razorpay in <strong>test mode</strong> — no real
+        money will be charged. Choose <strong>UPI</strong> in the payment popup and
+        enter <code className="rounded bg-bg-2 px-1.5 py-0.5">success@razorpay</code>{" "}
+        as the UPI ID to simulate a successful payment. Test cards may fail with
+        &ldquo;international cards not supported&rdquo; until your account is fully
+        activated — UPI works regardless.
+      </p>
+
+      <div className="grid grid-cols-1 gap-14 md:grid-cols-[1.6fr_1fr]">
+        <form onSubmit={handlePlaceOrder} className="flex flex-col gap-6">
+          <div>
+            <h3 className="mb-4 text-lg font-medium">Contact</h3>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <input name="firstName" required placeholder="First name" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
+              <input name="lastName" required placeholder="Last name" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
+              <input name="email" required type="email" placeholder="Email" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
+              <input name="phone" required type="tel" placeholder="Phone number" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
+            </div>
+          </div>
+          <div>
+            <h3 className="mb-4 text-lg font-medium">Shipping Address</h3>
+            <div className="grid grid-cols-1 gap-4">
+              <input name="address" required placeholder="Street address" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                <input name="city" required placeholder="City" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
+                <input name="state" required placeholder="State" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
+                <input name="pincode" required placeholder="PIN code" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
+              </div>
+            </div>
+          </div>
+
+          {payError && (
+            <p className="rounded-lg bg-red-50 px-4 py-3 text-[13px] text-red-700">{payError}</p>
+          )}
+
+          <button
+            type="submit"
+            disabled={placing}
+            className="mt-2 w-full cursor-pointer rounded-full bg-ink py-4 text-[15px] font-semibold text-white hover:bg-[#3a352d] disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            {placing ? "Opening payment…" : `Pay ${formatPrice(total)}`}
+          </button>
+        </form>
+
+        <div className="h-fit rounded-2xl border border-line bg-white p-7">
+          <h3 className="mb-5 text-lg font-medium">Order Summary</h3>
+          <div className="mb-5 flex flex-col gap-4">
+            {lines.map((line) => {
+              const product = getProductBySlug(line.slug);
+              if (!product) return null;
+              return (
+                <div key={line.slug} className="flex justify-between text-[13.5px]">
+                  <span className="text-ink-soft">
+                    {product.name} &times; {line.qty}
+                  </span>
+                  <span>{formatPrice(product.price * line.qty)}</span>
+                </div>
+              );
+            })}
+          </div>
+          <div className="mb-3 flex justify-between border-t border-line pt-4 text-[14.5px] text-ink-soft">
+            <span>Subtotal</span>
+            <span>{formatPrice(subtotal)}</span>
+          </div>
+          <div className="mb-3 flex justify-between text-[14.5px] text-ink-soft">
+            <span>Shipping</span>
+            <span>{shipping === 0 ? "Free" : formatPrice(shipping)}</span>
+          </div>
+          <div className="mt-2 flex justify-between border-t border-line pt-4 text-base font-semibold">
+            <span>Total</span>
+            <span>{formatPrice(total)}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="src/app/page.tsx">
+import { Suspense } from "react";
+import { filterProducts, getConcerns, getTypes } from "@/lib/products";
+import FilterBar from "@/components/FilterBar";
+import ProductCard from "@/components/ProductCard";
+import HeroAskSlot from "@/components/HeroAskSlot";
+
+function EmptyState() {
+  return (
+    <div className="py-20 text-center text-ink-soft">
+      <p className="mb-2 text-lg font-serif">No products found</p>
+      <p className="text-sm">Try a different search term or filter.</p>
+    </div>
+  );
+}
+
+async function ProductResults({
+  searchParams,
+}: {
+  searchParams: Promise<{ concern?: string; type?: string; q?: string }>;
+}) {
+  const params = await searchParams;
+  const concerns = getConcerns();
+  const types = getTypes();
+  const results = filterProducts(params.concern, params.type, params.q);
+
+  return (
+    <>
+      <FilterBar concerns={concerns} types={types} resultCount={results.length} />
+      {results.length === 0 ? (
+        <EmptyState />
+      ) : (
+        <div className="grid grid-cols-2 gap-x-6 gap-y-9 pb-24 md:grid-cols-4">
+          {results.map((product) => (
+            <ProductCard key={product.slug} product={product} />
+          ))}
+        </div>
+      )}
+    </>
+  );
+}
+
+export default function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ concern?: string; type?: string; q?: string }>;
+}) {
+  return (
+    <div>
+      <section
+        className="border-b border-line py-16 text-center md:py-20"
+        style={{
+          background:
+            "radial-gradient(120% 100% at 50% 0%, var(--bg-2) 0%, var(--bg) 60%)",
+        }}
+      >
+        <div className="mx-auto max-w-7xl px-8">
+          <div className="mb-4 text-[12.5px] font-semibold uppercase tracking-[2px] text-accent">
+            Clinically Formulated
+          </div>
+          <h1 className="mx-auto mb-4 max-w-2xl text-[34px] font-medium leading-tight md:text-[48px]">
+            Dermatologist-trusted skincare, <em className="text-accent">sorted by what you need.</em>
+          </h1>
+          <p className="mx-auto mb-9 max-w-lg text-[16px] text-ink-soft">
+            Authentic products from Bioderma, CeraVe, La Roche-Posay and more —
+            browse by skin concern to find what actually works for you.
+          </p>
+          <HeroAskSlot />
+        </div>
+      </section>
+
+      <div className="mx-auto max-w-7xl px-8 pt-14">
+        <Suspense fallback={<div className="pb-24 text-center text-ink-soft">Loading…</div>}>
+          <ProductResults searchParams={searchParams} />
+        </Suspense>
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="src/app/cart/page.tsx">
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useCart } from "@/lib/cart-context";
+import { getProductBySlug, formatPrice } from "@/lib/products";
+import { computeOrderTotal } from "@/lib/pricing";
+
+export default function CartPage() {
+  const { lines, setQty, removeItem } = useCart();
+  const router = useRouter();
+
+  const { subtotal, shipping, total } = computeOrderTotal(lines);
+
+  if (lines.length === 0) {
+    return (
+      <div className="mx-auto max-w-7xl px-8 py-24 text-center">
+        <h1 className="mb-3 text-[28px] font-medium">Your cart is empty</h1>
+        <p className="mb-8 text-ink-soft">Looks like you haven&rsquo;t added anything yet.</p>
+        <Link
+          href="/"
+          className="inline-block rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-white hover:bg-[#3a352d]"
+        >
+          Continue Shopping
+        </Link>
+      </div>
+    );
+  }
+
+  return (
+    <div className="mx-auto max-w-7xl px-8 py-14">
+      <h1 className="mb-9 text-[32px] font-medium">Your Cart</h1>
+      <div className="grid grid-cols-1 gap-14 md:grid-cols-[1.6fr_1fr]">
+        <div>
+          {lines.map((line) => {
+            const product = getProductBySlug(line.slug);
+            if (!product) return null;
+            return (
+              <div key={line.slug} className="flex gap-5 border-b border-line py-5">
+                <div className="relative h-[108px] w-[90px] shrink-0 overflow-hidden rounded-[10px] bg-bg-2">
+                  <Image src={product.image} alt={product.name} fill className="object-cover" />
+                </div>
+                <div className="flex flex-1 flex-col justify-between">
+                  <div className="flex justify-between gap-4">
+                    <div>
+                      <div className="mb-1 text-[11px] uppercase tracking-wide text-accent">
+                        {product.brand}
+                      </div>
+                      <Link href={`/product/${product.slug}`} className="text-[16px] font-medium hover:underline">
+                        {product.name}
+                      </Link>
+                    </div>
+                    <p className="whitespace-nowrap text-[15px]">
+                      {formatPrice(product.price * line.qty)}
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center overflow-hidden rounded-full border border-line">
+                      <button
+                        className="h-9 w-9 cursor-pointer text-sm"
+                        onClick={() => setQty(line.slug, line.qty - 1)}
+                      >
+                        &minus;
+                      </button>
+                      <span className="w-8 text-center text-[13px]">{line.qty}</span>
+                      <button
+                        className="h-9 w-9 cursor-pointer text-sm"
+                        onClick={() => setQty(line.slug, line.qty + 1)}
+                      >
+                        +
+                      </button>
+                    </div>
+                    <button
+                      onClick={() => removeItem(line.slug)}
+                      className="cursor-pointer text-[12.5px] text-ink-soft underline"
+                    >
+                      Remove
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="sticky top-28 h-fit rounded-2xl border border-line bg-white p-7">
+          <h3 className="mb-5 text-lg font-medium">Order Summary</h3>
+          <div className="mb-3 flex justify-between text-[14.5px] text-ink-soft">
+            <span>Subtotal</span>
+            <span>{formatPrice(subtotal)}</span>
+          </div>
+          <div className="mb-3 flex justify-between text-[14.5px] text-ink-soft">
+            <span>Shipping</span>
+            <span>{shipping === 0 ? "Free" : formatPrice(shipping)}</span>
+          </div>
+          <div className="mt-2 flex justify-between border-t border-line pt-4 text-base font-semibold">
+            <span>Total</span>
+            <span>{formatPrice(total)}</span>
+          </div>
+          <button
+            onClick={() => router.push("/checkout")}
+            className="mt-6 w-full cursor-pointer rounded-full bg-ink py-4 text-[14.5px] font-semibold text-white hover:bg-[#3a352d]"
+          >
+            Proceed to Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="src/components/Header.tsx">
+"use client";
+
+import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useState, useEffect, useCallback } from "react";
+import { useCart } from "@/lib/cart-context";
+
+export default function Header() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const { count, openCart } = useCart();
+  const [query, setQuery] = useState(searchParams.get("q") ?? "");
+
+  useEffect(() => {
+    setQuery(searchParams.get("q") ?? "");
+  }, [searchParams]);
+
+  const handleSearch = useCallback(
+    (value: string) => {
+      setQuery(value);
+      const params = new URLSearchParams(searchParams.toString());
+      if (value.trim()) {
+        params.set("q", value);
+      } else {
+        params.delete("q");
+      }
+      const qs = params.toString();
+      router.push(`/${qs ? `?${qs}` : ""}`);
+    },
+    [router, searchParams]
+  );
+
+  return (
+    <div className="sticky top-0 z-50">
+      <div className="bg-ink py-2 text-center text-[12px] tracking-wide text-white/90">
+        100% Authentic Products &nbsp;&middot;&nbsp; Free Shipping over ₹999 &nbsp;&middot;&nbsp; Curated by Dermatologists
+      </div>
+      <header className="border-b border-line bg-bg/90 backdrop-blur-md">
+        <div className="mx-auto flex max-w-7xl items-center gap-7 px-8 py-5">
+          <Link href="/" className="flex shrink-0 items-center gap-2 text-[22px] font-serif font-medium tracking-wide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} className="h-6 w-6 text-accent">
+              <path d="M12 3c3 4.5 6 8 6 11.5A6 6 0 0 1 6 14.5C6 11 9 7.5 12 3z" />
+            </svg>
+            <span>
+              SkinWise<span className="ml-px align-super text-[11px] font-normal">&trade;</span>
+            </span>
+          </Link>
+          <nav className="hidden shrink-0 gap-6 text-sm text-ink-soft md:flex">
+            <Link href="/" className="hover:text-ink">Shop All</Link>
+            <Link href={{ pathname: "/", query: { concern: "Acne" } }} className="hover:text-ink">Acne</Link>
+            <Link href={{ pathname: "/", query: { concern: "Dryness & Hydration" } }} className="hover:text-ink">Dryness</Link>
+            <Link href={{ pathname: "/", query: { concern: "Sensitive Skin" } }} className="hover:text-ink">Sensitive Skin</Link>
+          </nav>
+          <div className="relative max-w-[420px] flex-1">
+            <svg
+              className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 opacity-50"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}
+            >
+              <circle cx="11" cy="11" r="7" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <input
+              type="text"
+              value={query}
+              onChange={(e) => handleSearch(e.target.value)}
+              placeholder="Search products…"
+              className="w-full rounded-full border border-line bg-white py-2.5 pl-10 pr-4 text-sm outline-none focus:border-accent"
+            />
+          </div>
+          <div className="ml-auto flex shrink-0 items-center gap-4">
+            <button
+              aria-label="Open cart"
+              onClick={openCart}
+              className="relative flex h-9 w-9 items-center justify-center text-ink cursor-pointer"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} className="h-5 w-5">
+                <path d="M6 6h15l-1.5 9h-13z" />
+                <path d="M6 6l-1-3H2" />
+                <circle cx="9" cy="20" r="1.4" />
+                <circle cx="18" cy="20" r="1.4" />
+              </svg>
+              {count > 0 && (
+                <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[10px] font-semibold text-white">
+                  {count}
+                </span>
+              )}
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+  );
+}
+</file>
+
+</files>
