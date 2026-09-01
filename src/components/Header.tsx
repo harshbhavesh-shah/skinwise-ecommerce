@@ -6,12 +6,20 @@ import { useState, useEffect, useCallback } from "react";
 import { useCart } from "@/lib/cart-context";
 import { useCustomerSession } from "@/lib/customer-session-context";
 
+const NAV_LINKS = [
+  { label: "Shop All", query: {} },
+  { label: "Acne", query: { concern: "Acne" } },
+  { label: "Dryness", query: { concern: "Dryness & Hydration" } },
+  { label: "Sensitive Skin", query: { concern: "Sensitive Skin" } },
+];
+
 export default function Header() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { count, openCart } = useCart();
   const { loading, customer } = useCustomerSession();
   const [query, setQuery] = useState(searchParams.get("q") ?? "");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     setQuery(searchParams.get("q") ?? "");
@@ -38,8 +46,25 @@ export default function Header() {
         100% Authentic Products &nbsp;&middot;&nbsp; Free Shipping over ₹999 &nbsp;&middot;&nbsp; Curated by Dermatologists
       </div>
       <header className="border-b border-line bg-bg/90 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center gap-7 px-8 py-5">
-          <Link href="/" className="flex shrink-0 items-center gap-2 text-[22px] font-serif font-medium tracking-wide">
+        <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-4 sm:gap-7 sm:px-8 sm:py-5">
+          <button
+            type="button"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            onClick={() => setMenuOpen((v) => !v)}
+            className="flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center text-ink md:hidden"
+          >
+            {menuOpen ? (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5">
+                <path d="M6 6l12 12M18 6L6 18" />
+              </svg>
+            ) : (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5">
+                <path d="M4 7h16M4 12h16M4 17h16" />
+              </svg>
+            )}
+          </button>
+
+          <Link href="/" className="flex shrink-0 items-center gap-2 text-[19px] font-serif font-medium tracking-wide sm:text-[22px]">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} className="h-6 w-6 text-accent">
               <path d="M12 3c3 4.5 6 8 6 11.5A6 6 0 0 1 6 14.5C6 11 9 7.5 12 3z" />
             </svg>
@@ -47,12 +72,19 @@ export default function Header() {
               SkinWise<span className="ml-px align-super text-[11px] font-normal">&trade;</span>
             </span>
           </Link>
+
           <nav className="hidden shrink-0 gap-6 text-sm text-ink-soft md:flex">
-            <Link href="/" className="hover:text-ink">Shop All</Link>
-            <Link href={{ pathname: "/", query: { concern: "Acne" } }} className="hover:text-ink">Acne</Link>
-            <Link href={{ pathname: "/", query: { concern: "Dryness & Hydration" } }} className="hover:text-ink">Dryness</Link>
-            <Link href={{ pathname: "/", query: { concern: "Sensitive Skin" } }} className="hover:text-ink">Sensitive Skin</Link>
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.label}
+                href={{ pathname: "/", query: link.query }}
+                className="hover:text-ink"
+              >
+                {link.label}
+              </Link>
+            ))}
           </nav>
+
           <div className="relative max-w-[420px] flex-1">
             <svg
               className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 opacity-50"
@@ -69,11 +101,12 @@ export default function Header() {
               className="w-full rounded-full border border-line bg-white py-2.5 pl-10 pr-4 text-sm outline-none focus:border-accent"
             />
           </div>
+
           <div className="ml-auto flex shrink-0 items-center gap-4">
             {!loading && (
               <Link
                 href={customer ? "/account" : "/login"}
-                className="hidden text-sm text-ink-soft hover:text-ink sm:inline"
+                className="hidden text-sm text-ink-soft hover:text-ink md:inline"
               >
                 {customer ? customer.firstName || "Account" : "Sign in"}
               </Link>
@@ -97,6 +130,30 @@ export default function Header() {
             </button>
           </div>
         </div>
+
+        {menuOpen && (
+          <nav className="flex flex-col gap-1 border-t border-line px-4 py-3 text-sm md:hidden">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.label}
+                href={{ pathname: "/", query: link.query }}
+                onClick={() => setMenuOpen(false)}
+                className="rounded-lg px-2 py-2.5 text-ink-soft hover:bg-bg-2 hover:text-ink"
+              >
+                {link.label}
+              </Link>
+            ))}
+            {!loading && (
+              <Link
+                href={customer ? "/account" : "/login"}
+                onClick={() => setMenuOpen(false)}
+                className="mt-1 rounded-lg border-t border-line px-2 py-2.5 pt-3.5 font-medium text-ink hover:bg-bg-2"
+              >
+                {customer ? customer.firstName || "Account" : "Sign in"}
+              </Link>
+            )}
+          </nav>
+        )}
       </header>
     </div>
   );
