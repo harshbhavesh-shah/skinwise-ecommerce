@@ -2,9 +2,18 @@
 
 import { useState } from "react";
 import type { Product } from "@/lib/types";
+import type { ProductStockView } from "@/lib/inventory-shared";
 import { useCart } from "@/lib/cart-context";
 
-export default function AddToCartForm({ product }: { product: Product }) {
+export default function AddToCartForm({
+  product,
+  stock,
+}: {
+  product: Product;
+  stock: ProductStockView;
+}) {
+  const outOfStock = stock.stockStatus === "out-of-stock";
+  const maxQty = stock.quantity ?? Infinity;
   const [qty, setQty] = useState(1);
   const [justAdded, setJustAdded] = useState(false);
   const { addItem } = useCart();
@@ -14,6 +23,17 @@ export default function AddToCartForm({ product }: { product: Product }) {
     setJustAdded(true);
     setTimeout(() => setJustAdded(false), 1800);
   };
+
+  if (outOfStock) {
+    return (
+      <button
+        disabled
+        className="w-full cursor-not-allowed rounded-full bg-bg-2 py-4 text-[15px] font-semibold tracking-wide text-ink-soft"
+      >
+        Out of Stock
+      </button>
+    );
+  }
 
   return (
     <div>
@@ -29,13 +49,16 @@ export default function AddToCartForm({ product }: { product: Product }) {
           </button>
           <span className="w-8 text-center text-sm">{qty}</span>
           <button
-            onClick={() => setQty((q) => q + 1)}
+            onClick={() => setQty((q) => Math.min(maxQty, q + 1))}
             className="h-10 w-[38px] cursor-pointer text-base"
             aria-label="Increase quantity"
           >
             +
           </button>
         </div>
+        {stock.stockStatus === "low-stock" && (
+          <span className="text-[12.5px] text-amber-700">Only {stock.quantity} left in stock</span>
+        )}
       </div>
       <button
         onClick={handleAdd}

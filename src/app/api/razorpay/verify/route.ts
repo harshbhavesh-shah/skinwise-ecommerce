@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
+import { renderToBuffer } from "@react-pdf/renderer";
 import { appendEmailLog, createOrder, getOrder } from "@/lib/orders";
 import { computeOrderTotal } from "@/lib/pricing";
+import { getInventoryMap, decrementStock } from "@/lib/inventory";
 import { buildConfirmationEmail, sendEmail } from "@/lib/email";
+import { OrderReceiptDocument } from "@/lib/receipt";
 import type { CartLine, CustomerInfo } from "@/lib/types";
 
 export const runtime = "nodejs";
@@ -84,7 +87,8 @@ export async function POST(req: NextRequest) {
 
   // Recompute the total server-side rather than trusting the client, same
   // as create-order — the customer/shipping fields are just record-keeping.
-  const { subtotal, shipping, total } = computeOrderTotal(lines);
+  const inventory = await getInventoryMap();
+  const { subtotal, shipping, total } = computeOrderTotal(lines, inventory);
 
   try {
     await createOrder({
@@ -97,12 +101,19 @@ export async function POST(req: NextRequest) {
       total,
     });
 
+    // Payment has already succeeded at this point — decrement stock now,
+    // not before, so a failed/abandoned payment never reduces inventory.
+    await decrementStock(lines);
+
     // Best-effort confirmation email — a failure here shouldn't affect the
     // checkout response, the customer already has a working order either way.
     const order = await getOrder(razorpay_payment_id);
     if (order) {
       const { subject, html } = buildConfirmationEmail(order);
-      const result = await sendEmail(order.customer.email, subject, html);
+      const receiptBuffer = await renderToBuffer(OrderReceiptDocument({ order }));
+      const result = await sendEmail(order.customer.email, subject, html, [
+        { filename: `skinwise-receipt-${order.razorpayPaymentId}.pdf`, content: receiptBuffer },
+      ]);
       if (result.sent) {
         await appendEmailLog(order.id, subject);
       }

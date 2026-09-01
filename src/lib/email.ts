@@ -7,26 +7,36 @@ const apiKey = process.env.RESEND_API_KEY;
 const fromEmail = process.env.ORDERS_FROM_EMAIL;
 const resend = apiKey ? new Resend(apiKey) : null;
 
+// A plain, widely-available sans-serif stack — serif display fonts like
+// Georgia render inconsistently (and often tiny/cramped) in mobile mail
+// clients, which don't reliably have it installed.
+const FONT_STACK =
+  "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+
 function baseLayout(bodyHtml: string) {
   return `<!doctype html>
 <html>
-  <body style="margin:0;padding:0;background:#f4f3ee;font-family:Georgia,'Times New Roman',serif;">
-    <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f3ee;padding:32px 0;">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body style="margin:0;padding:0;background:#f4f3ee;font-family:${FONT_STACK};">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f3ee;padding:24px 12px;">
       <tr>
         <td align="center">
-          <table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:16px;overflow:hidden;">
+          <table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;max-width:560px;background:#ffffff;border-radius:16px;overflow:hidden;">
             <tr>
-              <td style="background:#2b2b23;padding:28px 36px;">
-                <span style="color:#ffffff;font-size:20px;letter-spacing:0.5px;">SkinWise</span>
+              <td style="background:#2b2b23;padding:24px 28px;">
+                <span style="color:#ffffff;font-size:19px;letter-spacing:0.3px;">SkinWise</span>
               </td>
             </tr>
             <tr>
-              <td style="padding:36px;color:#2b2b2b;font-size:14px;line-height:1.6;">
+              <td style="padding:28px;color:#2b2b2b;font-size:14px;line-height:1.6;">
                 ${bodyHtml}
               </td>
             </tr>
             <tr>
-              <td style="padding:20px 36px;border-top:1px solid #eee;color:#8a8a80;font-size:12px;">
+              <td style="padding:18px 28px;border-top:1px solid #eee;color:#8a8a80;font-size:12px;">
                 SkinWise — Dermatologist-trusted skincare
               </td>
             </tr>
@@ -44,11 +54,11 @@ function itemsTableHtml(order: Order) {
       (item) => `
       <tr>
         <td style="padding:6px 0;color:#5a5a52;">${item.brand} ${item.name} &times; ${item.qty}</td>
-        <td style="padding:6px 0;text-align:right;">${formatPrice(item.price * item.qty)}</td>
+        <td style="padding:6px 0;text-align:right;white-space:nowrap;">${formatPrice(item.price * item.qty)}</td>
       </tr>`
     )
     .join("");
-  return `<table width="100%" cellpadding="0" cellspacing="0" style="font-size:13.5px;margin:16px 0;">
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:13.5px;margin:16px 0;">
     ${rows}
     <tr><td colspan="2" style="border-top:1px solid #eee;padding-top:10px;"></td></tr>
     <tr>
@@ -70,7 +80,7 @@ export function buildConfirmationEmail(order: Order) {
   const subject = `Order confirmed — ${order.razorpayPaymentId}`;
   const body = `
     <p>Hi ${order.customer.firstName},</p>
-    <p>Thanks for your order! We've received your payment and we're getting it ready.</p>
+    <p>Thanks for your order! We've received your payment and we're getting it ready. Your receipt is attached.</p>
     ${itemsTableHtml(order)}
     <p style="color:#5a5a52;">
       Shipping to:<br>${order.customer.address}<br>${order.customer.city}, ${order.customer.state} ${order.customer.pincode}
@@ -104,7 +114,8 @@ export function buildStatusUpdateEmail(order: Order, status: OrderStatus, note?:
 export async function sendEmail(
   to: string,
   subject: string,
-  html: string
+  html: string,
+  attachments?: { filename: string; content: Buffer }[]
 ): Promise<{ sent: boolean; error?: string }> {
   if (!resend || !fromEmail) {
     console.log(
@@ -119,6 +130,7 @@ export async function sendEmail(
       to,
       subject,
       html,
+      ...(attachments ? { attachments } : {}),
     });
     if (error) {
       console.error("Resend error:", error);

@@ -6,12 +6,15 @@ import { useRouter } from "next/navigation";
 import { useCart } from "@/lib/cart-context";
 import { getProductBySlug, formatPrice } from "@/lib/products";
 import { computeOrderTotal } from "@/lib/pricing";
+import { getProductStockView } from "@/lib/inventory-shared";
+import { useInventoryMap } from "@/lib/use-inventory";
 
 export default function CartPage() {
   const { lines, setQty, removeItem } = useCart();
   const router = useRouter();
+  const inventory = useInventoryMap();
 
-  const { subtotal, shipping, total } = computeOrderTotal(lines);
+  const { subtotal, shipping, total } = computeOrderTotal(lines, inventory);
 
   if (lines.length === 0) {
     return (
@@ -36,10 +39,17 @@ export default function CartPage() {
           {lines.map((line) => {
             const product = getProductBySlug(line.slug);
             if (!product) return null;
+            const stock = getProductStockView(product, inventory);
+            const outOfStock = stock.stockStatus === "out-of-stock";
             return (
               <div key={line.slug} className="flex gap-5 border-b border-line py-5">
                 <div className="relative h-[108px] w-[90px] shrink-0 overflow-hidden rounded-[10px] bg-bg-2">
-                  <Image src={product.image} alt={product.name} fill className="object-cover" />
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className={`object-cover ${outOfStock ? "opacity-50 grayscale" : ""}`}
+                  />
                 </div>
                 <div className="flex flex-1 flex-col justify-between">
                   <div className="flex justify-between gap-4">
@@ -50,9 +60,16 @@ export default function CartPage() {
                       <Link href={`/product/${product.slug}`} className="text-[16px] font-medium hover:underline">
                         {product.name}
                       </Link>
+                      {outOfStock ? (
+                        <p className="mt-1 text-[12px] font-semibold text-ink-soft">Out of stock</p>
+                      ) : stock.stockStatus === "low-stock" ? (
+                        <p className="mt-1 text-[12px] text-amber-700">Only {stock.quantity} left in stock</p>
+                      ) : null}
                     </div>
                     <p className="whitespace-nowrap text-[15px]">
-                      {formatPrice(product.price * line.qty)}
+                      <span className={stock.originalPrice ? "font-medium text-accent" : ""}>
+                        {formatPrice(stock.price * line.qty)}
+                      </span>
                     </p>
                   </div>
                   <div className="flex items-center justify-between">
@@ -67,6 +84,7 @@ export default function CartPage() {
                       <button
                         className="h-9 w-9 cursor-pointer text-sm"
                         onClick={() => setQty(line.slug, line.qty + 1)}
+                        disabled={stock.quantity !== null && line.qty >= stock.quantity}
                       >
                         +
                       </button>

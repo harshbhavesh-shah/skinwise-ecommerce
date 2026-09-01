@@ -599,5 +599,121 @@
     "longDesc": "A gel cleanser that dispenses clear and transforms into a foam as you lather, formulated with 3 essential ceramides, 2% salicylic acid and niacinamide. Its oil-absorbing technology and hectorite clay unclog pores and reduce excess shine, while visibly reducing blackheads and breakouts in as little as one week, without disrupting the skin barrier.",
     "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
     "doctorOpinion": "A well-balanced option for blemish-prone skin — the salicylic acid and clay handle excess oil while the ceramides keep the barrier from getting stripped, which is where a lot of acne cleansers go wrong."
+  },
+  {
+    "name": "Mela B3 Serum",
+    "brand": "La Roche-Posay",
+    "type": "Serum",
+    "concerns": [
+      "Hyperpigmentation"
+    ],
+    "price": 2599,
+    "color": "#5b4a8a",
+    "id": 28,
+    "slug": "la-roche-posay-mela-b3-serum",
+    "image": "/products/la-roche-posay-mela-b3-serum-real-01.jpg",
+    "desc": "An intensive concentrate that targets dark spots and helps prevent them from recurring.",
+    "keyIngredients": [
+      "Melasyl",
+      "10% Niacinamide",
+      "Thermal spring water"
+    ],
+    "longDesc": "An intensive anti-dark spot concentrate built around La Roche-Posay's patented Melasyl molecule, paired with 10% niacinamide to visibly fade discoloration and interrupt the recurrence cycle that makes dark spots so persistent. Formulated to be gentle enough for regular use even on reactive skin.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "Melasyl is one of the more interesting molecules to come out in pigmentation care recently — I've seen it hold up well for patients whose dark spots kept coming back despite other treatments.",
+    "images": [
+      "/products/la-roche-posay-mela-b3-serum-real-01.jpg",
+      "/products/la-roche-posay-mela-b3-serum-real-02.jpg",
+      "/products/la-roche-posay-mela-b3-serum-real-03.jpg"
+    ]
+  },
+  {
+    "name": "Mela B3 Cleanser",
+    "brand": "La Roche-Posay",
+    "type": "Cleanser",
+    "concerns": [
+      "Hyperpigmentation"
+    ],
+    "price": 1499,
+    "color": "#5b4a8a",
+    "id": 29,
+    "slug": "la-roche-posay-mela-b3-cleanser",
+    "image": "/products/la-roche-posay-mela-b3-cleanser-real-01.jpg",
+    "desc": "A clarifying micro-peeling gel cleanser that gently exfoliates to even out skin tone.",
+    "keyIngredients": [
+      "Melasyl",
+      "Niacinamide / Vitamin B3",
+      "PHA"
+    ],
+    "longDesc": "A daily micro-peeling gel cleanser that pairs gentle PHA exfoliation with Melasyl and niacinamide to unify skin tone from the very first step of a routine. Rinses clean without stripping, making it a suitable pairing for the Mela B3 Serum.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "A nice way to introduce gentle exfoliation into a pigmentation routine without overdoing it — PHA is one of the more forgiving acids for patients who've reacted to stronger exfoliants before.",
+    "images": [
+      "/products/la-roche-posay-mela-b3-cleanser-real-01.jpg",
+      "/products/la-roche-posay-mela-b3-cleanser-real-02.jpg",
+      "/products/la-roche-posay-mela-b3-cleanser-real-03.jpg",
+      "/products/la-roche-posay-mela-b3-cleanser-real-04.jpg",
+      "/products/la-roche-posay-mela-b3-cleanser-real-05.jpg"
+    ]
+  },
+  {
+    "name": "Anthelios UVmune 400 Fluide Invisible SPF 50+",
+    "brand": "La Roche-Posay",
+    "type": "Sunscreen",
+    "concerns": [
+      "Sun Protection"
+    ],
+    "price": 2099,
+    "color": "#e8912b",
+    "id": 30,
+    "slug": "la-roche-posay-anthelios-uvmune-400-fluide",
+    "image": "/products/la-roche-posay-anthelios-uvmune-400-fluide-real-01.jpg",
+    "desc": "An invisible, ultra-light sunscreen fluid with extended UVA protection and SPF 50+.",
+    "keyIngredients": [
+      "Mexoryl 400",
+      "SPF 50+",
+      "Antioxidants"
+    ],
+    "longDesc": "Built on La Roche-Posay's next-generation Mexoryl 400 filter system, this fluid extends protection further into the long-UVA range than standard sunscreens — the wavelengths most linked to premature aging and pigmentation. The invisible, non-greasy finish sits comfortably under makeup.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "The extended long-UVA coverage is the real story here — most sunscreens undersell that range, and it's a significant factor in the pigmentation and aging patients ask me about most.",
+    "images": [
+      "/products/la-roche-posay-anthelios-uvmune-400-fluide-real-01.jpg",
+      "/products/la-roche-posay-anthelios-uvmune-400-fluide-real-02.jpg",
+      "/products/la-roche-posay-anthelios-uvmune-400-fluide-real-03.jpg",
+      "/products/la-roche-posay-anthelios-uvmune-400-fluide-real-04.jpg",
+      "/products/la-roche-posay-anthelios-uvmune-400-fluide-real-05.jpg",
+      "/products/la-roche-posay-anthelios-uvmune-400-fluide-real-06.jpg",
+      "/products/la-roche-posay-anthelios-uvmune-400-fluide-real-07.jpg",
+      "/products/la-roche-posay-anthelios-uvmune-400-fluide-real-08.jpg"
+    ]
+  },
+  {
+    "name": "Anthelios UVmune 400 Oil Control Fluide SPF 50+",
+    "brand": "La Roche-Posay",
+    "type": "Sunscreen",
+    "concerns": [
+      "Sun Protection",
+      "Acne"
+    ],
+    "price": 2099,
+    "color": "#e8912b",
+    "id": 31,
+    "slug": "la-roche-posay-anthelios-uvmune-400-oil-control",
+    "image": "/products/la-roche-posay-anthelios-uvmune-400-oil-control-real-01.jpg",
+    "desc": "A mattifying SPF 50+ fluid with extended UVA protection, formulated for oily and blemish-prone skin.",
+    "keyIngredients": [
+      "Mexoryl 400",
+      "SPF 50+",
+      "Oil-absorbing technology"
+    ],
+    "longDesc": "The same next-generation Mexoryl 400 UVA filter system as the original UVmune 400 fluid, reformulated with oil-absorbing technology for a matte, shine-free finish — built for oily and blemish-prone skin that still needs serious daily sun protection without breaking out.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
+    "doctorOpinion": "My go-to recommendation for oily and acne-prone patients who avoid sunscreen because it feels heavy — this stays matte through the day, which is often the difference between a patient using SPF daily or not at all.",
+    "images": [
+      "/products/la-roche-posay-anthelios-uvmune-400-oil-control-real-01.jpg",
+      "/products/la-roche-posay-anthelios-uvmune-400-oil-control-real-02.jpg",
+      "/products/la-roche-posay-anthelios-uvmune-400-oil-control-real-03.jpg"
+    ]
   }
 ]

@@ -1,8 +1,12 @@
 import { Suspense } from "react";
 import { filterProducts, getConcerns, getTypes } from "@/lib/products";
+import { getInventoryMap } from "@/lib/inventory";
+import { getProductStockView } from "@/lib/inventory-shared";
 import FilterBar from "@/components/FilterBar";
 import ProductCard from "@/components/ProductCard";
 import HeroAskSlot from "@/components/HeroAskSlot";
+
+export const dynamic = "force-dynamic";
 
 function EmptyState() {
   return (
@@ -22,6 +26,7 @@ async function ProductResults({
   const concerns = getConcerns();
   const types = getTypes();
   const results = filterProducts(params.concern, params.type, params.q);
+  const inventory = await getInventoryMap();
 
   return (
     <>
@@ -31,7 +36,7 @@ async function ProductResults({
       ) : (
         <div className="grid grid-cols-2 gap-x-6 gap-y-9 pb-24 md:grid-cols-4">
           {results.map((product) => (
-            <ProductCard key={product.slug} product={product} />
+            <ProductCard key={product.slug} product={product} stock={getProductStockView(product, inventory)} />
           ))}
         </div>
       )}

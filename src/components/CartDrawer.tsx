@@ -4,9 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "@/lib/cart-context";
 import { getProductBySlug, formatPrice } from "@/lib/products";
+import { getProductStockView } from "@/lib/inventory-shared";
+import { useInventoryMap } from "@/lib/use-inventory";
 
 export default function CartDrawer() {
-  const { lines, isOpen, closeCart, setQty, removeItem, subtotal } = useCart();
+  const { lines, isOpen, closeCart, setQty, removeItem } = useCart();
+  const inventory = useInventoryMap();
+
+  const subtotal = lines.reduce((sum, line) => {
+    const product = getProductBySlug(line.slug);
+    if (!product) return sum;
+    return sum + getProductStockView(product, inventory).price * line.qty;
+  }, 0);
 
   return (
     <>
@@ -42,14 +51,33 @@ export default function CartDrawer() {
             lines.map((line) => {
               const product = getProductBySlug(line.slug);
               if (!product) return null;
+              const stock = getProductStockView(product, inventory);
+              const outOfStock = stock.stockStatus === "out-of-stock";
               return (
                 <div key={line.slug} className="flex gap-3.5 border-b border-line py-4">
                   <div className="relative h-[86px] w-[72px] shrink-0 overflow-hidden rounded-lg bg-bg-2">
-                    <Image src={product.image} alt={product.name} fill className="object-cover" />
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className={`object-cover ${outOfStock ? "opacity-50 grayscale" : ""}`}
+                    />
                   </div>
                   <div className="min-w-0 flex-1">
                     <h4 className="mb-1 truncate text-[14.5px] font-medium">{product.name}</h4>
-                    <p className="mb-2.5 text-[13.5px] text-ink-soft">{formatPrice(product.price)}</p>
+                    <p className="mb-2.5 flex items-center gap-2 text-[13.5px]">
+                      <span className={stock.originalPrice ? "font-medium text-accent" : "text-ink-soft"}>
+                        {formatPrice(stock.price)}
+                      </span>
+                      {stock.originalPrice && (
+                        <span className="text-ink-soft/60 line-through">{formatPrice(stock.originalPrice)}</span>
+                      )}
+                    </p>
+                    {outOfStock ? (
+                      <p className="mb-2 text-[12px] font-semibold text-ink-soft">Out of stock</p>
+                    ) : stock.stockStatus === "low-stock" ? (
+                      <p className="mb-2 text-[12px] text-amber-700">Only {stock.quantity} left</p>
+                    ) : null}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center overflow-hidden rounded-full border border-line">
                         <button
@@ -62,6 +90,7 @@ export default function CartDrawer() {
                         <button
                           className="h-8 w-8 cursor-pointer text-sm"
                           onClick={() => setQty(line.slug, line.qty + 1)}
+                          disabled={stock.quantity !== null && line.qty >= stock.quantity}
                         >
                           +
                         </button>

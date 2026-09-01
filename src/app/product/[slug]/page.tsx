@@ -1,13 +1,15 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { products, getProductBySlug, getRelated, formatPrice } from "@/lib/products";
+import { getProductBySlug, getRelated, formatPrice } from "@/lib/products";
+import { getInventoryMap } from "@/lib/inventory";
+import { getProductStockView } from "@/lib/inventory-shared";
 import ProductCard from "@/components/ProductCard";
 import ProductGallery from "@/components/ProductGallery";
 import AddToCartForm from "@/components/AddToCartForm";
 
-export function generateStaticParams() {
-  return products.map((p) => ({ slug: p.slug }));
-}
+// Price and stock come from live Firestore inventory, so this page can no
+// longer be statically pre-rendered per slug.
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,
@@ -34,6 +36,8 @@ export default async function ProductPage({
 
   const related = getRelated(product);
   const primaryConcern = product.concerns[0];
+  const inventory = await getInventoryMap();
+  const stock = getProductStockView(product, inventory);
 
   return (
     <div className="mx-auto max-w-7xl px-8 py-12 md:py-14">
@@ -81,7 +85,17 @@ export default async function ProductPage({
           <h1 className="mb-3.5 text-[30px] font-medium leading-tight md:text-[34px]">
             {product.name}
           </h1>
-          <p className="mb-5 text-2xl font-medium">{formatPrice(product.price)}</p>
+          <p className="mb-5 flex items-center gap-3 text-2xl font-medium">
+            <span className={stock.originalPrice ? "text-accent" : ""}>{formatPrice(stock.price)}</span>
+            {stock.originalPrice && (
+              <span className="text-lg text-ink-soft/60 line-through">{formatPrice(stock.originalPrice)}</span>
+            )}
+            {stock.stockStatus === "out-of-stock" && (
+              <span className="rounded-full bg-bg-2 px-3 py-1 text-[12.5px] font-semibold uppercase tracking-wide text-ink-soft">
+                Out of stock
+              </span>
+            )}
+          </p>
           <div className="mb-7 flex flex-wrap gap-2">
             {product.concerns.map((c) => (
               <Link
@@ -97,7 +111,7 @@ export default async function ProductPage({
             {product.desc}
           </p>
 
-          <AddToCartForm product={product} />
+          <AddToCartForm product={product} stock={stock} />
 
           <dl className="mt-9 border-t border-line pt-6">
             <dt className="mb-1 flex items-center gap-1.5 text-[13px] font-semibold">
@@ -174,7 +188,7 @@ export default async function ProductPage({
           <h2 className="mb-8 text-[26px] font-medium">You may also like</h2>
           <div className="grid grid-cols-2 gap-x-6 gap-y-9 md:grid-cols-4">
             {related.map((p) => (
-              <ProductCard key={p.slug} product={p} />
+              <ProductCard key={p.slug} product={p} stock={getProductStockView(p, inventory)} />
             ))}
           </div>
         </section>

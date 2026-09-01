@@ -6,6 +6,8 @@ import Link from "next/link";
 import { useCart } from "@/lib/cart-context";
 import { useAskAgent } from "@/lib/ask-agent-context";
 import { getProductBySlug, formatPrice } from "@/lib/products";
+import { getProductStockView } from "@/lib/inventory-shared";
+import { useInventoryMap } from "@/lib/use-inventory";
 
 type Recommendation = { slug: string; reason: string };
 type Result = { summary: string; recommendations: Recommendation[] };
@@ -19,6 +21,7 @@ export default function AskAgentPanel() {
   const [addedSlug, setAddedSlug] = useState<string | null>(null);
   const [allAdded, setAllAdded] = useState(false);
   const { addItem } = useCart();
+  const inventory = useInventoryMap();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -55,7 +58,10 @@ export default function AskAgentPanel() {
   const handleAddAll = () => {
     if (!result) return;
     result.recommendations.forEach((rec) => {
-      if (getProductBySlug(rec.slug)) addItem(rec.slug, 1);
+      const product = getProductBySlug(rec.slug);
+      if (product && getProductStockView(product, inventory).stockStatus !== "out-of-stock") {
+        addItem(rec.slug, 1);
+      }
     });
     setAllAdded(true);
     setTimeout(() => setAllAdded(false), 1800);
@@ -161,6 +167,8 @@ export default function AskAgentPanel() {
                     {result.recommendations.map((rec) => {
                       const product = getProductBySlug(rec.slug);
                       if (!product) return null;
+                      const stock = getProductStockView(product, inventory);
+                      const outOfStock = stock.stockStatus === "out-of-stock";
                       return (
                         <div
                           key={rec.slug}
@@ -171,7 +179,12 @@ export default function AskAgentPanel() {
                             onClick={close}
                             className="relative h-[72px] w-[60px] shrink-0 overflow-hidden rounded-lg bg-bg-2"
                           >
-                            <Image src={product.image} alt={product.name} fill className="object-cover" />
+                            <Image
+                              src={product.image}
+                              alt={product.name}
+                              fill
+                              className={`object-cover ${outOfStock ? "opacity-50 grayscale" : ""}`}
+                            />
                           </Link>
                           <div className="min-w-0 flex-1">
                             <div className="text-[10.5px] uppercase tracking-wide text-accent">
@@ -184,14 +197,27 @@ export default function AskAgentPanel() {
                             >
                               {product.name}
                             </Link>
-                            <p className="mb-1.5 text-[13px] text-ink-soft">{formatPrice(product.price)}</p>
+                            <p className="mb-1.5 flex items-center gap-1.5 text-[13px]">
+                              <span className={stock.originalPrice ? "font-medium text-accent" : "text-ink-soft"}>
+                                {formatPrice(stock.price)}
+                              </span>
+                              {stock.originalPrice && (
+                                <span className="text-ink-soft/60 line-through">{formatPrice(stock.originalPrice)}</span>
+                              )}
+                            </p>
                             <p className="mb-2 text-[12.5px] leading-snug text-ink-soft">{rec.reason}</p>
-                            <button
-                              onClick={() => handleAdd(product.slug)}
-                              className="cursor-pointer rounded-full bg-ink px-4 py-1.5 text-[12px] font-semibold text-white hover:bg-[#2c352f]"
-                            >
-                              {addedSlug === product.slug ? "Added ✓" : "Add to Cart"}
-                            </button>
+                            {outOfStock ? (
+                              <span className="inline-block rounded-full bg-bg-2 px-4 py-1.5 text-[12px] font-semibold text-ink-soft">
+                                Out of stock
+                              </span>
+                            ) : (
+                              <button
+                                onClick={() => handleAdd(product.slug)}
+                                className="cursor-pointer rounded-full bg-ink px-4 py-1.5 text-[12px] font-semibold text-white hover:bg-[#2c352f]"
+                              >
+                                {addedSlug === product.slug ? "Added ✓" : "Add to Cart"}
+                              </button>
+                            )}
                           </div>
                         </div>
                       );

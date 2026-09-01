@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { computeOrderTotal } from "@/lib/pricing";
+import { computeOrderTotal, checkStock } from "@/lib/pricing";
+import { getInventoryMap } from "@/lib/inventory";
 import type { CartLine } from "@/lib/types";
 
 export const runtime = "nodejs";
@@ -23,9 +24,24 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
 
+  const inventory = await getInventoryMap();
+
+  // Check stock before ever contacting Razorpay — nobody should be able to
+  // pay for something that's actually out of stock.
+  const shortfalls = checkStock(lines, inventory);
+  if (shortfalls.length > 0) {
+    const [first] = shortfalls;
+    const message =
+      first.available === 0
+        ? `${first.name} just sold out.`
+        : `Only ${first.available} left of ${first.name} — please adjust your cart.`;
+    return NextResponse.json({ error: message }, { status: 409 });
+  }
+
   // Never trust a client-supplied amount — recompute it server-side from
-  // the real catalog so the checkout total can't be tampered with.
-  const { total } = computeOrderTotal(lines);
+  // the real catalog (with live discounts applied) so the checkout total
+  // can't be tampered with.
+  const { total } = computeOrderTotal(lines, inventory);
 
   if (total <= 0) {
     return NextResponse.json({ error: "Your cart is empty." }, { status: 400 });

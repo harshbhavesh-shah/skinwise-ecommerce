@@ -5,6 +5,8 @@ import { useState } from "react";
 import { useCart } from "@/lib/cart-context";
 import { getProductBySlug, formatPrice } from "@/lib/products";
 import { computeOrderTotal } from "@/lib/pricing";
+import { getProductStockView } from "@/lib/inventory-shared";
+import { useInventoryMap } from "@/lib/use-inventory";
 
 declare global {
   interface Window {
@@ -39,8 +41,9 @@ export default function CheckoutPage() {
   const router = useRouter();
   const [placing, setPlacing] = useState(false);
   const [payError, setPayError] = useState<string | null>(null);
+  const inventory = useInventoryMap();
 
-  const { subtotal, shipping, total } = computeOrderTotal(lines);
+  const { subtotal, shipping, total } = computeOrderTotal(lines, inventory);
 
   if (lines.length === 0 && !placing) {
     return (
@@ -203,12 +206,13 @@ export default function CheckoutPage() {
             {lines.map((line) => {
               const product = getProductBySlug(line.slug);
               if (!product) return null;
+              const stock = getProductStockView(product, inventory);
               return (
                 <div key={line.slug} className="flex justify-between text-[13.5px]">
                   <span className="text-ink-soft">
                     {product.name} &times; {line.qty}
                   </span>
-                  <span>{formatPrice(product.price * line.qty)}</span>
+                  <span>{formatPrice(stock.price * line.qty)}</span>
                 </div>
               );
             })}
