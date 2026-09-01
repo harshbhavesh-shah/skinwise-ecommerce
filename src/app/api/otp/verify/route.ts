@@ -20,32 +20,37 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Missing verification code." }, { status: 400 });
   }
 
-  getDb(); // ensures firebase-admin is initialized
-  let uid: string;
   try {
-    uid = (await getAuth().verifyIdToken(idToken)).uid;
-  } catch {
-    return NextResponse.json({ error: "That sign-in couldn't be verified. Please try again." }, { status: 403 });
-  }
+    getDb(); // ensures firebase-admin is initialized
+    let uid: string;
+    try {
+      uid = (await getAuth().verifyIdToken(idToken)).uid;
+    } catch {
+      return NextResponse.json({ error: "That sign-in couldn't be verified. Please try again." }, { status: 403 });
+    }
 
-  const otpResult = await verifyOtp(uid, code);
-  if (!otpResult.ok) {
-    return NextResponse.json({ error: otpResult.error }, { status: 400 });
-  }
+    const otpResult = await verifyOtp(uid, code);
+    if (!otpResult.ok) {
+      return NextResponse.json({ error: otpResult.error }, { status: 400 });
+    }
 
-  // Code is correct — mint the session cookie now, same as /api/session.
-  const sessionResult = await createSessionCookie(idToken);
-  if ("error" in sessionResult) {
-    return NextResponse.json({ error: sessionResult.error }, { status: 403 });
-  }
+    // Code is correct — mint the session cookie now, same as /api/session.
+    const sessionResult = await createSessionCookie(idToken);
+    if ("error" in sessionResult) {
+      return NextResponse.json({ error: sessionResult.error }, { status: 403 });
+    }
 
-  const res = NextResponse.json({ ok: true, uid: sessionResult.uid, email: sessionResult.email });
-  res.cookies.set(SESSION_COOKIE, sessionResult.cookie, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    path: "/",
-    maxAge: sessionResult.maxAge,
-  });
-  return res;
+    const res = NextResponse.json({ ok: true, uid: sessionResult.uid, email: sessionResult.email });
+    res.cookies.set(SESSION_COOKIE, sessionResult.cookie, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      path: "/",
+      maxAge: sessionResult.maxAge,
+    });
+    return res;
+  } catch (err) {
+    console.error("Failed to verify OTP:", err);
+    return NextResponse.json({ error: "Something went wrong verifying your code. Please try again." }, { status: 500 });
+  }
 }

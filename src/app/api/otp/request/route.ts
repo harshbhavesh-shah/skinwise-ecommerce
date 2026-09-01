@@ -17,20 +17,25 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Missing ID token." }, { status: 400 });
   }
 
-  getDb(); // ensures firebase-admin is initialized
-  let decoded;
   try {
-    decoded = await getAuth().verifyIdToken(idToken);
-  } catch {
-    return NextResponse.json({ error: "That sign-in couldn't be verified. Please try again." }, { status: 403 });
-  }
-  if (!decoded.email) {
-    return NextResponse.json({ error: "Your account needs an email address to sign in here." }, { status: 400 });
-  }
+    getDb(); // ensures firebase-admin is initialized
+    let decoded;
+    try {
+      decoded = await getAuth().verifyIdToken(idToken);
+    } catch {
+      return NextResponse.json({ error: "That sign-in couldn't be verified. Please try again." }, { status: 403 });
+    }
+    if (!decoded.email) {
+      return NextResponse.json({ error: "Your account needs an email address to sign in here." }, { status: 400 });
+    }
 
-  const result = await requestOtp(decoded.uid, decoded.email);
-  if (!result.ok) {
-    return NextResponse.json({ error: result.error }, { status: 429 });
+    const result = await requestOtp(decoded.uid, decoded.email);
+    if (!result.ok) {
+      return NextResponse.json({ error: result.error }, { status: 429 });
+    }
+    return NextResponse.json({ ok: true });
+  } catch (err) {
+    console.error("Failed to request OTP:", err);
+    return NextResponse.json({ error: "Something went wrong sending your code. Please try again." }, { status: 500 });
   }
-  return NextResponse.json({ ok: true });
 }

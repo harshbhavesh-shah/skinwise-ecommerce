@@ -16,7 +16,13 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Missing ID token." }, { status: 400 });
   }
 
-  const result = await createSessionCookie(idToken);
+  let result;
+  try {
+    result = await createSessionCookie(idToken);
+  } catch (err) {
+    console.error("Failed to create session:", err);
+    return NextResponse.json({ error: "Something went wrong signing you in. Please try again." }, { status: 500 });
+  }
   if ("error" in result) {
     return NextResponse.json({ error: result.error }, { status: 403 });
   }
