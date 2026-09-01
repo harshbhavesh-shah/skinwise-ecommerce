@@ -27,6 +27,9 @@ function docToOrder(id: string, data: FirebaseFirestore.DocumentData): Order {
     adminNotes: typeof data.adminNotes === "string" ? data.adminNotes : undefined,
     emailLog: (data.emailLog as EmailLogEntry[] | undefined) ?? [],
     customer: data.customer as CustomerInfo,
+    customerUid: typeof data.customerUid === "string" ? data.customerUid : undefined,
+    pointsEarned: typeof data.pointsEarned === "number" ? data.pointsEarned : undefined,
+    pointsRedeemed: typeof data.pointsRedeemed === "number" ? data.pointsRedeemed : undefined,
     subtotal: Number(data.subtotal),
     shipping: Number(data.shipping),
     total: Number(data.total),
@@ -38,6 +41,9 @@ export async function createOrder(params: {
   razorpayOrderId: string;
   razorpayPaymentId: string;
   customer: CustomerInfo;
+  customerUid?: string;
+  pointsEarned?: number;
+  pointsRedeemed?: number;
   lines: CartLine[];
   subtotal: number;
   shipping: number;
@@ -74,6 +80,9 @@ export async function createOrder(params: {
       statusHistory: [{ status: "paid", at: now }] satisfies OrderStatusEvent[],
       emailLog: [] satisfies EmailLogEntry[],
       customer: params.customer,
+      ...(params.customerUid ? { customerUid: params.customerUid } : {}),
+      ...(params.pointsEarned ? { pointsEarned: params.pointsEarned } : {}),
+      ...(params.pointsRedeemed ? { pointsRedeemed: params.pointsRedeemed } : {}),
       subtotal: params.subtotal,
       shipping: params.shipping,
       total: params.total,
@@ -153,6 +162,21 @@ export async function listOrders(
     startIndex + PAGE_SIZE < matches.length ? page[page.length - 1]?.createdAt ?? null : null;
 
   return { orders: page, nextCursor };
+}
+
+// Bounded equality query + in-memory sort, same pragmatic choice listOrders
+// makes for search — avoids needing a manual composite index (customerUid
+// equality + createdAt orderBy) for what's a low-volume per-customer query.
+export async function listOrdersForCustomer(uid: string): Promise<Order[]> {
+  const db = getDb();
+  const snapshot = await db
+    .collection(ORDERS_COLLECTION)
+    .where("customerUid", "==", uid)
+    .limit(200)
+    .get();
+  return snapshot.docs
+    .map((doc) => docToOrder(doc.id, doc.data()))
+    .sort((a, b) => b.createdAt.localeCompare(a.createdAt));
 }
 
 export async function getOrder(id: string): Promise<Order | null> {

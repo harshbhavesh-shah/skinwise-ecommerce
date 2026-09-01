@@ -7,6 +7,7 @@ import { getProductBySlug, formatPrice } from "@/lib/products";
 import { computeOrderTotal } from "@/lib/pricing";
 import { getProductStockView } from "@/lib/inventory-shared";
 import { useInventoryMap } from "@/lib/use-inventory";
+import { useCustomerSession } from "@/lib/customer-session-context";
 
 declare global {
   interface Window {
@@ -42,8 +43,11 @@ export default function CheckoutPage() {
   const [placing, setPlacing] = useState(false);
   const [payError, setPayError] = useState<string | null>(null);
   const inventory = useInventoryMap();
+  const { loading: accountLoading, customer: account } = useCustomerSession();
+  const [usePoints, setUsePoints] = useState(false);
 
-  const { subtotal, shipping, total } = computeOrderTotal(lines, inventory);
+  const redeemPoints = usePoints ? account?.loyaltyPoints ?? 0 : 0;
+  const { subtotal, shipping, total, pointsRedeemed } = computeOrderTotal(lines, inventory, redeemPoints);
 
   if (lines.length === 0 && !placing) {
     return (
@@ -83,7 +87,7 @@ export default function CheckoutPage() {
       const orderRes = await fetch("/api/razorpay/create-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ lines }),
+        body: JSON.stringify({ lines, redeemPoints }),
       });
       const orderData = await orderRes.json();
       if (!orderRes.ok) {
@@ -115,7 +119,7 @@ export default function CheckoutPage() {
             const verifyRes = await fetch("/api/razorpay/verify", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ ...r, customer, lines }),
+              body: JSON.stringify({ ...r, customer, lines, redeemPoints }),
             });
             const verifyData = await verifyRes.json();
             if (!verifyRes.ok || !verifyData.verified) {
@@ -165,24 +169,33 @@ export default function CheckoutPage() {
       </p>
 
       <div className="grid grid-cols-1 gap-14 md:grid-cols-[1.6fr_1fr]">
-        <form onSubmit={handlePlaceOrder} className="flex flex-col gap-6">
+        <form
+          key={accountLoading ? "loading" : account?.uid ?? "guest"}
+          onSubmit={handlePlaceOrder}
+          className="flex flex-col gap-6"
+        >
+          {account && (
+            <p className="rounded-lg bg-accent-soft px-4 py-3 text-[13px] text-accent">
+              Signed in as {account.firstName || account.email} — using your saved details below.
+            </p>
+          )}
           <div>
             <h3 className="mb-4 text-lg font-medium">Contact</h3>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <input name="firstName" required placeholder="First name" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
-              <input name="lastName" required placeholder="Last name" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
-              <input name="email" required type="email" placeholder="Email" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
-              <input name="phone" required type="tel" placeholder="Phone number" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
+              <input name="firstName" defaultValue={account?.firstName} required placeholder="First name" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
+              <input name="lastName" defaultValue={account?.lastName} required placeholder="Last name" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
+              <input name="email" defaultValue={account?.email} required type="email" placeholder="Email" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
+              <input name="phone" defaultValue={account?.phone} required type="tel" placeholder="Phone number" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
             </div>
           </div>
           <div>
             <h3 className="mb-4 text-lg font-medium">Shipping Address</h3>
             <div className="grid grid-cols-1 gap-4">
-              <input name="address" required placeholder="Street address" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
+              <input name="address" defaultValue={account?.address} required placeholder="Street address" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-                <input name="city" required placeholder="City" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
-                <input name="state" required placeholder="State" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
-                <input name="pincode" required placeholder="PIN code" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
+                <input name="city" defaultValue={account?.city} required placeholder="City" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
+                <input name="state" defaultValue={account?.state} required placeholder="State" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
+                <input name="pincode" defaultValue={account?.pincode} required placeholder="PIN code" className="rounded-lg border border-line bg-white px-4 py-3 text-sm outline-none focus:border-accent" />
               </div>
             </div>
           </div>
@@ -217,10 +230,30 @@ export default function CheckoutPage() {
               );
             })}
           </div>
+          {account && account.loyaltyPoints > 0 && (
+            <label className="mb-4 flex cursor-pointer items-start gap-2.5 rounded-lg bg-accent-soft px-4 py-3 text-[13px] text-accent">
+              <input
+                type="checkbox"
+                checked={usePoints}
+                onChange={(e) => setUsePoints(e.target.checked)}
+                className="mt-0.5 cursor-pointer"
+              />
+              <span>
+                Use my {account.loyaltyPoints} points (
+                {formatPrice(Math.min(account.loyaltyPoints, subtotal))} off)
+              </span>
+            </label>
+          )}
           <div className="mb-3 flex justify-between border-t border-line pt-4 text-[14.5px] text-ink-soft">
             <span>Subtotal</span>
             <span>{formatPrice(subtotal)}</span>
           </div>
+          {pointsRedeemed > 0 && (
+            <div className="mb-3 flex justify-between text-[14.5px] text-accent">
+              <span>Points redeemed</span>
+              <span>&minus;{formatPrice(pointsRedeemed)}</span>
+            </div>
+          )}
           <div className="mb-3 flex justify-between text-[14.5px] text-ink-soft">
             <span>Shipping</span>
             <span>{shipping === 0 ? "Free" : formatPrice(shipping)}</span>

@@ -43,6 +43,13 @@ export type CustomerInfo = {
   pincode: string;
 };
 
+export type CustomerAccount = CustomerInfo & {
+  uid: string;
+  createdAt: string;
+  updatedAt: string;
+  loyaltyPoints: number;
+};
+
 export type OrderItem = {
   slug: string;
   name: string;
@@ -94,6 +101,13 @@ export type Order = {
   adminNotes?: string;
   emailLog: EmailLogEntry[];
   customer: CustomerInfo;
+  // Set when checkout happened while signed in — links the order back to
+  // the customers/{uid} doc. Absent for guest checkouts.
+  customerUid?: string;
+  // Loyalty points this order earned/redeemed — absent for guest checkouts
+  // or accounts with no points activity on this order.
+  pointsEarned?: number;
+  pointsRedeemed?: number;
   subtotal: number;
   shipping: number;
   total: number;

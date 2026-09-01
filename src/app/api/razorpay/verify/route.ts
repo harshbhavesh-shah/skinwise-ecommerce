@@ -4,6 +4,8 @@ import { renderToBuffer } from "@react-pdf/renderer";
 import { appendEmailLog, createOrder, getOrder } from "@/lib/orders";
 import { computeOrderTotal } from "@/lib/pricing";
 import { getInventoryMap, decrementStock } from "@/lib/inventory";
+import { getSessionUser } from "@/lib/customer-auth";
+import { applyPointsForOrder } from "@/lib/customers";
 import { buildConfirmationEmail, sendEmail } from "@/lib/email";
 import { OrderReceiptDocument } from "@/lib/receipt";
 import type { CartLine, CustomerInfo } from "@/lib/types";
@@ -54,6 +56,7 @@ export async function POST(req: NextRequest) {
     razorpay_signature?: string;
     customer?: unknown;
     lines?: unknown;
+    redeemPoints?: unknown;
   };
   try {
     body = await req.json();
@@ -61,7 +64,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
 
-  const { razorpay_order_id, razorpay_payment_id, razorpay_signature, customer, lines } = body;
+  const { razorpay_order_id, razorpay_payment_id, razorpay_signature, customer, lines, redeemPoints } = body;
+  const requestedRedeem = typeof redeemPoints === "number" ? redeemPoints : 0;
   if (!razorpay_order_id || !razorpay_payment_id || !razorpay_signature) {
     return NextResponse.json({ error: "Missing payment details." }, { status: 400 });
   }
@@ -88,21 +92,45 @@ export async function POST(req: NextRequest) {
   // Recompute the total server-side rather than trusting the client, same
   // as create-order — the customer/shipping fields are just record-keeping.
   const inventory = await getInventoryMap();
-  const { subtotal, shipping, total } = computeOrderTotal(lines, inventory);
+
+  // Signed-in customers get their order linked back to their account —
+  // guests (no session cookie) checkout exactly as before.
+  const session = await getSessionUser();
 
   try {
+    // Payment has already succeeded at this point (signature verified
+    // above) — apply points now, never before, so a failed/abandoned
+    // payment never touches a balance. This is the only place a balance is
+    // ever mutated, and it clamps against the *live* balance rather than
+    // trusting requestedRedeem.
+    let pointsEarned = 0;
+    let pointsRedeemed = 0;
+    if (session) {
+      const { subtotal: rawSubtotal } = computeOrderTotal(lines, inventory);
+      const result = await applyPointsForOrder(session.uid, requestedRedeem, rawSubtotal);
+      pointsEarned = result.earned;
+      pointsRedeemed = result.redeemed;
+    }
+
+    // Final numbers reflect the *actual* redeemed amount from the points
+    // transaction above, so the order and the points ledger can never disagree.
+    const { subtotal, shipping, total } = computeOrderTotal(lines, inventory, pointsRedeemed);
+
     await createOrder({
       razorpayOrderId: razorpay_order_id,
       razorpayPaymentId: razorpay_payment_id,
       customer,
+      customerUid: session?.uid,
+      pointsEarned,
+      pointsRedeemed,
       lines,
       subtotal,
       shipping,
       total,
     });
 
-    // Payment has already succeeded at this point — decrement stock now,
-    // not before, so a failed/abandoned payment never reduces inventory.
+    // Decrement stock now, not before, so a failed/abandoned payment never
+    // reduces inventory.
     await decrementStock(lines);
 
     // Best-effort confirmation email — a failure here shouldn't affect the

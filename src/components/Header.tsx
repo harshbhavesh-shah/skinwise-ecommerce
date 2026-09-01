@@ -4,11 +4,13 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect, useCallback } from "react";
 import { useCart } from "@/lib/cart-context";
+import { useCustomerSession } from "@/lib/customer-session-context";
 
 export default function Header() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { count, openCart } = useCart();
+  const { loading, customer } = useCustomerSession();
   const [query, setQuery] = useState(searchParams.get("q") ?? "");
 
   useEffect(() => {
@@ -68,6 +70,14 @@ export default function Header() {
             />
           </div>
           <div className="ml-auto flex shrink-0 items-center gap-4">
+            {!loading && (
+              <Link
+                href={customer ? "/account" : "/login"}
+                className="hidden text-sm text-ink-soft hover:text-ink sm:inline"
+              >
+                {customer ? customer.firstName || "Account" : "Sign in"}
+              </Link>
+            )}
             <button
               aria-label="Open cart"
               onClick={openCart}

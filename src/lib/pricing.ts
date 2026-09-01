@@ -10,7 +10,14 @@ const SHIPPING_FEE = 99;
 // server-side before creating a Razorpay order so a tampered client
 // total (or a stale discounted price) can never be charged. Pure/client-safe:
 // only imports from "./inventory-shared", never touches Firestore.
-export function computeOrderTotal(lines: CartLine[], inventory: InventoryMap) {
+//
+// redeemPoints (1 point = ₹1) is clamped to the subtotal here — the caller
+// is responsible for clamping it against the customer's live balance first
+// (see applyPointsForOrder in customers.ts) since that needs a Firestore
+// read this function deliberately doesn't do. Free-shipping eligibility is
+// checked against the pre-redemption subtotal, so redeeming points can
+// never cost a shopper the free shipping they'd otherwise have gotten.
+export function computeOrderTotal(lines: CartLine[], inventory: InventoryMap, redeemPoints = 0) {
   const subtotal = lines.reduce((sum, line) => {
     const product = getProductBySlug(line.slug);
     if (!product || line.qty <= 0) return sum;
@@ -18,9 +25,10 @@ export function computeOrderTotal(lines: CartLine[], inventory: InventoryMap) {
     return sum + price * line.qty;
   }, 0);
 
+  const pointsRedeemed = Math.max(0, Math.min(redeemPoints, subtotal));
   const shipping = subtotal > FREE_SHIPPING_THRESHOLD || subtotal === 0 ? 0 : SHIPPING_FEE;
 
-  return { subtotal, shipping, total: subtotal + shipping };
+  return { subtotal, shipping, pointsRedeemed, total: subtotal - pointsRedeemed + shipping };
 }
 
 export type StockShortfall = { slug: string; name: string; available: number; requested: number };

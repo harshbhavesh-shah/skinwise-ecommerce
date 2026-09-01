@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { computeOrderTotal, checkStock } from "@/lib/pricing";
 import { getInventoryMap } from "@/lib/inventory";
+import { getSessionUser } from "@/lib/customer-auth";
+import { getCustomer } from "@/lib/customers";
 import type { CartLine } from "@/lib/types";
 
 export const runtime = "nodejs";
@@ -17,9 +19,11 @@ export async function POST(req: NextRequest) {
   }
 
   let lines: CartLine[];
+  let requestedRedeem = 0;
   try {
     const body = await req.json();
     lines = Array.isArray(body?.lines) ? body.lines : [];
+    requestedRedeem = typeof body?.redeemPoints === "number" ? body.redeemPoints : 0;
   } catch {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
@@ -38,10 +42,22 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: message }, { status: 409 });
   }
 
+  // Clamp any requested points redemption against the customer's live
+  // balance — never trust the client's number for the amount actually
+  // charged. Guests (no session) can't redeem at all.
+  let redeemPoints = 0;
+  if (requestedRedeem > 0) {
+    const session = await getSessionUser();
+    if (session) {
+      const customer = await getCustomer(session.uid);
+      redeemPoints = Math.max(0, Math.min(requestedRedeem, customer?.loyaltyPoints ?? 0));
+    }
+  }
+
   // Never trust a client-supplied amount — recompute it server-side from
   // the real catalog (with live discounts applied) so the checkout total
   // can't be tampered with.
-  const { total } = computeOrderTotal(lines, inventory);
+  const { total } = computeOrderTotal(lines, inventory, redeemPoints);
 
   if (total <= 0) {
     return NextResponse.json({ error: "Your cart is empty." }, { status: 400 });

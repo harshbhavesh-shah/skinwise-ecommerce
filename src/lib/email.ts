@@ -111,6 +111,18 @@ export function buildStatusUpdateEmail(order: Order, status: OrderStatus, note?:
   return { subject, html: baseLayout(body) };
 }
 
+export function buildOtpEmail(code: string) {
+  const subject = `Your SkinWise verification code: ${code}`;
+  const body = `
+    <p>Here's your sign-in verification code:</p>
+    <p style="margin:20px 0;font-size:32px;font-weight:bold;letter-spacing:6px;text-align:center;color:#2b2b23;">
+      ${code}
+    </p>
+    <p style="color:#5a5a52;">This code expires in 10 minutes. If you didn't try to sign in, you can ignore this email.</p>
+  `;
+  return { subject, html: baseLayout(body) };
+}
+
 export async function sendEmail(
   to: string,
   subject: string,
