@@ -43,11 +43,22 @@ export default function CheckoutPage() {
   const [placing, setPlacing] = useState(false);
   const [payError, setPayError] = useState<string | null>(null);
   const inventory = useInventoryMap();
-  const { loading: accountLoading, customer: account } = useCustomerSession();
+  const { loading: accountLoading, customer: account, refresh: refreshAccount } = useCustomerSession();
   const [usePoints, setUsePoints] = useState(false);
 
   const redeemPoints = usePoints ? account?.loyaltyPoints ?? 0 : 0;
   const { subtotal, shipping, total, pointsRedeemed } = computeOrderTotal(lines, inventory, redeemPoints);
+
+  // MRP = what every line would cost with no product discount applied;
+  // subtotal already reflects any live discount, so the gap between them
+  // is the total discount amount shown in the summary below.
+  const mrpTotal = lines.reduce((sum, line) => {
+    const product = getProductBySlug(line.slug);
+    if (!product) return sum;
+    const stock = getProductStockView(product, inventory);
+    return sum + (stock.originalPrice ?? stock.price) * line.qty;
+  }, 0);
+  const discountTotal = mrpTotal - subtotal;
 
   if (lines.length === 0 && !placing) {
     return (
@@ -129,6 +140,29 @@ export default function CheckoutPage() {
               setPlacing(false);
               return;
             }
+
+            if (account) {
+              // Save whatever details they just entered/completed back to
+              // their account, so a next order (or the account page) shows
+              // them pre-filled — and refresh the shared session so an
+              // updated points balance shows up immediately, not just after
+              // a full page reload.
+              await fetch("/api/account", {
+                method: "PATCH",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  firstName: customer.firstName,
+                  lastName: customer.lastName,
+                  phone: customer.phone,
+                  address: customer.address,
+                  city: customer.city,
+                  state: customer.state,
+                  pincode: customer.pincode,
+                }),
+              });
+              await refreshAccount();
+            }
+
             clear();
             router.push(`/order-confirmed?payment_id=${encodeURIComponent(verifyData.paymentId)}`);
           } catch {
@@ -245,6 +279,16 @@ export default function CheckoutPage() {
             </label>
           )}
           <div className="mb-3 flex justify-between border-t border-line pt-4 text-[14.5px] text-ink-soft">
+            <span>MRP</span>
+            <span>{formatPrice(mrpTotal)}</span>
+          </div>
+          {discountTotal > 0 && (
+            <div className="mb-3 flex justify-between text-[14.5px] text-accent">
+              <span>Discount</span>
+              <span>&minus;{formatPrice(discountTotal)}</span>
+            </div>
+          )}
+          <div className="mb-3 flex justify-between text-[14.5px] text-ink-soft">
             <span>Subtotal</span>
             <span>{formatPrice(subtotal)}</span>
           </div>
