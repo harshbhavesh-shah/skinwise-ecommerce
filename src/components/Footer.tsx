@@ -14,10 +14,13 @@ export default function Footer() {
             <div className="mb-3.5 font-serif text-xl text-white">
               SkinWise<span className="ml-px align-super text-[11px] font-normal">&trade;</span>
             </div>
-            <p className="text-[13.5px]">
+            <p className="mb-3 text-[13.5px]">
               Authentic, dermatologist-trusted skincare from Bioderma, CeraVe,
               La Roche-Posay and more — sorted by skin concern, not guesswork.
             </p>
+            <Link href="/about" className="text-[13.5px] underline hover:text-white">
+              About Us
+            </Link>
           </div>
           <div>
             <h5 className="mb-4 text-sm font-semibold text-white">Shop by Concern</h5>

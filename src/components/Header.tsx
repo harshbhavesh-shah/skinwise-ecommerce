@@ -6,11 +6,12 @@ import { useState, useEffect, useCallback } from "react";
 import { useCart } from "@/lib/cart-context";
 import { useCustomerSession } from "@/lib/customer-session-context";
 
-const NAV_LINKS = [
-  { label: "Shop All", query: {} },
-  { label: "Acne", query: { concern: "Acne" } },
-  { label: "Dryness", query: { concern: "Dryness & Hydration" } },
-  { label: "Sensitive Skin", query: { concern: "Sensitive Skin" } },
+const NAV_LINKS: { label: string; href: string | { pathname: string; query: Record<string, string> } }[] = [
+  { label: "Shop All", href: { pathname: "/", query: {} } },
+  { label: "Acne", href: { pathname: "/", query: { concern: "Acne" } } },
+  { label: "Dryness", href: { pathname: "/", query: { concern: "Dryness & Hydration" } } },
+  { label: "Sensitive Skin", href: { pathname: "/", query: { concern: "Sensitive Skin" } } },
+  { label: "About Us", href: "/about" },
 ];
 
 export default function Header() {
@@ -77,7 +78,7 @@ export default function Header() {
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.label}
-                href={{ pathname: "/", query: link.query }}
+                href={link.href}
                 className="hover:text-ink"
               >
                 {link.label}
@@ -136,7 +137,7 @@ export default function Header() {
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.label}
-                href={{ pathname: "/", query: link.query }}
+                href={link.href}
                 onClick={() => setMenuOpen(false)}
                 className="rounded-lg px-2 py-2.5 text-ink-soft hover:bg-bg-2 hover:text-ink"
               >
