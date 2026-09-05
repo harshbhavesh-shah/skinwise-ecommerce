@@ -1,27 +1,5 @@
 [
   {
-    "name": "Sensibio H2O Micellar Water",
-    "brand": "Bioderma",
-    "type": "Cleanser",
-    "concerns": [
-      "Sensitive Skin"
-    ],
-    "price": 699,
-    "color": "#a7c4bd",
-    "id": 1,
-    "slug": "bioderma-sensibio-h2o-micellar-water",
-    "image": "/products/bioderma-sensibio-h2o-micellar-water.svg",
-    "desc": "A gentle, no-rinse micellar water that removes makeup and impurities without disrupting the skin's natural barrier — formulated for sensitive skin.",
-    "keyIngredients": [
-      "Micellar technology",
-      "Cucumber extract",
-      "Fluorohydroxy acid"
-    ],
-    "longDesc": "Formulated for the most reactive skin types, this iconic micellar water uses patented biomimetic technology to lift away makeup, sunscreen, and daily grime without rubbing or rinsing. It respects the skin's natural pH and helps calm redness and tightness immediately after use, making it a staple first step for sensitive, intolerant, and allergy-prone skin.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "I recommend Sensibio H2O as a first step for almost every patient with reactive or intolerant skin — it's one of the few cleansing waters I've seen genuinely calm redness rather than provoke it. A good baseline product to build a routine around."
-  },
-  {
     "name": "Sébium Foaming Gel",
     "brand": "Bioderma",
     "type": "Cleanser",
@@ -86,451 +64,6 @@
     "longDesc": "A soothing, frequent-use shampoo that gently cleanses the scalp while reducing flaking and the itch-scratch cycle associated with dandruff. Free from harsh sulfates, it's gentle enough for daily use while remaining effective against persistent scalp flaking.",
     "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
     "doctorOpinion": "A well-tolerated option for patients who need frequent washing but still deal with flaking — I recommend it particularly for those who find medicated shampoos too harsh for daily use."
-  },
-  {
-    "name": "Foaming Facial Cleanser",
-    "brand": "CeraVe",
-    "type": "Cleanser",
-    "concerns": [
-      "Acne"
-    ],
-    "price": 899,
-    "color": "#9cb8c9",
-    "id": 5,
-    "slug": "cerave-foaming-facial-cleanser",
-    "image": "/products/cerave-foaming-facial-cleanser.svg",
-    "desc": "A foaming gel cleanser with ceramides and niacinamide that removes excess oil without disrupting the skin barrier.",
-    "keyIngredients": [
-      "3 essential ceramides",
-      "Niacinamide",
-      "Hyaluronic acid"
-    ],
-    "longDesc": "Developed with dermatologists, this foaming gel cleanser removes excess oil and impurities from normal to oily skin while three essential ceramides and niacinamide work to maintain and restore the skin's natural barrier — so your skin feels clean, never tight or stripped.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "CeraVe's ceramide-based cleansers are among the most frequently recommended in my practice — the science is solid, the formulations are consistent, and patients rarely react badly to them, even with compromised skin barriers."
-  },
-  {
-    "name": "Hydrating Facial Cleanser",
-    "brand": "CeraVe",
-    "type": "Cleanser",
-    "concerns": [
-      "Dryness & Hydration",
-      "Sensitive Skin"
-    ],
-    "price": 899,
-    "color": "#aec7d6",
-    "id": 6,
-    "slug": "cerave-hydrating-facial-cleanser",
-    "image": "/products/cerave-hydrating-facial-cleanser.svg",
-    "desc": "A non-foaming, gentle cleanser with hyaluronic acid and ceramides for normal to dry, sensitive skin.",
-    "keyIngredients": [
-      "3 essential ceramides",
-      "Hyaluronic acid",
-      "MVE technology"
-    ],
-    "longDesc": "A non-foaming, soap-free cleanser that removes dirt and makeup while helping restore the protective skin barrier. Formulated with hyaluronic acid to attract moisture and ceramides to lock it in, this cleanser is gentle enough for daily use on normal to dry, sensitive skin.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "This is my default cleanser recommendation for dry or sensitive skin patients starting a new routine. It cleanses without stripping, which matters enormously for anyone already dealing with barrier issues."
-  },
-  {
-    "name": "Moisturizing Cream",
-    "brand": "CeraVe",
-    "type": "Moisturizer",
-    "concerns": [
-      "Dryness & Hydration"
-    ],
-    "price": 1199,
-    "color": "#c3d3dd",
-    "id": 7,
-    "slug": "cerave-moisturizing-cream",
-    "image": "/products/cerave-moisturizing-cream.svg",
-    "desc": "A rich, non-greasy 24-hour moisturizer with three essential ceramides to help restore the skin barrier.",
-    "keyIngredients": [
-      "3 essential ceramides",
-      "Hyaluronic acid",
-      "MVE technology"
-    ],
-    "longDesc": "A rich, 24-hour moisturizing cream with a unique blend of three essential ceramides that helps restore and maintain the skin's natural barrier. MVE delivery technology provides a continuous release of moisturizing ingredients, making it ideal for very dry to normal skin on the face and body.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "One of the most well-studied moisturizers available over the counter. I recommend it routinely for eczema, post-procedure care, and simply as a reliable daily moisturizer for dry to normal skin."
-  },
-  {
-    "name": "SA Renewing Lotion",
-    "brand": "CeraVe",
-    "type": "Moisturizer",
-    "concerns": [
-      "Dryness & Hydration"
-    ],
-    "price": 1099,
-    "color": "#b3c9d4",
-    "id": 8,
-    "slug": "cerave-sa-renewing-lotion",
-    "image": "/products/cerave-sa-renewing-lotion.svg",
-    "desc": "A lightweight lotion with salicylic acid that gently exfoliates rough, bumpy skin while moisturizing.",
-    "keyIngredients": [
-      "Salicylic acid",
-      "3 essential ceramides",
-      "Urea"
-    ],
-    "longDesc": "A lightweight, fast-absorbing lotion that combines salicylic acid with ceramides to gently exfoliate rough, bumpy skin texture (including keratosis pilaris) while restoring hydration and barrier function — without the irritation typically associated with exfoliating acids.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "Useful for patients dealing with rough, bumpy skin texture — the combination of salicylic acid with ceramides means we get gentle exfoliation without the irritation I'd otherwise worry about."
-  },
-  {
-    "name": "Resurfacing Retinol Serum",
-    "brand": "CeraVe",
-    "type": "Serum",
-    "concerns": [
-      "Anti-Aging"
-    ],
-    "price": 1499,
-    "color": "#7d97a8",
-    "id": 9,
-    "slug": "cerave-resurfacing-retinol-serum",
-    "image": "/products/cerave-resurfacing-retinol-serum.svg",
-    "desc": "An encapsulated retinol serum that smooths texture and fine lines overnight, formulated to minimize irritation.",
-    "keyIngredients": [
-      "Encapsulated retinol",
-      "Niacinamide",
-      "Ceramides"
-    ],
-    "longDesc": "A nightly resurfacing serum with encapsulated retinol, designed to smooth the appearance of post-acne marks and uneven texture while minimizing common retinol irritation. Ceramides and niacinamide help maintain barrier comfort throughout your retinization journey.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "A sensible entry point for patients new to retinoids. The encapsulation technology genuinely reduces the irritation I see with stronger prescription retinoids, making it easier for patients to stay consistent."
-  },
-  {
-    "name": "Skin Renewing Vitamin C Serum",
-    "brand": "CeraVe",
-    "type": "Serum",
-    "concerns": [
-      "Hyperpigmentation",
-      "Anti-Aging"
-    ],
-    "price": 1799,
-    "color": "#e0c88f",
-    "id": 10,
-    "slug": "cerave-skin-renewing-vitamin-c-serum",
-    "image": "/products/cerave-skin-renewing-vitamin-c-serum.svg",
-    "desc": "A brightening serum with pure vitamin C and hyaluronic acid to even tone and support collagen production.",
-    "keyIngredients": [
-      "L-ascorbic acid (Vitamin C)",
-      "Hyaluronic acid",
-      "Vitamin E"
-    ],
-    "longDesc": "A potent brightening serum combining 10% pure L-ascorbic acid with hyaluronic acid to visibly brighten skin tone, soften the look of fine lines, and support the skin's natural collagen production — formulated to minimize the sting often associated with vitamin C serums.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "I recommend this to patients looking to address dullness or early pigmentation who haven't tolerated vitamin C serums well in the past — the formulation is better buffered than most drugstore options."
-  },
-  {
-    "name": "Dandruff Relief Shampoo",
-    "brand": "CeraVe",
-    "type": "Shampoo",
-    "concerns": [
-      "Hair & Scalp"
-    ],
-    "price": 799,
-    "color": "#93aebd",
-    "id": 11,
-    "slug": "cerave-dandruff-relief-shampoo",
-    "image": "/products/cerave-dandruff-relief-shampoo.svg",
-    "desc": "A medicated shampoo that targets flaking and itch while being gentle enough for daily use.",
-    "keyIngredients": [
-      "Pyrithione zinc",
-      "Ceramides",
-      "Niacinamide"
-    ],
-    "longDesc": "A medicated, dermatologist-developed shampoo that relieves itching and flaking from dandruff, while ceramides and niacinamide help maintain scalp barrier health for comfortable, ongoing use.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "A reasonable maintenance option for mild to moderate dandruff, especially for patients who want to avoid the drying effect of stronger medicated shampoos with long-term use."
-  },
-  {
-    "name": "Effaclar Duo Acne Treatment",
-    "brand": "La Roche-Posay",
-    "type": "Treatment",
-    "concerns": [
-      "Acne"
-    ],
-    "price": 1699,
-    "color": "#7c8f7d",
-    "id": 12,
-    "slug": "la-roche-posay-effaclar-duo-acne-treatment",
-    "image": "/products/la-roche-posay-effaclar-duo-acne-treatment.svg",
-    "desc": "A dual-action gel that targets acne and helps reduce the appearance of post-acne marks.",
-    "keyIngredients": [
-      "Niacinamide",
-      "Salicylic acid (LHA)",
-      "Micro-exfoliating agents"
-    ],
-    "longDesc": "A dual-action leave-on treatment gel that targets active blemishes with micro-exfoliating LHA while niacinamide works to visibly reduce the appearance of post-acne marks — formulated to be non-comedogenic and suitable for sensitive, acne-prone skin.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "I frequently suggest Effaclar Duo as an adjunct to prescription acne treatment — the niacinamide component genuinely helps with the post-inflammatory marks that bother patients as much as active breakouts."
-  },
-  {
-    "name": "Anthelios Sunscreen SPF 50",
-    "brand": "La Roche-Posay",
-    "type": "Sunscreen",
-    "concerns": [
-      "Sun Protection"
-    ],
-    "price": 1899,
-    "color": "#e3d9b8",
-    "id": 13,
-    "slug": "la-roche-posay-anthelios-sunscreen-spf-50",
-    "image": "/products/la-roche-posay-anthelios-sunscreen-spf-50.svg",
-    "desc": "A broad-spectrum, lightweight sunscreen with high UVA/UVB protection for daily wear, even under makeup.",
-    "keyIngredients": [
-      "Mexoryl SX/XL filters",
-      "Antioxidants",
-      "Thermal spring water"
-    ],
-    "longDesc": "An advanced broad-spectrum sunscreen using patented Mexoryl filter technology for superior, photostable UVA/UVB protection. Its fluid, non-greasy texture absorbs quickly and layers seamlessly under makeup, making daily reapplication genuinely pleasant.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "This is the sunscreen I recommend most often when patients tell me they 'hate how sunscreen feels.' The texture compliance alone makes a real difference in whether people actually reapply it."
-  },
-  {
-    "name": "Toleriane Sensitive Cream",
-    "brand": "La Roche-Posay",
-    "type": "Moisturizer",
-    "concerns": [
-      "Sensitive Skin"
-    ],
-    "price": 1599,
-    "color": "#d9cfc2",
-    "id": 14,
-    "slug": "la-roche-posay-toleriane-sensitive-cream",
-    "image": "/products/la-roche-posay-toleriane-sensitive-cream.svg",
-    "desc": "A fragrance-free moisturizer formulated to soothe and hydrate reactive, sensitive skin.",
-    "keyIngredients": [
-      "Prebiotic thermal spring water",
-      "Ceramide-3",
-      "Niacinamide"
-    ],
-    "longDesc": "A fragrance-free daily moisturizer built around La Roche-Posay's prebiotic thermal spring water, designed to soothe reactivity while replenishing the skin barrier — dermatologist-recommended for sensitive and allergy-prone skin, including post-procedure care.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "A dependable choice for patients recovering from procedures or dealing with reactive, easily-irritated skin. Fragrance-free and genuinely gentle, not just labeled as such."
-  },
-  {
-    "name": "Lipikar Balm AP+",
-    "brand": "La Roche-Posay",
-    "type": "Moisturizer",
-    "concerns": [
-      "Eczema",
-      "Dryness & Hydration"
-    ],
-    "price": 1799,
-    "color": "#c7cbb8",
-    "id": 15,
-    "slug": "la-roche-posay-lipikar-balm-ap-plus",
-    "image": "/products/la-roche-posay-lipikar-balm-ap-plus.svg",
-    "desc": "An intensive repairing balm for very dry, eczema-prone skin, clinically proven to soothe irritation.",
-    "keyIngredients": [
-      "Shea butter",
-      "Niacinamide",
-      "Microresyl"
-    ],
-    "longDesc": "An intensive, fast-absorbing balm clinically proven to relieve dryness and discomfort associated with eczema-prone skin. Shea butter and niacinamide soothe irritation, while Microresyl technology helps reduce the recurrence of dry patches with continued use.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "For my eczema patients, this balm is often part of the maintenance plan between flare-ups. It's rich enough to matter but doesn't feel like it's sitting on top of the skin."
-  },
-  {
-    "name": "Pigmentclar Serum",
-    "brand": "La Roche-Posay",
-    "type": "Serum",
-    "concerns": [
-      "Hyperpigmentation"
-    ],
-    "price": 2199,
-    "color": "#d8b98f",
-    "id": 16,
-    "slug": "la-roche-posay-pigmentclar-serum",
-    "image": "/products/la-roche-posay-pigmentclar-serum.svg",
-    "desc": "A targeted serum that helps fade dark spots and even out skin tone over time.",
-    "keyIngredients": [
-      "LHA",
-      "Niacinamide",
-      "Vitamin CG"
-    ],
-    "longDesc": "A targeted serum formulated to visibly reduce the appearance of dark spots, post-acne marks, and uneven skin tone. LHA gently resurfaces while niacinamide and Vitamin CG work beneath the surface to interrupt excess pigment production.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "A solid option for early hyperpigmentation and post-acne marks. I set realistic expectations with patients — visible improvement takes 8-12 weeks of consistent use, but the formulation is sound."
-  },
-  {
-    "name": "Hydro Boost Water Gel",
-    "brand": "Neutrogena",
-    "type": "Moisturizer",
-    "concerns": [
-      "Dryness & Hydration"
-    ],
-    "price": 899,
-    "color": "#a9c9c4",
-    "id": 17,
-    "slug": "neutrogena-hydro-boost-water-gel",
-    "image": "/products/neutrogena-hydro-boost-water-gel.svg",
-    "desc": "An oil-free, water-based gel moisturizer with hyaluronic acid that hydrates without heaviness.",
-    "keyIngredients": [
-      "Hyaluronic acid",
-      "Glycerin",
-      "Dimethicone"
-    ],
-    "longDesc": "An oil-free gel-cream that instantly quenches dry skin and continues hydrating over time. Its hyaluronic acid-infused formula plumps skin with intense moisture while feeling completely weightless — never greasy or heavy, even in humid climates.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "A good, accessible hydrating option for patients with normal to oily skin who find heavier creams too much. The hyaluronic acid base does real work without adding weight."
-  },
-  {
-    "name": "Rapid Wrinkle Repair Serum",
-    "brand": "Neutrogena",
-    "type": "Serum",
-    "concerns": [
-      "Anti-Aging"
-    ],
-    "price": 1399,
-    "color": "#8fa89f",
-    "id": 18,
-    "slug": "neutrogena-rapid-wrinkle-repair-serum",
-    "image": "/products/neutrogena-rapid-wrinkle-repair-serum.svg",
-    "desc": "A fast-absorbing serum with retinol that targets fine lines and uneven texture.",
-    "keyIngredients": [
-      "Retinol SA",
-      "Hyaluronic acid",
-      "Glucose complex"
-    ],
-    "longDesc": "A fast-absorbing anti-aging serum with accelerated retinol SA technology that visibly reduces the look of fine lines and wrinkles, with results dermatologists say are comparable to prescription retinoids — without a prescription.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "For patients not ready for a prescription retinoid, this is a reasonable stepping stone with real, published clinical data behind it — not just marketing claims."
-  },
-  {
-    "name": "Ultra Sheer Sunscreen SPF 55",
-    "brand": "Neutrogena",
-    "type": "Sunscreen",
-    "concerns": [
-      "Sun Protection"
-    ],
-    "price": 599,
-    "color": "#e6dcc0",
-    "id": 19,
-    "slug": "neutrogena-ultra-sheer-sunscreen-spf-55",
-    "image": "/products/neutrogena-ultra-sheer-sunscreen-spf-55.svg",
-    "desc": "A lightweight, non-greasy sunscreen that absorbs quickly and layers well under makeup.",
-    "keyIngredients": [
-      "Helioplex technology",
-      "Avobenzone",
-      "Oxybenzone"
-    ],
-    "longDesc": "A lightweight, non-greasy sunscreen with Helioplex broad-spectrum technology that stays photostable in the sun, offering reliable daily protection that absorbs quickly and doesn't leave a white cast.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "A practical, no-fuss daily sunscreen recommendation for patients who want reliable protection without a complicated skincare routine."
-  },
-  {
-    "name": "Advanced Repair Cream",
-    "brand": "Eucerin",
-    "type": "Moisturizer",
-    "concerns": [
-      "Dryness & Hydration",
-      "Eczema"
-    ],
-    "price": 999,
-    "color": "#bcd0cf",
-    "id": 20,
-    "slug": "eucerin-advanced-repair-cream",
-    "image": "/products/eucerin-advanced-repair-cream.svg",
-    "desc": "A fragrance-free cream with ceramides and urea that provides 48-hour relief for very dry skin.",
-    "keyIngredients": [
-      "Ceramide-3",
-      "Natural moisturizing factors",
-      "Urea"
-    ],
-    "longDesc": "A fragrance-free, fast-absorbing cream formulated with ceramide-3 and natural moisturizing factors to provide 48-hour relief for very dry, flaking skin — clinically shown to repair the driest of skin without a greasy after-feel.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "I recommend this often for patients with chronic dry skin conditions who need something dependable for daily maintenance — it consistently performs well without irritating already-compromised skin."
-  },
-  {
-    "name": "Eczema Relief Cream",
-    "brand": "Eucerin",
-    "type": "Moisturizer",
-    "concerns": [
-      "Eczema"
-    ],
-    "price": 1199,
-    "color": "#a3bdba",
-    "id": 21,
-    "slug": "eucerin-eczema-relief-cream",
-    "image": "/products/eucerin-eczema-relief-cream.svg",
-    "desc": "A steroid-free cream formulated to relieve itching and redness associated with eczema flare-ups.",
-    "keyIngredients": [
-      "Colloidal oatmeal",
-      "Ceramide-3",
-      "Licochalcone A"
-    ],
-    "longDesc": "A steroid-free cream developed to calm the itching, redness and irritation of eczema flare-ups. Colloidal oatmeal and licochalcone A work together to soothe compromised skin while restoring the barrier over time.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "A steroid-free option I suggest for maintenance between eczema flare-ups, when we want to calm the skin without escalating to topical steroids for every episode."
-  },
-  {
-    "name": "Gentle Facial Cleanser",
-    "brand": "Vanicream",
-    "type": "Cleanser",
-    "concerns": [
-      "Sensitive Skin"
-    ],
-    "price": 799,
-    "color": "#cfd6cf",
-    "id": 22,
-    "slug": "vanicream-gentle-facial-cleanser",
-    "image": "/products/vanicream-gentle-facial-cleanser.svg",
-    "desc": "A soap-free, fragrance-free cleanser formulated for sensitive and easily irritated skin.",
-    "keyIngredients": [
-      "Glycerin",
-      "No dyes, fragrance or lanolin",
-      "Sunflower seed oil"
-    ],
-    "longDesc": "Free of dyes, fragrance, lanolin, parabens, and formaldehyde, this cleanser was developed for people with the most easily irritated skin. It removes makeup and impurities effectively while leaving skin feeling calm, never tight or reactive.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "For my most sensitive and reactive patients — including those with confirmed contact allergies — Vanicream is usually where I start. The minimal ingredient list matters more than people realize."
-  },
-  {
-    "name": "Cicalfate+ Repair Cream",
-    "brand": "Avène",
-    "type": "Treatment",
-    "concerns": [
-      "Eczema",
-      "Sensitive Skin"
-    ],
-    "price": 1299,
-    "color": "#b8c9bf",
-    "id": 23,
-    "slug": "avene-cicalfate-plus-repair-cream",
-    "image": "/products/avene-cicalfate-plus-repair-cream.svg",
-    "desc": "A restorative cream that helps soothe and protect compromised, irritated, or eczema-prone skin.",
-    "keyIngredients": [
-      "Avène thermal spring water",
-      "Copper & zinc sulfate",
-      "Postbiotic complex"
-    ],
-    "longDesc": "A restorative, fast-acting cream that helps soothe and protect skin affected by irritation, minor wounds, or eczema flare-ups. Avène thermal spring water combined with copper and zinc sulfate helps calm compromised skin and support visible recovery.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "Useful for patients recovering from minor skin trauma, procedures, or eczema flares where the skin barrier needs active support alongside routine care."
-  },
-  {
-    "name": "Anti-Dandruff Shampoo",
-    "brand": "Nizoral",
-    "type": "Shampoo",
-    "concerns": [
-      "Hair & Scalp"
-    ],
-    "price": 599,
-    "color": "#94a6ad",
-    "id": 24,
-    "slug": "nizoral-anti-dandruff-shampoo",
-    "image": "/products/nizoral-anti-dandruff-shampoo.svg",
-    "desc": "A medicated shampoo with ketoconazole that treats and helps prevent dandruff.",
-    "keyIngredients": [
-      "Ketoconazole 1%",
-      "Anti-fungal complex",
-      "Conditioning agents"
-    ],
-    "longDesc": "A clinical-strength, dermatologist-recommended shampoo with 1% ketoconazole that treats the fungus associated with stubborn dandruff at its source — visibly reducing flaking and itch, often within the first few uses.",
-    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; this is placeholder demo text.)",
-    "doctorOpinion": "For persistent, fungal-driven dandruff that hasn't responded to gentler shampoos, ketoconazole-based options like this one are usually my next recommendation before considering prescription alternatives."
   },
   {
     "name": "Pigmentbio Foaming Cream",
@@ -713,7 +246,1100 @@
     "images": [
       "/products/la-roche-posay-anthelios-uvmune-400-oil-control-real-01.jpg",
       "/products/la-roche-posay-anthelios-uvmune-400-oil-control-real-02.jpg",
-      "/products/la-roche-posay-anthelios-uvmune-400-oil-control-real-03.jpg"
-    ]
+      "/products/la-roche-posay-anthelios-uvmune-400-oil-control-real-03.jpg",
+      "/products/la-roche-posay-anthelios-uvmune-400-oil-control-real-04.jpg"
+    ],
+    "info": {
+      "whySelected": "A lightweight sunscreen designed especially for oily and combination skin, combining very high SPF 50+ protection with UVMune 400 ultra-long UVA protection (380–400nm) and an oil-control, mattifying finish. Also resistant to water, sweat and sand.",
+      "bestFor": [
+        "Oily, combination and normal-to-oily skin",
+        "Blemish/acne-prone skin",
+        "People who dislike greasy sunscreens",
+        "Hot and humid weather, daily outdoor exposure",
+        "People concerned about tanning and pigmentation"
+      ],
+      "notFirstChoiceFor": [
+        "Very dry or dehydrated skin",
+        "People sensitive to alcohol-based sunscreen textures",
+        "People sensitive to fragrance"
+      ],
+      "ingredientTech": [
+        {
+          "name": "Mexoryl 400",
+          "description": "Helps protect against ultra-long UVA rays in the 380–400nm range."
+        },
+        {
+          "name": "Airlicium™",
+          "description": "Mattifying technology designed to absorb excess sebum and help control shine."
+        },
+        {
+          "name": "Silica + Perlite",
+          "description": "Help create the dry-touch, less-greasy finish."
+        },
+        {
+          "name": "Zinc PCA",
+          "description": "Commonly used in formulas for oily skin."
+        },
+        {
+          "name": "Glycerin",
+          "description": "Provides a hydrating component to the formulation."
+        }
+      ],
+      "textureAndFinish": "Lightweight fluid with a dry-touch, mattifying, invisible finish — La Roche-Posay reports a 12-hour mattifying effect in a 130-person consumer test on mixed-to-oily skin.",
+      "suitability": [
+        {
+          "skinType": "Oily",
+          "stars": 5
+        },
+        {
+          "skinType": "Normal-to-Oily",
+          "stars": 5
+        },
+        {
+          "skinType": "Combination",
+          "stars": 5
+        },
+        {
+          "skinType": "Acne-Prone",
+          "stars": 4
+        },
+        {
+          "skinType": "Normal",
+          "stars": 4
+        },
+        {
+          "skinType": "Normal-to-Dry",
+          "stars": 3
+        },
+        {
+          "skinType": "Very Dry",
+          "stars": 2
+        },
+        {
+          "skinType": "Very Sensitive",
+          "stars": 3
+        }
+      ],
+      "pros": [
+        "Excellent high-level sun protection",
+        "Ultra-long UVA protection",
+        "Excellent choice for oily/combination skin",
+        "Lightweight fluid texture with a matte, dry-touch finish",
+        "Water, sweat and sand resistant",
+        "No obvious white cast"
+      ],
+      "thingsToKnow": [
+        "May feel drying on dry skin",
+        "Contains alcohol denat. fairly high in the ingredient list",
+        "Contains fragrance",
+        "Matte finish may not suit everyone"
+      ],
+      "howToUse": [
+        "Apply generously to the face and neck in the morning, preferably shortly before sun exposure.",
+        "Reapply regularly, especially after sweating, swimming or towel drying."
+      ],
+      "rating": 4.5,
+      "category": "Sunscreen — Oily / Combination Skin"
+    }
+  },
+  {
+    "name": "Hydrating Cleanser",
+    "brand": "CeraVe",
+    "type": "Cleanser",
+    "concerns": [
+      "Dryness & Hydration",
+      "Sensitive Skin"
+    ],
+    "price": 1,
+    "color": "#8fb9d6",
+    "id": 32,
+    "slug": "cerave-hydrating-cleanser",
+    "image": "/products/cerave-hydrating-cleanser-real.jpg",
+    "desc": "A gentle, low-foam cleanser with three ceramides and hyaluronic acid that cleanses without leaving normal-to-dry and sensitive skin feeling tight.",
+    "keyIngredients": [
+      "Ceramides NP/AP/EOP",
+      "Hyaluronic Acid",
+      "Glycerin"
+    ],
+    "longDesc": "A foundation cleanser built around a simple philosophy: gentle cleansing plus hydration and barrier support, not a long list of trendy actives. Its creamy, low-foam texture removes daily grime and makeup residue without the stripped, tight after-feel that many cleansers leave behind, thanks to three essential ceramides, hyaluronic acid, glycerin, cholesterol and phytosphingosine.",
+    "fullIngredients": "Aqua/Water, Glycerin, Cetearyl Alcohol, PEG-40 Stearate, Stearyl Alcohol, Potassium Phosphate, Ceramide NP, Ceramide AP, Ceramide EOP, Carbomer, Glyceryl Stearate, Behentrimonium Methosulfate, Sodium Lauroyl Lactylate, Sodium Hyaluronate, Cholesterol, Phenoxyethanol, Disodium EDTA, Dipotassium Phosphate, Tocopherol, Phytosphingosine, Xanthan Gum, Cetyl Alcohol, Polysorbate 20, Ethylhexylglycerin. (Formulations can be updated by the manufacturer — verify against the physical pack before relying on this list.)",
+    "doctorOpinion": "My go-to foundation cleanser for patients who don't want their cleanser fighting their skin — gentle, barrier-focused, and non-comedogenic enough that it works even on sensitive, reactive skin.",
+    "info": {
+      "whySelected": "The strength of this cleanser isn't a long list of trendy actives — it's a straightforward philosophy of gentle cleansing plus hydration and barrier support. The formula contains three ceramides (NP, AP, EOP), hyaluronic acid, glycerin, cholesterol and phytosphingosine, and is non-comedogenic, free of added fragrance, and accepted by the National Eczema Association.",
+      "bestFor": [
+        "Dry and normal-to-dry skin",
+        "Sensitive skin",
+        "Dehydrated skin",
+        "Skin that feels tight after cleansing",
+        "People using potentially drying skincare treatments elsewhere in their routine"
+      ],
+      "notFirstChoiceFor": [
+        "Very oily skin wanting a fresh, foaming cleanse — consider a foaming cleanser instead",
+        "Very congested/acne-prone skin, where a targeted salicylic-acid cleanser may make more sense"
+      ],
+      "ingredientTech": [
+        {
+          "name": "Ceramides NP, AP & EOP",
+          "description": "Skin-identical barrier lipids included to support the skin's protective barrier."
+        },
+        {
+          "name": "Hyaluronic Acid",
+          "description": "Present as sodium hyaluronate; supports the skin's moisture balance."
+        },
+        {
+          "name": "Glycerin",
+          "description": "A humectant that supports hydration and makes cleansing more comfortable."
+        },
+        {
+          "name": "Cholesterol + Phytosphingosine",
+          "description": "Complement the barrier-lipid approach of the rest of the formula."
+        },
+        {
+          "name": "Fatty alcohols (cetearyl, stearyl, cetyl)",
+          "description": "Contribute to the creamy, emollient texture — not the same as drying ethanol/alcohol."
+        }
+      ],
+      "textureAndFinish": "Creamy, lotion-like and low-foam — cleans thoroughly without the stripped or tight after-feel of a foaming cleanser.",
+      "suitability": [
+        {
+          "skinType": "Dry",
+          "stars": 5
+        },
+        {
+          "skinType": "Normal-to-Dry",
+          "stars": 5
+        },
+        {
+          "skinType": "Sensitive",
+          "stars": 5
+        },
+        {
+          "skinType": "Normal",
+          "stars": 5
+        },
+        {
+          "skinType": "Combination",
+          "stars": 4
+        },
+        {
+          "skinType": "Oily",
+          "stars": 3
+        },
+        {
+          "skinType": "Acne-Prone",
+          "stars": 4
+        }
+      ],
+      "pros": [
+        "Excellent for dry/normal-to-dry skin",
+        "Very good sensitive-skin option",
+        "Three essential ceramides",
+        "Hyaluronic acid and glycerin",
+        "Fragrance-free and non-comedogenic",
+        "Doesn't rely on exfoliating acids",
+        "Barrier-focused formulation developed with dermatologists"
+      ],
+      "thingsToKnow": [
+        "Not designed primarily for strong oil control",
+        "Doesn't contain salicylic acid or benzoyl peroxide",
+        "Very oily skin may prefer a foaming cleanser instead",
+        "Not a substitute for a leave-on moisturizer"
+      ],
+      "howToUse": [
+        "Wet face with lukewarm water.",
+        "Apply cleanser and gently massage over the face.",
+        "Rinse thoroughly and pat dry.",
+        "Follow with a moisturizer.",
+        "Use morning and/or evening, and after heavy sweating."
+      ],
+      "rating": 4.7,
+      "category": "Hydrating & Barrier Cleanser"
+    }
+  },
+  {
+    "name": "Photoderm Aquafluide SPF50+",
+    "brand": "Bioderma",
+    "type": "Sunscreen",
+    "concerns": [
+      "Sun Protection",
+      "Sensitive Skin"
+    ],
+    "price": 1,
+    "color": "#f5c451",
+    "id": 33,
+    "slug": "bioderma-photoderm-aquafluide",
+    "image": "/products/bioderma-photoderm-aquafluide-real.jpg",
+    "desc": "An ultra-light, water-based SPF 50+ fluid with a dry-touch finish for sensitive, normal-to-oily and combination skin.",
+    "keyIngredients": [
+      "Sun Active Defense™",
+      "Glycerin",
+      "Silica"
+    ],
+    "longDesc": "A lightweight, water-based sunscreen offering very high UVA and UVB protection with a fresh, non-sticky, dry-touch finish. Bioderma's Sun Active Defense™ technology combines UV filters with biological protection designed to reinforce the skin's natural defences against sun-related oxidative stress — an easy daily sunscreen for anyone who dislikes heavy, greasy formulas.",
+    "fullIngredients": "Aqua/Water, Glycerin, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; verify before publishing.)",
+    "doctorOpinion": "An excellent everyday sunscreen for sensitive, normal-to-oily and combination skin who want very high protection without a heavy sunscreen feel — it also works well as a makeup base.",
+    "info": {
+      "whySelected": "A lightweight, water-based sunscreen offering very high UVA and UVB protection with a fresh, non-sticky, dry-touch finish. Its Sun Active Defense™ technology combines UV filters with biological protection designed to reinforce the skin's natural defences against sun-related oxidative stress.",
+      "bestFor": [
+        "Sensitive skin",
+        "Normal-to-oily and combination skin",
+        "People who dislike heavy sunscreen",
+        "Daily facial sunscreen, including hot and humid weather",
+        "Makeup users — can work as a makeup base"
+      ],
+      "notFirstChoiceFor": [
+        "Very dry skin needing a richer sunscreen",
+        "People specifically looking for a strongly mattifying acne-control sunscreen"
+      ],
+      "ingredientTech": [
+        {
+          "name": "Sun Active Defense™",
+          "description": "Combines UV filters with biological protection aimed at helping protect against oxidative stress."
+        },
+        {
+          "name": "Glycerin",
+          "description": "Helps support skin hydration."
+        },
+        {
+          "name": "Silica",
+          "description": "Contributes to the dry-touch feel."
+        },
+        {
+          "name": "Lightweight emollients",
+          "description": "Give the fluid its smooth, comfortable application."
+        }
+      ],
+      "textureAndFinish": "Ultra-light, water-based fluid with a dry-touch, non-sticky, non-oily and invisible finish — reported up to 8 hours of hydration.",
+      "suitability": [
+        {
+          "skinType": "Sensitive",
+          "stars": 5
+        },
+        {
+          "skinType": "Normal",
+          "stars": 5
+        },
+        {
+          "skinType": "Normal-to-Oily",
+          "stars": 5
+        },
+        {
+          "skinType": "Combination",
+          "stars": 5
+        },
+        {
+          "skinType": "Oily",
+          "stars": 4
+        },
+        {
+          "skinType": "Acne-Prone",
+          "stars": 4
+        },
+        {
+          "skinType": "Normal-to-Dry",
+          "stars": 4
+        },
+        {
+          "skinType": "Dry",
+          "stars": 3
+        }
+      ],
+      "pros": [
+        "Very high UVA/UVB protection",
+        "Very lightweight, dry-touch texture",
+        "Non-sticky and non-oily",
+        "8-hour hydration claim",
+        "Water and heat resistant",
+        "Fragrance-free and non-comedogenic",
+        "Very good skin and eye tolerance"
+      ],
+      "thingsToKnow": [
+        "Not as strongly mattifying as dedicated oil-control sunscreens",
+        "Very dry skin may prefer a more moisturizing sunscreen",
+        "For severe pigmentation/melasma, also consider visible-light protection alongside sunscreen choice"
+      ],
+      "howToUse": [
+        "Apply generously and evenly to the face and neck every morning before sun exposure.",
+        "Reapply during prolonged sun exposure and after sweating.",
+        "Using too little product reduces the level of sun protection."
+      ],
+      "rating": 4.5,
+      "category": "Sunscreen — Lightweight / Sensitive Skin"
+    }
+  },
+  {
+    "name": "Photoderm Crème SPF 50+",
+    "brand": "Bioderma",
+    "type": "Sunscreen",
+    "concerns": [
+      "Sun Protection",
+      "Dryness & Hydration",
+      "Sensitive Skin"
+    ],
+    "price": 1,
+    "color": "#e8b96a",
+    "id": 34,
+    "slug": "bioderma-photoderm-creme",
+    "image": "/products/bioderma-photoderm-creme-real.jpg",
+    "desc": "A comfortable, moisturizing SPF 50+ cream with very high UVA/UVB protection, designed for normal-to-dry and sensitive skin.",
+    "keyIngredients": [
+      "Sun Active Defense™",
+      "Ectoin",
+      "Vitamin E"
+    ],
+    "longDesc": "A comfortable, moisturizing SPF 50+ cream designed particularly for normal-to-dry and sensitive skin, combining high UVA/UVB protection with Bioderma's Sun Active Defense™. Up to 8 hours of hydration in an invisible finish that's designed not to leave a greasy film — a daily sunscreen that can be used alone or under makeup.",
+    "fullIngredients": "Aqua/Water, Glycerin, Diethylamino Hydroxybenzoyl Hexyl Benzoate, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Ethylhexyl Triazone, and other formulation-specific actives as listed by the manufacturer. (Full INCI ingredient list is provided on the physical product packaging; verify before publishing.)",
+    "doctorOpinion": "The sunscreen I reach for with normal-to-dry and sensitive-skin patients who want high SPF protection but also need something genuinely comfortable and moisturizing to wear daily.",
+    "info": {
+      "whySelected": "A comfortable, moisturizing SPF 50+ cream designed particularly for normal-to-dry and sensitive skin, combining high UVA/UVB protection with Bioderma's Sun Active Defense™, which is intended to strengthen the skin's natural defence against sun-related stress.",
+      "bestFor": [
+        "Normal, normal-to-dry and dry skin",
+        "Sensitive skin",
+        "Skin that feels tight after sunscreen",
+        "Daily facial sunscreen",
+        "People who prefer a cream rather than a fluid/matte sunscreen"
+      ],
+      "notFirstChoiceFor": [
+        "Very oily or extremely shine-prone skin",
+        "People specifically looking for an ultra-matte sunscreen",
+        "People who prefer an ultra-light watery/fluid texture"
+      ],
+      "ingredientTech": [
+        {
+          "name": "Glycerin",
+          "description": "A humectant that helps attract and retain water, contributing to skin hydration."
+        },
+        {
+          "name": "Ectoin",
+          "description": "A protective molecule included as part of the formulation's biological defence approach."
+        },
+        {
+          "name": "Vitamin E / Tocopherol",
+          "description": "An antioxidant that helps protect against oxidative stress."
+        },
+        {
+          "name": "Laminaria Ochroleuca Extract",
+          "description": "Brown algae extract included in the formulation."
+        },
+        {
+          "name": "Silica",
+          "description": "Helps with the sensory profile and contributes to a less greasy finish."
+        }
+      ],
+      "textureAndFinish": "Comfortable, moisturizing cream with an invisible finish — Bioderma reports 97% of users found the skin supple and comfortable, and 89% reported no greasy feeling through the day.",
+      "suitability": [
+        {
+          "skinType": "Very Dry",
+          "stars": 5
+        },
+        {
+          "skinType": "Dry",
+          "stars": 5
+        },
+        {
+          "skinType": "Normal-to-Dry",
+          "stars": 5
+        },
+        {
+          "skinType": "Sensitive",
+          "stars": 5
+        },
+        {
+          "skinType": "Normal",
+          "stars": 5
+        },
+        {
+          "skinType": "Normal-to-Oily",
+          "stars": 4
+        },
+        {
+          "skinType": "Combination",
+          "stars": 3
+        },
+        {
+          "skinType": "Oily",
+          "stars": 2
+        },
+        {
+          "skinType": "Acne-Prone",
+          "stars": 3
+        }
+      ],
+      "pros": [
+        "Very high UVA/UVB protection",
+        "Excellent choice for dry and sensitive skin",
+        "Up to 8-hour hydration claim",
+        "Comfortable cream texture with an invisible finish",
+        "Designed not to leave a greasy film",
+        "Can be used alone or under makeup"
+      ],
+      "thingsToKnow": [
+        "Not the best choice for very oily skin",
+        "Cream texture may feel richer than a fluid sunscreen",
+        "For a strong matte/oil-control effect, choose a dedicated oil-control sunscreen instead"
+      ],
+      "howToUse": [
+        "Apply generously and evenly to the face and neck before sun exposure.",
+        "Reapply regularly, particularly after swimming, sweating or towel drying.",
+        "Using too little product reduces the level of protection."
+      ],
+      "rating": 4.5,
+      "category": "Sunscreen — Normal / Dry / Sensitive Skin"
+    }
+  },
+  {
+    "name": "Sun Light Gel SPF 50+",
+    "brand": "Cetaphil",
+    "type": "Sunscreen",
+    "concerns": [
+      "Sun Protection",
+      "Acne",
+      "Sensitive Skin"
+    ],
+    "price": 1,
+    "color": "#a9c9e0",
+    "id": 35,
+    "slug": "cetaphil-sun-light-gel",
+    "image": "/products/cetaphil-sun-light-gel-real.jpg",
+    "desc": "A lightweight, water-resistant SPF 50+ gel for sensitive, oily and combination skin — non-comedogenic and fragrance-free.",
+    "keyIngredients": [
+      "Tinosorb S",
+      "Tinosorb M",
+      "Vitamin E"
+    ],
+    "longDesc": "A practical daily SPF 50+ option for sensitive and oily/combination skin, built around a light gel texture that's resistant to water and sweat. Non-comedogenic, fragrance-free and paraben-free, it's a solid choice for anyone who wants sunscreen that keeps up with an active day without feeling heavy.",
+    "fullIngredients": "Aqua/Water, Octinoxate, Uvinul A Plus, Tinosorb S, Ethylhexyl Triazone, Titanium Dioxide, Tinosorb M, Tocopherol, C12-15 Alkyl Benzoate, Dimethicone, and other formulation-specific ingredients. (Full INCI ingredient list is provided on the physical product packaging; verify before publishing.)",
+    "doctorOpinion": "A practical, lightweight SPF 50+ for patients with oily, combination or sensitive skin who want reliable water/sweat resistance without a heavy after-feel.",
+    "info": {
+      "whySelected": "A practical daily SPF 50+ option for sensitive and oily/combination skin when the customer wants a sunscreen that feels relatively light and is resistant to water and sweat. It's also fragrance-free and paraben-free according to Cetaphil's published product information.",
+      "bestFor": [
+        "Sensitive, oily and combination skin",
+        "Normal-to-oily and acne-prone skin",
+        "People who dislike heavy creams",
+        "Outdoor activities and sweating",
+        "Daily facial sunscreen"
+      ],
+      "notFirstChoiceFor": [
+        "Very dry or dehydrated skin",
+        "People who dislike alcohol-containing sunscreen formulas",
+        "People wanting a tinted sunscreen with visible-light protection"
+      ],
+      "ingredientTech": [
+        {
+          "name": "Vitamin E / Tocopherol",
+          "description": "An antioxidant that also provides skin-conditioning benefits."
+        },
+        {
+          "name": "C12-15 Alkyl Benzoate",
+          "description": "A lightweight emollient that improves spreadability for a smoother, less greasy feel."
+        },
+        {
+          "name": "Dimethicone",
+          "description": "Provides a smooth skin feel and contributes to the protective film."
+        },
+        {
+          "name": "Silica",
+          "description": "Helps with the sensory profile and can reduce shine."
+        }
+      ],
+      "textureAndFinish": "Light gel, lightweight and non-sticky with a relatively non-greasy finish designed to minimise visible residue.",
+      "suitability": [
+        {
+          "skinType": "Oily",
+          "stars": 5
+        },
+        {
+          "skinType": "Normal-to-Oily",
+          "stars": 5
+        },
+        {
+          "skinType": "Combination",
+          "stars": 5
+        },
+        {
+          "skinType": "Acne-Prone",
+          "stars": 4
+        },
+        {
+          "skinType": "Sensitive",
+          "stars": 4
+        },
+        {
+          "skinType": "Normal",
+          "stars": 4
+        },
+        {
+          "skinType": "Normal-to-Dry",
+          "stars": 3
+        },
+        {
+          "skinType": "Dry",
+          "stars": 3
+        },
+        {
+          "skinType": "Very Dry",
+          "stars": 2
+        }
+      ],
+      "pros": [
+        "SPF 50+ with UVA + UVB protection",
+        "Lightweight gel texture",
+        "Water/sweat resistant",
+        "Non-comedogenic, fragrance-free and paraben-free",
+        "Suitable for sensitive skin",
+        "Contains vitamin E"
+      ],
+      "thingsToKnow": [
+        "Contains alcohol fairly high in the ingredient list, which very dry or barrier-compromised skin may find less comfortable",
+        "Not primarily a moisturizing sunscreen",
+        "Not tinted, so it doesn't provide the visible-light benefit of an iron-oxide tinted sunscreen"
+      ],
+      "howToUse": [
+        "Apply generously and evenly to the face, neck and other exposed areas before sun exposure.",
+        "Reapply regularly during prolonged outdoor exposure, particularly after swimming, sweating or towel drying."
+      ],
+      "rating": 4.4,
+      "category": "Sunscreen — Oily / Combination / Sensitive Skin"
+    }
+  },
+  {
+    "name": "Blueberry Hydrate & Barrier Repair Sunscreen SPF 50+ PA++++",
+    "brand": "Dot & Key",
+    "type": "Sunscreen",
+    "concerns": [
+      "Sun Protection",
+      "Dryness & Hydration"
+    ],
+    "price": 1,
+    "color": "#7fb8c9",
+    "id": 36,
+    "slug": "dot-and-key-blueberry-barrier-repair",
+    "image": "/products/dot-and-key-blueberry-barrier-repair-real.jpg",
+    "desc": "A hydrating SPF 50+ PA++++ sunscreen with ceramides, cholesterol and hyaluronic acid for normal-to-dry, dehydrated and combination skin.",
+    "keyIngredients": [
+      "Ceramides",
+      "Hyaluronic Acid",
+      "Blueberry Extract"
+    ],
+    "longDesc": "Unlike a purely sun-protection-focused formula, this sunscreen adds ceramides, cholesterol, phospholipids, hyaluronic acid and soothing blueberry extract — a hydrating, barrier-supportive everyday option for anyone who wants sun protection without a matte, drying finish.",
+    "fullIngredients": "Aqua/Water, Glycerin, Ceramides, Cholesterol, Phospholipids, Sodium Hyaluronate, Vaccinium Myrtillus (Blueberry) Extract, Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7, Allantoin, Tocopheryl Acetate, and other formulation-specific ingredients. (Full INCI ingredient list is provided on the physical product packaging; verify before publishing.)",
+    "doctorOpinion": "A good fit for patients whose skin feels tight or dry under sunscreen — the ceramide and hyaluronic acid base means it doubles as light hydration, not just protection.",
+    "info": {
+      "whySelected": "A hydrating sunscreen that combines SPF 50+ PA++++ protection with barrier-supporting ingredients. Unlike a purely sun-protection-focused formula, it includes ceramides, cholesterol, phospholipids, hyaluronic acid and soothing ingredients — particularly interesting for customers who want sun protection, hydration and barrier support in one step.",
+      "bestFor": [
+        "Normal, normal-to-dry and dry skin",
+        "Dehydrated skin",
+        "Combination skin",
+        "Skin with a compromised or dry-feeling barrier",
+        "People who dislike very matte sunscreens"
+      ],
+      "notFirstChoiceFor": [
+        "Very oily skin with significant shine",
+        "People specifically looking for maximum oil control",
+        "Someone wanting a tinted sunscreen for pigmentation/visible-light protection"
+      ],
+      "ingredientTech": [
+        {
+          "name": "Hyaluronic Acid + Glycerin",
+          "description": "Humectants that help attract and retain water, supporting hydration."
+        },
+        {
+          "name": "Ceramides",
+          "description": "Skin-identical lipids that are important components of the skin barrier."
+        },
+        {
+          "name": "Cholesterol + Phospholipids",
+          "description": "Important components of the skin's lipid barrier that complement the ceramides."
+        },
+        {
+          "name": "Blueberry Extract",
+          "description": "Provides antioxidant and soothing positioning within the formula."
+        },
+        {
+          "name": "Allantoin",
+          "description": "A soothing skin-conditioning ingredient."
+        }
+      ],
+      "textureAndFinish": "Lightweight cream/lotion with a hydrating, comfortable finish, designed to be non-greasy with no white cast.",
+      "suitability": [
+        {
+          "skinType": "Normal-to-Dry",
+          "stars": 5
+        },
+        {
+          "skinType": "Dry",
+          "stars": 5
+        },
+        {
+          "skinType": "Normal",
+          "stars": 5
+        },
+        {
+          "skinType": "Dehydrated",
+          "stars": 5
+        },
+        {
+          "skinType": "Combination",
+          "stars": 4
+        },
+        {
+          "skinType": "Sensitive",
+          "stars": 4
+        },
+        {
+          "skinType": "Normal-to-Oily",
+          "stars": 4
+        },
+        {
+          "skinType": "Acne-Prone",
+          "stars": 4
+        },
+        {
+          "skinType": "Oily",
+          "stars": 3
+        }
+      ],
+      "pros": [
+        "SPF 50+ PA++++",
+        "Hydrating formulation with ceramides, cholesterol and phospholipids",
+        "Hyaluronic acid",
+        "Fragrance-free and alcohol-free according to published ingredient information",
+        "Good option for dry/dehydrated skin",
+        "Non-comedogenic positioning"
+      ],
+      "thingsToKnow": [
+        "Not designed primarily for strong oil control",
+        "Not a tinted sunscreen, so don't rely on it for visible-light/pigmentation protection",
+        "\"Barrier repair\" describes barrier-supporting ingredients, not a medical treatment for a damaged barrier"
+      ],
+      "howToUse": [
+        "Apply generously and evenly to the face and neck as the last step of your morning skincare routine, before sun exposure.",
+        "When outdoors, reapply approximately every 2 hours, and after swimming or sweating."
+      ],
+      "rating": 4.4,
+      "category": "Sunscreen — Hydrating / Barrier Support"
+    }
+  },
+  {
+    "name": "Acne-UV Gold SPF 50 PA++++",
+    "brand": "IPCA",
+    "type": "Sunscreen",
+    "concerns": [
+      "Sun Protection",
+      "Acne"
+    ],
+    "price": 1,
+    "color": "#e8a33c",
+    "id": 37,
+    "slug": "ipca-acne-uv-gold",
+    "image": "/products/ipca-acne-uv-gold-real.jpg",
+    "desc": "An advanced, lightweight SPF 50 PA++++ sunscreen for oily, acne-prone and combination skin, alcohol-free and fragrance-free.",
+    "keyIngredients": [
+      "Tinosorb S",
+      "Zinc Oxide",
+      "MBBT"
+    ],
+    "longDesc": "A lightweight gel-cream sunscreen built around a strong, modern broad-spectrum filter system — Tinosorb S, Uvasorb HEB, MBBT and zinc oxide — while staying alcohol-free and fragrance-free. PA++++ gives it an edge for customers who specifically want the highest UVA protection rating alongside daily oil-control comfort.",
+    "fullIngredients": "Aqua/Water, Tinosorb S, Diethylhexyl Butamido Triazone, MBBT, Zinc Oxide, Phospholipids, Glycerin, Tocopheryl Acetate, Polylysine, and other formulation-specific ingredients. (Full INCI ingredient list is provided on the physical product packaging; verify before publishing.)",
+    "doctorOpinion": "One of the strongest sunscreen picks for oily, acne-prone skin in the range — PA++++, modern filters, and a formula that never adds unnecessary fragrance or alcohol.",
+    "info": {
+      "whySelected": "A particularly good acne-prone-skin sunscreen candidate: the formula uses a combination of modern UV filters including Tinosorb S, Uvasorb HEB and MBBT, together with zinc oxide, while avoiding alcohol and fragrance according to the currently published ingredient list.",
+      "bestFor": [
+        "Oily and acne-prone skin",
+        "Combination and normal-to-oily skin",
+        "People who dislike heavy sunscreens",
+        "Customers wanting PA++++ (the highest UVA protection rating)"
+      ],
+      "notFirstChoiceFor": [
+        "Very dry or very dehydrated/barrier-compromised skin",
+        "Customers specifically looking for a tinted sunscreen",
+        "Customers wanting a strongly moisturising sunscreen"
+      ],
+      "ingredientTech": [
+        {
+          "name": "Tinosorb S",
+          "description": "Broad-spectrum UV protection."
+        },
+        {
+          "name": "Diethylhexyl Butamido Triazone",
+          "description": "Powerful UVB protection."
+        },
+        {
+          "name": "MBBT",
+          "description": "Broad-spectrum particulate UV filter."
+        },
+        {
+          "name": "Zinc Oxide",
+          "description": "Mineral UV protection."
+        },
+        {
+          "name": "Phospholipids",
+          "description": "Skin-conditioning and barrier support."
+        }
+      ],
+      "textureAndFinish": "Lightweight gel-cream that spreads easily with a non-heavy finish, designed more around comfort for oilier/acne-prone skin than rich moisturisation.",
+      "suitability": [
+        {
+          "skinType": "Oily",
+          "stars": 5
+        },
+        {
+          "skinType": "Acne-Prone",
+          "stars": 5
+        },
+        {
+          "skinType": "Combination",
+          "stars": 5
+        },
+        {
+          "skinType": "Normal",
+          "stars": 4.5
+        },
+        {
+          "skinType": "Sensitive",
+          "stars": 4
+        },
+        {
+          "skinType": "Normal-to-Dry",
+          "stars": 4
+        },
+        {
+          "skinType": "Dry",
+          "stars": 3
+        }
+      ],
+      "pros": [
+        "SPF 50 with PA++++",
+        "Excellent modern UV-filter combination",
+        "Alcohol-free and fragrance-free",
+        "Good candidate for acne-prone/oily skin",
+        "Contains zinc oxide",
+        "Lightweight formulation"
+      ],
+      "thingsToKnow": [
+        "Not a treatment for acne — its role is photoprotection for acne-prone skin",
+        "Not tinted, so don't rely on it for visible-light pigmentation protection",
+        "Dry-skin customers may prefer a more moisturising sunscreen"
+      ],
+      "howToUse": [
+        "Apply generously and evenly to the face before sun exposure.",
+        "Reapply regularly, especially after sweating or prolonged outdoor exposure."
+      ],
+      "rating": 4.7,
+      "category": "Sunscreen — Oily / Acne-Prone / Combination, PA++++"
+    }
+  },
+  {
+    "name": "ACE Liquid Sunscreen SPF 50+ PA+++",
+    "brand": "Solasafe",
+    "type": "Sunscreen",
+    "concerns": [
+      "Sun Protection",
+      "Acne"
+    ],
+    "price": 1,
+    "color": "#7fd0c9",
+    "id": 38,
+    "slug": "solasafe-ace-liquid",
+    "image": "/products/solasafe-ace-liquid-real.jpg",
+    "desc": "A lightweight liquid SPF 50+ PA+++ sunscreen with niacinamide, zinc PCA, hyaluronic acid and cica for oily and acne-prone skin.",
+    "keyIngredients": [
+      "Niacinamide",
+      "Zinc PCA",
+      "Hyaluronic Acid"
+    ],
+    "longDesc": "Unlike a traditional silicone-gel sunscreen, ACE combines photoprotection with genuinely skincare-oriented ingredients — niacinamide, zinc PCA, hyaluronic acid, cica and green tea — in a very lightweight, fast-absorbing liquid. A sunscreen that doesn't feel like a separate heavy step in the routine.",
+    "fullIngredients": "Aqua/Water, Niacinamide, Zinc PCA, Sodium Hyaluronate, Centella Asiatica Extract, Camellia Sinensis (Green Tea) Leaf Extract, Squalane, and other formulation-specific ingredients. (Full INCI ingredient list is provided on the physical product packaging; verify before publishing.)",
+    "doctorOpinion": "Probably the strongest Solasafe pick for the modern oily, acne-prone customer who wants a lightweight sunscreen that also carries genuinely useful skincare ingredients.",
+    "info": {
+      "whySelected": "Unlike the traditional Solasafe silicone gel, ACE combines photoprotection with skincare-oriented ingredients — niacinamide, zinc PCA, hyaluronic acid, cica and green tea — making it attractive for customers who want a sunscreen that doesn't feel like a separate heavy step.",
+      "bestFor": [
+        "Oily, combination and acne-prone skin",
+        "Normal-to-oily skin",
+        "Customers who dislike heavy sunscreen",
+        "Customers looking for a lightweight fluid"
+      ],
+      "notFirstChoiceFor": [
+        "Extremely dry skin needing a richer sunscreen",
+        "Customers wanting tinted/visible-light protection",
+        "Customers specifically wanting PA++++ (this is PA+++)"
+      ],
+      "ingredientTech": [
+        {
+          "name": "Niacinamide",
+          "description": "Supports the skin barrier and can help with uneven pigmentation."
+        },
+        {
+          "name": "Zinc PCA",
+          "description": "Useful for oily/acne-prone skin because of its sebum-regulating positioning."
+        },
+        {
+          "name": "Hyaluronic Acid",
+          "description": "Supports hydration without a heavy feel."
+        },
+        {
+          "name": "Centella Asiatica (Cica)",
+          "description": "A soothing, barrier-support ingredient."
+        },
+        {
+          "name": "Green Tea Extract",
+          "description": "Antioxidant support."
+        }
+      ],
+      "textureAndFinish": "Very lightweight liquid — fast-spreading, non-greasy, invisible finish. Noticeably lighter than a traditional silicone-gel sunscreen.",
+      "suitability": [
+        {
+          "skinType": "Oily",
+          "stars": 5
+        },
+        {
+          "skinType": "Combination",
+          "stars": 5
+        },
+        {
+          "skinType": "Normal",
+          "stars": 5
+        },
+        {
+          "skinType": "Acne-Prone",
+          "stars": 5
+        },
+        {
+          "skinType": "Normal-to-Dry",
+          "stars": 4
+        },
+        {
+          "skinType": "Dry",
+          "stars": 4
+        },
+        {
+          "skinType": "Sensitive",
+          "stars": 4
+        }
+      ],
+      "pros": [
+        "SPF 50+ PA+++",
+        "Lightweight fluid texture",
+        "Niacinamide, zinc PCA and hyaluronic acid",
+        "Cica and green tea",
+        "Fragrance-free with a non-comedogenic claim",
+        "Hydrating without a heavy cream feel"
+      ],
+      "thingsToKnow": [
+        "PA+++ rather than PA++++",
+        "Not tinted — for melasma/pigmentation with visible-light concerns, a properly tinted sunscreen is preferable",
+        "The niacinamide/zinc PCA are supportive skincare ingredients, not an acne treatment"
+      ],
+      "howToUse": [
+        "Apply generously and evenly to the face before sun exposure.",
+        "Reapply regularly during outdoor exposure, especially after sweating."
+      ],
+      "rating": 4.5,
+      "category": "Sunscreen — Oily / Combination / Acne-Prone, Lightweight Fluid"
+    }
+  },
+  {
+    "name": "SPF 50+ Silicone Sunscreen Gel",
+    "brand": "Solasafe",
+    "type": "Sunscreen",
+    "concerns": [
+      "Sun Protection"
+    ],
+    "price": 1,
+    "color": "#9fd6d0",
+    "id": 39,
+    "slug": "solasafe-silicone-gel",
+    "image": "/products/solasafe-silicone-gel-real.jpg",
+    "desc": "A silicone-based SPF 50+ PA+++ sunscreen gel with a smooth, silky, matte-type finish for oily and combination skin.",
+    "keyIngredients": [
+      "Zinc Oxide",
+      "Tinosorb S",
+      "Vitamin E"
+    ],
+    "longDesc": "A classic silicone-gel sunscreen combining modern organic UV filters with zinc oxide. Its main appeal is the silky, smooth gel texture and relatively low-oily skin feel — a good pick for anyone who specifically wants a silicone/matte sunscreen over a cream or fluid.",
+    "fullIngredients": "Aqua/Water, Zinc Oxide, Tinosorb S, Diethylhexyl Butamido Triazone, Tocopheryl Acetate, Dimethicone, and other formulation-specific ingredients. (Full INCI ingredient list is provided on the physical product packaging; verify before publishing.)",
+    "doctorOpinion": "A good practical gel sunscreen for oily and combination skin, particularly for patients who specifically ask for a silicone-based, matte finish.",
+    "info": {
+      "whySelected": "A classic silicone-gel sunscreen with a combination of modern organic filters and zinc oxide. Its main attraction is the silky, smooth gel texture and relatively low-oily skin feel.",
+      "bestFor": [
+        "Oily, combination and normal-to-oily skin",
+        "People who prefer a silicone/matte sunscreen",
+        "Daily outdoor use"
+      ],
+      "notFirstChoiceFor": [
+        "Very dry skin",
+        "Very sensitive or fragrance-reactive skin",
+        "People who dislike silicone-gel textures"
+      ],
+      "ingredientTech": [
+        {
+          "name": "Zinc Oxide",
+          "description": "Mineral UV filter."
+        },
+        {
+          "name": "Tinosorb S",
+          "description": "Broad-spectrum organic UV filter."
+        },
+        {
+          "name": "Diethylhexyl Butamido Triazone",
+          "description": "UVB filter."
+        },
+        {
+          "name": "Vitamin E Acetate",
+          "description": "Antioxidant support."
+        },
+        {
+          "name": "Silicones",
+          "description": "Give the formula its smooth, silky skin feel."
+        }
+      ],
+      "textureAndFinish": "Silicone gel — smooth, silky and relatively matte. A good fit for \"I don't like creamy sunscreens, I want a gel that feels smooth.\"",
+      "suitability": [
+        {
+          "skinType": "Oily",
+          "stars": 5
+        },
+        {
+          "skinType": "Combination",
+          "stars": 5
+        },
+        {
+          "skinType": "Normal",
+          "stars": 4
+        },
+        {
+          "skinType": "Acne-Prone",
+          "stars": 4
+        },
+        {
+          "skinType": "Normal-to-Dry",
+          "stars": 3
+        },
+        {
+          "skinType": "Sensitive",
+          "stars": 3
+        },
+        {
+          "skinType": "Dry",
+          "stars": 2
+        }
+      ],
+      "pros": [
+        "High SPF protection",
+        "Silicone-gel texture with smooth application",
+        "Good option for oily/combination skin",
+        "Contains zinc oxide and modern UV filters",
+        "Antioxidant support"
+      ],
+      "thingsToKnow": [
+        "Contains fragrance/perfume in the listed formulation",
+        "Not the first choice for very dry or barrier-compromised skin",
+        "PA+++ rather than PA++++"
+      ],
+      "howToUse": [
+        "Apply generously and evenly to the face before sun exposure.",
+        "Reapply regularly during outdoor exposure, especially after sweating."
+      ],
+      "rating": 4.3,
+      "category": "Sunscreen — Oily / Combination, Matte Silicone Gel"
+    }
+  },
+  {
+    "name": "Tinted Ivory Sunscreen SPF 50",
+    "brand": "Solasafe",
+    "type": "Sunscreen",
+    "concerns": [
+      "Sun Protection",
+      "Hyperpigmentation"
+    ],
+    "price": 1,
+    "color": "#d9b98a",
+    "id": 40,
+    "slug": "solasafe-tinted-ivory",
+    "image": "/products/solasafe-tinted-ivory-real.jpg",
+    "desc": "A tinted SPF 50 PA+++ sunscreen mousse that provides UV protection with light complexion-evening coverage.",
+    "keyIngredients": [
+      "Titanium Dioxide",
+      "Zinc Oxide"
+    ],
+    "longDesc": "The key advantage here isn't simply SPF — it's the tint. A lightweight tinted silicone texture blends into skin for a cosmetic, complexion-evening finish, giving customers a way to combine sun protection with light coverage in one step, without needing foundation underneath.",
+    "fullIngredients": "Aqua/Water, Titanium Dioxide, Zinc Oxide, Ethylhexyl Methoxycinnamate, Diethylamino Hydroxybenzoyl Hexyl Benzoate, and other formulation-specific ingredients. (Full INCI ingredient list is provided on the physical product packaging; verify before publishing.)",
+    "doctorOpinion": "A useful addition for patients who want sunscreen plus a light complexion correction in one step — just not a substitute for a properly tinted, visible-light-tested sunscreen in significant melasma.",
+    "info": {
+      "whySelected": "The key advantage isn't simply SPF — it's the tint. This gives a separate category for customers who want sun protection plus slight complexion correction/coverage, useful addition to a tinted-sunscreen lineup.",
+      "bestFor": [
+        "Normal, combination and mildly oily skin",
+        "Customers who prefer a tinted sunscreen",
+        "Customers wanting to reduce the appearance of uneven complexion"
+      ],
+      "notFirstChoiceFor": [
+        "Very oily skin wanting a strong matte/oil-control sunscreen",
+        "Very dry skin without moisturizer underneath",
+        "Customers needing a very specific match to their skin tone"
+      ],
+      "ingredientTech": [
+        {
+          "name": "Titanium Dioxide",
+          "description": "Mineral UV filter, also contributes to the tint's coverage."
+        },
+        {
+          "name": "Zinc Oxide",
+          "description": "Mineral UV filter."
+        },
+        {
+          "name": "Silicone-based ingredients",
+          "description": "Help the tint blend smoothly into skin."
+        }
+      ],
+      "textureAndFinish": "Lightweight tinted silicone texture that blends into skin for a cosmetic, complexion-evening finish.",
+      "suitability": [
+        {
+          "skinType": "Normal",
+          "stars": 5
+        },
+        {
+          "skinType": "Combination",
+          "stars": 5
+        },
+        {
+          "skinType": "Oily",
+          "stars": 4
+        },
+        {
+          "skinType": "Normal-to-Dry",
+          "stars": 4
+        },
+        {
+          "skinType": "Acne-Prone",
+          "stars": 4
+        },
+        {
+          "skinType": "Dry",
+          "stars": 3
+        },
+        {
+          "skinType": "Sensitive",
+          "stars": 3
+        }
+      ],
+      "pros": [
+        "Tinted with SPF 50",
+        "Lightweight",
+        "Provides some cosmetic coverage",
+        "Can simplify a routine for customers who don't want foundation",
+        "Useful addition to a tinted-sunscreen lineup"
+      ],
+      "thingsToKnow": [
+        "PA+++ rather than PA++++",
+        "Ivory shade may not suit every skin tone",
+        "Tint should not be confused with a dedicated pigmentation treatment — for significant melasma, prefer a tinted sunscreen with documented visible-light protection"
+      ],
+      "howToUse": [
+        "Apply generously and evenly to the face before sun exposure, blending as you would a light foundation.",
+        "Reapply regularly during outdoor exposure."
+      ],
+      "rating": 4.2,
+      "category": "Sunscreen — Tinted / Complexion-Evening, Normal/Combination"
+    }
   }
 ]

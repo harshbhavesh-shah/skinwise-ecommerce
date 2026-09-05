@@ -37,6 +37,7 @@ export default function Footer() {
             <h5 className="mb-4 text-sm font-semibold text-white">Support</h5>
             <div className="flex flex-col gap-2.5 text-[13.5px]">
               <Link href="/cart" className="hover:text-white">Cart</Link>
+              <Link href="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
               <p>hello@skinwise-demo.com</p>
               <p>This is a demo storefront — no real orders are placed.</p>
             </div>

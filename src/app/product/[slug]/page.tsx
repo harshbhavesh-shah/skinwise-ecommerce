@@ -6,6 +6,8 @@ import { getProductStockView } from "@/lib/inventory-shared";
 import ProductCard from "@/components/ProductCard";
 import ProductGallery from "@/components/ProductGallery";
 import AddToCartForm from "@/components/AddToCartForm";
+import StarRating from "@/components/StarRating";
+import ProductInfoTabs from "@/components/ProductInfoTabs";
 
 // Price and stock come from live Firestore inventory, so this page can no
 // longer be statically pre-rendered per slug.
@@ -82,9 +84,17 @@ export default async function ProductPage({
             <span className="text-ink-soft/50">&middot;</span>
             <span className="text-ink-soft">{product.type}</span>
           </div>
-          <h1 className="mb-3.5 text-[30px] font-medium leading-tight md:text-[34px]">
+          <h1 className="mb-2 text-[30px] font-medium leading-tight md:text-[34px]">
             {product.name}
           </h1>
+          {product.info && (
+            <div className="mb-3.5 flex items-center gap-2">
+              <StarRating value={product.info.rating} />
+              <span className="text-[13px] font-medium text-ink-soft">
+                {product.info.rating.toFixed(1)}/5
+              </span>
+            </div>
+          )}
           <p className="mb-5 flex items-center gap-3 text-2xl font-medium">
             <span className={stock.originalPrice ? "text-accent" : ""}>{formatPrice(stock.price)}</span>
             {stock.originalPrice && (
@@ -137,6 +147,14 @@ export default async function ProductPage({
       <div className="mt-16 grid grid-cols-1 gap-12 border-t border-line pt-14 md:grid-cols-2 md:gap-16">
         <section>
           <h2 className="mb-4 text-[22px] font-medium">About This Product</h2>
+          {product.info && (
+            <>
+              <h3 className="mb-2 text-[15px] font-semibold">Why We Selected It</h3>
+              <p className="mb-6 text-[15px] leading-relaxed text-ink-soft">
+                {product.info.whySelected}
+              </p>
+            </>
+          )}
           <p className="mb-8 text-[15px] leading-relaxed text-ink-soft">
             {product.longDesc}
           </p>
@@ -182,6 +200,13 @@ export default async function ProductPage({
           </div>
         </section>
       </div>
+
+      {product.info && (
+        <section className="mt-16 border-t border-line pt-14">
+          <h2 className="mb-5 text-[22px] font-medium">Skinwise Breakdown</h2>
+          <ProductInfoTabs info={product.info} />
+        </section>
+      )}
 
       {related.length > 0 && (
         <section className="mt-20 border-t border-line pt-20">

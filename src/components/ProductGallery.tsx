@@ -14,7 +14,7 @@ export default function ProductGallery({
 
   return (
     <div>
-      <div className="relative aspect-[5/6] overflow-hidden rounded-[20px] bg-bg-2">
+      <div className="relative aspect-square overflow-hidden rounded-[20px] bg-bg-2">
         <Image
           src={images[activeIndex]}
           alt={alt}

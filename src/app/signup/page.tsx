@@ -55,8 +55,13 @@ function SignupForm() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<"google" | "email" | null>(null);
+  const [agreed, setAgreed] = useState(false);
 
   const handleGoogle = async () => {
+    if (!agreed) {
+      setError("Please agree to the Privacy Policy to create an account.");
+      return;
+    }
     setError(null);
     setLoading("google");
     try {
@@ -70,6 +75,10 @@ function SignupForm() {
 
   const handleEmailPassword = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!agreed) {
+      setError("Please agree to the Privacy Policy to create an account.");
+      return;
+    }
     setError(null);
     setLoading("email");
     try {
@@ -113,10 +122,28 @@ function SignupForm() {
         Save your details for faster checkout and track your orders.
       </p>
 
+      <label className="mb-5 flex cursor-pointer items-start gap-2.5 text-[13px] text-ink-soft">
+        <input
+          type="checkbox"
+          checked={agreed}
+          onChange={(e) => {
+            setAgreed(e.target.checked);
+            if (e.target.checked) setError(null);
+          }}
+          className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-line accent-accent"
+        />
+        <span>
+          I agree to the{" "}
+          <Link href="/privacy-policy" target="_blank" className="font-medium text-accent hover:underline">
+            Privacy Policy
+          </Link>
+        </span>
+      </label>
+
       <button
         type="button"
         onClick={handleGoogle}
-        disabled={loading !== null}
+        disabled={loading !== null || !agreed}
         className="mb-5 flex cursor-pointer items-center justify-center gap-2.5 rounded-full border border-line bg-white py-3 text-[14px] font-medium hover:bg-bg-2 disabled:cursor-not-allowed disabled:opacity-50"
       >
         <svg viewBox="0 0 24 24" className="h-4 w-4">
@@ -173,7 +200,7 @@ function SignupForm() {
         )}
         <button
           type="submit"
-          disabled={loading !== null}
+          disabled={loading !== null || !agreed}
           className="cursor-pointer rounded-full bg-ink py-3.5 text-[15px] font-semibold text-white hover:bg-[#3a352d] disabled:cursor-not-allowed disabled:opacity-50"
         >
           {loading === "email" ? "Creating account…" : "Create account"}

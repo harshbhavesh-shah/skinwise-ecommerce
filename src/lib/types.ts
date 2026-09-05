@@ -25,6 +25,24 @@ export type Product = {
     url: string;
     license: string;
   };
+  // Richer dermatologist write-up content, rendered as expandable sections
+  // on the product page. Optional — products without it (most of the
+  // original catalog) just don't show these sections.
+  info?: ProductInfo;
+};
+
+export type ProductInfo = {
+  whySelected: string;
+  bestFor: string[];
+  notFirstChoiceFor: string[];
+  ingredientTech: { name: string; description: string }[];
+  textureAndFinish: string;
+  suitability: { skinType: string; stars: number }[];
+  pros: string[];
+  thingsToKnow: string[];
+  howToUse: string[];
+  rating: number;
+  category: string;
 };
 
 export type CartLine = {
